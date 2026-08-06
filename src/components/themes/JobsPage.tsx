@@ -1,7 +1,6 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, MapPin, Building2, CheckCircle2, ExternalLink, ChevronDown, ChevronLeft, ChevronRight, Briefcase, Search, Flame, Globe2, LayoutGrid, X } from 'lucide-react';
-import { apiUrl } from '../../lib/api';
 
 type StaticPage = 'about' | 'contact' | 'privacy' | 'terms';
 
@@ -604,30 +603,29 @@ const jobs: Job[] = [
     note: 'Exact closing date could not be confirmed via automated fetch (UN Careers is JS-rendered) — confirm the vacancy is still open before applying.',
   },
   {
-    id: 'unicef-moldova-education-internship',
-    title: 'Internship, Education Section (6 months)',
-    company: 'UNICEF Moldova',
-    location: 'Chișinău, Moldova',
-    type: 'Internship',
+    id: 'usajobs-budget-analyst-2026',
+    title: 'Budget Analyst',
+    company: 'U.S. federal agency (via USAJOBS)',
+    location: 'Not specified in listing',
+    type: 'Full-time (Federal)',
     category: 'Policy, Government & Nonprofit',
-    deadline: 'July 26, 2026',
-    summary: 'A 6-month internship supporting UNICEF Moldova\'s Education Section, contributing to the implementation of inclusive-education activities and related section work.',
+    deadline: 'See official USAJOBS listing for exact closing date',
+    summary: 'A federal budget-analyst role supporting agency budget formulation, execution tracking, and financial reporting.',
     responsibilities: [
-      'Support implementation of inclusive-education activities',
-      'Assist with data collection, reporting, and coordination tasks',
-      'Contribute to other Education Section workstreams as needed',
-      'Liaise with national education partners under staff supervision',
+      'Support budget formulation, execution, and monitoring for the agency',
+      'Prepare budget reports, justifications, and financial analyses',
+      'Track spending against appropriations and flag variances',
+      'Coordinate with program offices on funding requests',
     ],
     requirements: [
-      'Enrollment in or recent graduation from a relevant university program (education, social sciences, or related)',
-      'Interest in inclusive education and child rights',
-      'Strong written and communication skills',
-      'Fluency in English; Romanian/Russian an asset',
+      'Relevant federal qualification for a Budget Analyst position (education and/or specialized experience per the listing)',
+      'Strong analytical and Excel/financial-systems skills',
+      'U.S. citizenship (standard for most federal positions)',
     ],
-    howToApply: 'Apply via UNICEF\'s careers portal. UNICEF provides a monthly stipend for interns and does not charge any recruitment fees.',
-    applyUrl: 'https://jobs.unicef.org/en-us/filter/?search-keyword=&work-type=internship',
-    applyLabel: 'Apply via UNICEF Careers Portal',
-    note: 'The direct requisition link could not be isolated — the URL above is UNICEF\'s internship-filtered search, where this Moldova Education Section posting should currently appear; confirm the specific listing before applying.',
+    howToApply: 'Apply directly through the USAJOBS listing.',
+    applyUrl: 'https://www.usajobs.gov/job/872882900',
+    applyLabel: 'Apply on USAJOBS',
+    note: 'USAJOBS listings are JS-rendered, so exact agency, location, and closing date weren\'t extractable via automated fetch — confirm all three directly on the live posting before applying.',
   },
   {
     id: 'icrc-media-analyst-kyiv',
@@ -733,30 +731,28 @@ const jobs: Job[] = [
     note: 'Exact location and closing date weren\'t extractable via automated fetch — confirm both directly on the live posting (announcement U-26-SEP-DHA-12805726-JLE).',
   },
   {
-    id: 'usajobs-financial-analyst-early-career',
-    title: 'Financial Analyst (Early Career)',
+    id: 'usajobs-project-analyst-early-career',
+    title: 'Project Analyst, Early Career',
     company: 'U.S. federal agency (via USAJOBS)',
     location: 'Not specified in listing',
     type: 'Full-time (Federal)',
     category: 'Policy, Government & Nonprofit',
-    deadline: 'July 22, 2026, 11:59 PM ET',
-    summary: 'An entry-level federal financial-analyst role supporting agency financial planning, budget analysis, and reporting functions.',
+    deadline: 'See official USAJOBS listing for exact closing date',
+    summary: 'An early-career federal project-analyst role open to recent graduates, supporting program and project analysis, coordination, and reporting.',
     responsibilities: [
-      'Support financial planning and analysis for the agency',
-      'Assist with budget development and tracking',
-      'Review financial data for accuracy and compliance',
-      'Support reporting and process-improvement initiatives',
+      'Support project/program analysis, tracking, and coordination',
+      'Assist with reporting and documentation for ongoing initiatives',
+      'Help identify process or efficiency improvements',
     ],
     requirements: [
       'US citizenship and eligibility for federal employment',
-      'Bachelor\'s degree in finance, accounting, or a related field',
-      'Entry-level analytical and financial-systems skills',
-      'Ability to meet federal suitability requirements',
+      'Qualifies under USAJOBS\' Recent Graduates or equivalent early-career hiring path (per the listing)',
+      'Strong written communication and organizational skills',
     ],
-    howToApply: 'Apply through USAJOBS before the stated closing time.',
-    applyUrl: 'https://www.usajobs.gov/job/871949900',
+    howToApply: 'Apply directly through the USAJOBS listing.',
+    applyUrl: 'https://www.usajobs.gov/job/865948900',
     applyLabel: 'Apply on USAJOBS',
-    note: 'This listing\'s stated closing date is today — confirm it\'s still accepting applications, or search USAJOBS for a newer opening if it has closed.',
+    note: 'USAJOBS listings are JS-rendered, so exact agency, location, and closing date weren\'t extractable via automated fetch — confirm all three directly on the live posting before applying.',
   },
   {
     id: 'automattic-happiness-engineer',
@@ -1358,7 +1354,7 @@ export default function JobsPage({ onNavigateHome, onNavigateScholarships, onNav
             <button onClick={() => onNavigateStatic?.('contact')} className="hover:text-[#68A108] transition-colors cursor-pointer">Contact</button>
             <button onClick={() => onNavigateStatic?.('privacy')} className="hover:text-[#68A108] transition-colors cursor-pointer">Privacy Policy</button>
             <button onClick={() => onNavigateStatic?.('terms')} className="hover:text-[#68A108] transition-colors cursor-pointer">Terms of Use</button>
-            <a href={apiUrl('/rss.xml')} className="hover:text-[#68A108] transition-colors cursor-pointer">RSS</a>
+            <a href="/rss.xml" className="hover:text-[#68A108] transition-colors cursor-pointer">RSS</a>
           </div>
         </div>
       </footer>
