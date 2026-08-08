@@ -415,6 +415,48 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
     });
   }, [allArticles]);
 
+  // Single source of truth for which article goes where on the homepage hero grid, so the
+  // same story never appears twice across Main Story / Trending / Big Story / Quick
+  // Dispatches / Featured Story — each section claims articles in priority order and the
+  // next section only picks from what's left.
+  const homepageSections = useMemo(() => {
+    const parseViews = (v: any) => {
+      const s = String(v || '').toLowerCase();
+      const n = parseFloat(s);
+      if (isNaN(n)) return 0;
+      if (s.endsWith('m')) return n * 1000000;
+      if (s.endsWith('k')) return n * 1000;
+      return n;
+    };
+
+    const used = new Set<string>();
+    const claim = (article: any) => {
+      if (article) used.add(String(article.id));
+      return article;
+    };
+
+    const mainStory = claim(sortedAllArticles[0]) || null;
+
+    const trendingStories = [...allArticles]
+      .sort((a, b) => parseViews(b.views) - parseViews(a.views))
+      .filter((a) => !used.has(String(a.id)))
+      .slice(0, 3);
+    trendingStories.forEach(claim);
+
+    const remainingAfterTrending = sortedAllArticles.filter((a) => !used.has(String(a.id)));
+
+    const bigStory = claim(remainingAfterTrending[0]) || null;
+    const remainingAfterBigStory = remainingAfterTrending.slice(1);
+
+    const quickDispatches = remainingAfterBigStory.slice(0, 8);
+    quickDispatches.forEach(claim);
+
+    const featuredStories = remainingAfterBigStory.slice(8, 13);
+    featuredStories.forEach(claim);
+
+    return { mainStory, trendingStories, bigStory, quickDispatches, featuredStories };
+  }, [sortedAllArticles, allArticles]);
+
   // Deep-link support: reflect the open article in the URL so it can be shared/bookmarked,
   // and restore it on load or when the user navigates with back/forward. Note: the
   // homepage's "Quick Tags" filter pills (further down) intentionally only filter this
@@ -994,10 +1036,10 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
               </div>
 
               {/* 3-Column Hero Grid Section (Modern Rounded Layout) */}
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mb-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mb-8 items-stretch">
 
                 {/* Column 1: Main Story (Takes 2 columns of 4) */}
-                <div className="lg:col-span-2 flex flex-col">
+                <div className="lg:col-span-2 flex flex-col h-full">
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3 relative">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 bg-[#68A108] rounded-full" />
@@ -1009,9 +1051,10 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                     </div>
                   </div>
                   {(() => {
-                    const mainStory = sortedAllArticles[0] || seedArticles[0];
+                    const mainStory = homepageSections.mainStory || seedArticles[0];
+                    const bigStory = homepageSections.bigStory;
                     return (
-                      <div className="flex flex-col bg-white border border-slate-100 p-4 rounded-lg shadow-sm">
+                      <div className="flex flex-col flex-1 bg-white border border-slate-100 p-4 rounded-lg shadow-sm">
                         <div
                           onClick={() => setSelectedArticle(mainStory)}
                           className="group cursor-pointer flex flex-col"
@@ -1054,39 +1097,38 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                           </div>
                         </div>
 
-                        {/* Additional Headlines filling the space directly under the main story */}
-                        <div className="pt-3 border-t border-slate-100">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-[10px] font-black text-[#68A108] uppercase tracking-wider font-mono flex items-center gap-1.5">
-                              <Flame size={12} className="text-[#68A108]" /> MORE TOP STORIES
-                            </span>
-                            <span className="text-[9px] font-bold text-slate-400 uppercase">Recent Updates</span>
-                          </div>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {sortedAllArticles.slice(1, 3).map((subArticle) => (
-                              <div
-                                key={subArticle.id}
-                                onClick={() => setSelectedArticle(subArticle)}
-                                className="group bg-slate-50/70 hover:bg-slate-100/90 border border-slate-200/60 p-2.5 rounded-md transition-all duration-200 cursor-pointer flex gap-3 items-center"
-                              >
-                                <div className="w-16 h-14 shrink-0 overflow-hidden relative border border-slate-200 bg-white rounded-md">
-                                  {renderCatchyThumbnail(subArticle, "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500", false, false)}
-                                </div>
-                                <div className="flex flex-col min-w-0 flex-1">
-                                  <span className="text-[8px] font-black text-[#68A108] uppercase tracking-wider block mb-0.5">
-                                    {subArticle.category}
-                                  </span>
-                                  <h4 className="text-[11px] font-extrabold text-slate-900 leading-snug group-hover:text-[#68A108] transition-colors line-clamp-2">
-                                    {subArticle.title}
-                                  </h4>
-                                  <span className="text-[9px] font-mono text-slate-400 mt-1 flex items-center gap-1">
-                                    <Calendar size={9} /> {subArticle.date}
+                        {/* Big Story: one large story filling the remaining space under the main story */}
+                        {bigStory && (
+                          <div className="pt-3 border-t border-slate-100 flex-1 flex flex-col">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-[10px] font-black text-[#68A108] uppercase tracking-wider font-mono flex items-center gap-1.5">
+                                <Flame size={12} className="text-[#68A108]" /> BIG STORY
+                              </span>
+                              <span className="text-[9px] font-bold text-slate-400 uppercase">Editor's Pick</span>
+                            </div>
+                            <div
+                              onClick={() => setSelectedArticle(bigStory)}
+                              className="group cursor-pointer flex-1 flex flex-col bg-slate-50/70 hover:bg-slate-100/90 border border-slate-200/60 rounded-lg overflow-hidden transition-all duration-200"
+                            >
+                              <div className="relative flex-1 min-h-[220px] overflow-hidden bg-slate-100 border-b border-slate-200/60">
+                                {renderCatchyThumbnail(bigStory, "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0", false, false)}
+                                <div className="absolute bottom-3 left-3 z-10">
+                                  <span className="bg-[#68A108] text-white text-[9px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md select-none shadow-sm">
+                                    {bigStory.category || 'NEWS'}
                                   </span>
                                 </div>
                               </div>
-                            ))}
+                              <div className="p-3.5">
+                                <h4 className="text-[15px] font-black text-slate-900 leading-snug group-hover:text-[#68A108] transition-colors line-clamp-2 mb-1.5">
+                                  {bigStory.title}
+                                </h4>
+                                <span className="text-[10px] font-mono text-slate-400 flex items-center gap-1">
+                                  <Calendar size={10} /> {bigStory.date}
+                                </span>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        )}
 
                       </div>
                     );
@@ -1094,7 +1136,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                 </div>
 
                 {/* Column 2: Trending Stories (Replaced Editor's Picks with Trending Stories) */}
-                <div className="lg:col-span-1 flex flex-col">
+                <div className="lg:col-span-1 flex flex-col h-full">
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3 relative">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 bg-[#68A108] rounded-full" />
@@ -1103,20 +1145,9 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                     <div className="absolute bottom-[-1px] left-0 w-28 h-[2px] bg-[#68A108] rounded-full" />
                     <span className="text-[9px] font-mono font-bold text-[#68A108]">HOT</span>
                   </div>
-                  <div className="flex flex-col gap-3.5 flex-1">
+                  <div className="flex flex-col gap-3.5 flex-1 justify-between">
                     {(() => {
-                      // Sort by views count to show real trending stories
-                      const trendingList = [...allArticles].sort((a, b) => {
-                        const parseViews = (v: any) => {
-                          const s = String(v || '').toLowerCase();
-                          const n = parseFloat(s);
-                          if (isNaN(n)) return 0;
-                          if (s.endsWith('m')) return n * 1000000;
-                          if (s.endsWith('k')) return n * 1000;
-                          return n;
-                        };
-                        return parseViews(b.views) - parseViews(a.views);
-                      }).slice(0, 3);
+                      const trendingList = homepageSections.trendingStories;
 
                       return trendingList.map((article, index) => (
                         <div
@@ -1179,7 +1210,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                     </div>
                   </div>
                   <div className="flex-1 bg-white border border-slate-100/80 p-3 divide-y divide-slate-100 flex flex-col justify-start rounded-lg shadow-sm">
-                    {sortedAllArticles.slice(3, 13).map((article) => (
+                    {homepageSections.quickDispatches.map((article) => (
                       <div
                         key={article.id}
                         onClick={() => setSelectedArticle(article)}
@@ -1219,7 +1250,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5">
-                  {sortedAllArticles.slice(4, 9).map((article) => (
+                  {homepageSections.featuredStories.map((article) => (
                     <div
                       key={article.id}
                       onClick={() => setSelectedArticle(article)}
