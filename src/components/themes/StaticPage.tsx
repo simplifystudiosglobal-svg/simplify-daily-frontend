@@ -72,7 +72,7 @@ function PrivacyContent() {
   return (
     <>
       <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-2">Privacy Policy</h2>
-      <p className="text-[12px] text-slate-400 mb-6">Last updated: July 2026</p>
+      <p className="text-[12px] text-slate-400 mb-6">Last updated: August 2026</p>
       <div className="space-y-5 text-[14.5px] leading-relaxed text-slate-600">
         <p>This policy explains, in plain terms, what happens when you use Simplify Feed.</p>
         <div>
@@ -101,10 +101,20 @@ function PrivacyContent() {
           </p>
         </div>
         <div>
-          <h3 className="font-black text-slate-900 text-[13px] uppercase tracking-wide mb-1.5">Cookies</h3>
+          <h3 className="font-black text-slate-900 text-[13px] uppercase tracking-wide mb-1.5">Cookies and advertising</h3>
           <p>
-            This site does not set tracking or advertising cookies. Any cookies present are strictly limited to
-            essential site functionality.
+            We work with reputable third-party advertising partners (such as Media.net and Ezoic) to display ads
+            that help fund Simplify Feed. These partners may use cookies, web beacons, or similar technologies to
+            deliver ads and measure their performance, and some may use information about your visits to this and
+            other sites to show ads they believe are more relevant to you (interest-based advertising).
+          </p>
+          <p>
+            We don't control these partners' individual practices — each operates under its own privacy policy,
+            which we encourage you to review: <a href="https://www.media.net/en/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#68A108] underline">Media.net</a>{' '}
+            and <a href="https://www.ezoic.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-[#68A108] underline">Ezoic</a>.
+            You can opt out of interest-based advertising from many providers through the{' '}
+            <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer" className="text-[#68A108] underline">Digital Advertising Alliance</a>{' '}
+            or manage cookies directly in your browser settings.
           </p>
         </div>
         <div>

@@ -1,0 +1,13 @@
+# ads.txt for simplifyfeed.com
+# https://iabtechlab.com/ads-txt/
+#
+# This file lists who is authorized to sell ad inventory on this domain.
+# Add one line per ad network below, using the exact line each network
+# gives you in their publisher dashboard after signing up — it will look
+# like: <ad system domain>, <publisher account ID>, DIRECT, <certification ID>
+#
+# Example (replace with the real line from your Media.net dashboard):
+# media.net, PUBLISHER_ID, DIRECT
+#
+# Example (replace with the real line from your Ezoic dashboard):
+# google.com, PUBLISHER_ID, DIRECT, f08c47fec0942fa0
