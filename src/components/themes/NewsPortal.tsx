@@ -544,7 +544,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
       if (src.includes('wikimedia.org')) return 'Photo: Wikimedia Commons';
       if (src.includes('nasa.gov')) return 'Photo: NASA';
       if (src.includes('unsplash.com')) return 'Photo: Unsplash';
-      return 'Photo: Simplify Daily';
+      return 'Photo: Simplify Feed';
     })();
 
     return (
@@ -606,7 +606,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
             <div className="border-t border-slate-200 pt-4 pb-6 font-sans text-[13px] md:text-[14px]">
               <div className="flex flex-col gap-0.5 text-slate-500">
                 <span className="font-bold text-slate-800">
-                  By {article.author}, Simplify Daily
+                  By {article.author}, Simplify Feed
                 </span>
                 <span>
                   Published {article.date}
@@ -656,7 +656,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
               </div>
             )}
 
-            {/* Read Next / More from Simplify Daily section */}
+            {/* Read Next / More from Simplify Feed section */}
             <div className="mt-16 pt-10 border-t-4 border-[#68A108]">
               <div className="flex items-center justify-between mb-8">
                 <h3 className="text-lg font-black uppercase tracking-tight text-slate-900 font-sans">
@@ -769,7 +769,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
         <div className="max-w-7xl mx-auto px-4 flex justify-start items-center relative z-10">
           <div className="flex flex-col items-start text-left select-none">
             <h1 className="text-4xl md:text-5xl font-black tracking-tighter flex items-center cursor-pointer text-white hover:opacity-95 transition-opacity animate-fadeIn" onClick={() => { setSelectedArticle(null); setSelectedCategoryFilter('ALL'); setSelectedStyleFilter('ALL'); setSearchQuery(''); }}>
-              <span>Simplify Daily</span>
+              <span>Simplify Feed</span>
               <span className="w-3.5 h-3.5 bg-[#68A108] rounded-full ml-2 self-end mb-2"></span>
             </h1>
             <p className="text-[10px] uppercase font-black tracking-[0.25em] text-[#68A108] font-mono leading-none mt-2">
@@ -1590,7 +1590,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
       <footer className="mt-16 py-12 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
           <h2 className="text-3xl font-black flex items-center grayscale opacity-10 select-none cursor-pointer" onClick={() => setSelectedArticle(null)}>
-            Simplify Daily
+            Simplify Feed
             <span className="w-2 h-2 bg-[#333] rounded-full ml-0.5"></span>
           </h2>
           <div
