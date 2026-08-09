@@ -445,13 +445,17 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
 
     const remainingAfterTrending = sortedAllArticles.filter((a) => !used.has(String(a.id)));
 
-    const bigStory = claim(remainingAfterTrending[0]) || null;
-    const remainingAfterBigStory = remainingAfterTrending.slice(1);
-
-    const quickDispatches = remainingAfterBigStory.slice(0, 8);
+    // Latest claims the next-most-recent stories before Big Story, so freshly published
+    // articles show up in Latest rather than being pulled into the Big Story slot.
+    const quickDispatches = remainingAfterTrending.slice(0, 8);
     quickDispatches.forEach(claim);
 
-    const featuredStories = remainingAfterBigStory.slice(8, 13);
+    const remainingAfterLatest = remainingAfterTrending.slice(8);
+
+    const bigStory = claim(remainingAfterLatest[0]) || null;
+    const remainingAfterBigStory = remainingAfterLatest.slice(1);
+
+    const featuredStories = remainingAfterBigStory.slice(0, 5);
     featuredStories.forEach(claim);
 
     return { mainStory, trendingStories, bigStory, quickDispatches, featuredStories };
@@ -1202,7 +1206,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3 relative">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 bg-[#68A108] rounded-full" />
-                      <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 font-sans">QUICK DISPATCHES</h3>
+                      <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 font-sans">LATEST</h3>
                     </div>
                     <div className="absolute bottom-[-1px] left-0 w-28 h-[2px] bg-[#68A108] rounded-full" />
                     <div className="flex gap-1">
