@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Search, ChevronDown, ChevronLeft, ChevronRight, Calendar, Eye, Sparkles, AlertCircle, TrendingUp, CheckCircle, RefreshCw, FileText, Globe, Loader2, ArrowRight, ArrowLeft, Edit3, Facebook, Twitter, Linkedin, Youtube, Instagram, List, Grid, ArrowUpRight, Mail, Hash, Flame, Shield, Lock, Unlock, Key, X } from 'lucide-react';
 import { seedArticles } from '../../data/articles';
 import { apiUrl } from '../../lib/api';
+import { AdsterraSkyscraper160x600, AdsterraNativeBanner } from '../ads/AdsterraUnits';
 
 const CATEGORY_FALLBACK_IMAGES: Record<string, string[]> = {
   POLITICS: [
@@ -621,14 +622,8 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
           <div className="flex justify-between items-start gap-8 relative">
             
             {/* Left Skyscraper Advertisement - beneath back button */}
-            <div className="hidden xl:flex sticky top-24 w-[160px] h-[600px] bg-[#f2f2f2] border border-slate-200/40 rounded-none items-center justify-center select-none shadow-sm shrink-0 relative overflow-hidden">
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                <span className="text-[12px] font-medium tracking-[0.2em] text-[#8c8c8c]/80 uppercase [writing-mode:vertical-lr] rotate-180">
-                  Advertisement
-                </span>
-              </div>
-              <div className="absolute inset-x-0 top-0 h-1.5 bg-[#68A108]/80" />
-              <div className="absolute inset-x-0 bottom-0 h-8 text-[9px] font-mono text-center text-slate-400 font-bold tracking-widest pb-3">160x600</div>
+            <div className="hidden xl:block sticky top-24 shrink-0">
+              <AdsterraSkyscraper160x600 />
             </div>
 
             <div id="cnn-style-article-container" className="max-w-[1350px] w-full px-2 md:px-6 font-sans flex-1">
@@ -743,16 +738,9 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
             </div>
           </div>
 
-          {/* Right Skyscraper Advertisement - styled exactly like the user's placeholder screenshot */}
-          <div className="hidden xl:flex sticky top-24 w-[160px] h-[600px] bg-[#f2f2f2] border border-slate-200/40 rounded-none items-center justify-center select-none shadow-sm shrink-0 mt-6 relative overflow-hidden">
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-              <span className="text-[12px] font-medium tracking-[0.2em] text-[#8c8c8c]/80 uppercase [writing-mode:vertical-lr] rotate-180">
-                Advertisement
-              </span>
-            </div>
-            {/* Visual clean details matching a generic news portal layout */}
-            <div className="absolute inset-x-0 top-0 h-1.5 bg-[#68A108]/80" />
-            <div className="absolute inset-x-0 bottom-0 h-8 text-[9px] font-mono text-center text-slate-400 font-bold tracking-widest pb-3">160x600</div>
+          {/* Right Skyscraper Advertisement */}
+          <div className="hidden xl:block sticky top-24 shrink-0 mt-6">
+            <AdsterraSkyscraper160x600 />
           </div>
 
         </div>
@@ -1283,6 +1271,11 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Native Banner Advertisement */}
+              <div className="mb-8 bg-white border border-slate-100 rounded-lg shadow-sm p-4">
+                <AdsterraNativeBanner />
               </div>
 
               {/* Newsletter Signup */}
