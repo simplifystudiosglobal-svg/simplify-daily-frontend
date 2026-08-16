@@ -675,6 +675,12 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
               {photoCredit}
             </p>
 
+            {/* Advertisement - shown below xl instead of the side skyscrapers, so every
+                screen size gets an ad, not just desktop */}
+            <div className="xl:hidden bg-white border border-slate-100 rounded-lg shadow-sm p-4 mb-8">
+              <AdsterraNativeBanner />
+            </div>
+
             {/* 8. Body Content */}
             <div 
               className="article-body-content prose prose-sans max-w-none text-slate-900 mb-12" 

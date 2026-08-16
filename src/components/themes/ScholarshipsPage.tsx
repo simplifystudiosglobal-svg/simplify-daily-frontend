@@ -1,6 +1,7 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, MapPin, GraduationCap, CheckCircle2, ExternalLink, ChevronDown, ChevronLeft, ChevronRight, Landmark, Search, Flame, Globe2, LayoutGrid, X } from 'lucide-react';
+import { AdsterraNativeBanner } from '../ads/AdsterraUnits';
 
 type StaticPage = 'about' | 'contact' | 'privacy' | 'terms';
 
@@ -1187,6 +1188,11 @@ export default function ScholarshipsPage({ onNavigateHome, onNavigateJobs, onNav
                 <div className="text-2xl font-black leading-none">{regionCount}+</div>
                 <div className="text-[11px] font-bold text-neutral-400 mt-1">Countries &amp; regions represented</div>
               </div>
+            </div>
+
+            {/* Advertisement */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+              <AdsterraNativeBanner />
             </div>
 
             {/* Browse by level */}

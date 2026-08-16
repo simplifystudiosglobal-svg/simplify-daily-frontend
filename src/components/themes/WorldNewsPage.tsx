@@ -1,6 +1,7 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, Newspaper, ChevronLeft, ChevronRight, CheckCircle2, Search, Rss, Globe2, LayoutGrid, X, Clock } from 'lucide-react';
+import { AdsterraNativeBanner } from '../ads/AdsterraUnits';
 import { apiUrl } from '../../lib/api';
 
 type StaticPage = 'about' | 'contact' | 'privacy' | 'terms';
@@ -623,6 +624,11 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
                     <div className="text-2xl font-black leading-none">{outletCount}+</div>
                     <div className="text-[11px] font-bold text-neutral-400 mt-1">Distinct verified sources</div>
                   </div>
+                </div>
+
+                {/* Advertisement */}
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                  <AdsterraNativeBanner />
                 </div>
 
                 {/* Browse by category */}
