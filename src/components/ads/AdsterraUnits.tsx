@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 const SKYSCRAPER_KEY = '636174ac7332e295e72e425d0954d5f7';
 const NATIVE_CONTAINER_ID = 'container-698769f2ffc8a5ff10c04c2915a994d2';
-const NATIVE_SCRIPT_SRC = 'https://pl30771759.effectivecpmnetwork.com/698769f2ffc8a5ff10c04c2915a994d2/invoke.js';
+const NATIVE_SCRIPT_SRC = 'https://pl30771759.profitableratecpmnetwork.com/698769f2ffc8a5ff10c04c2915a994d2/invoke.js';
 
 // Adsterra's classic banner format (atOptions + invoke.js) calls document.write()
 // internally. Calling document.write on the *main* document after the page has already
@@ -35,7 +35,7 @@ export function AdsterraSkyscraper160x600({ className = '' }: { className?: stri
           `"key":"${SKYSCRAPER_KEY}",` +
           '"format":"iframe","height":600,"width":160,"params":{}' +
           '};</script>' +
-          `<script src="https://www.highperformanceformat.com/${SKYSCRAPER_KEY}/invoke.js"><\/script>` +
+          `<script src="https://www.highrevenueformat.com/${SKYSCRAPER_KEY}/invoke.js"><\/script>` +
           '</body></html>'
       );
       doc.close();
