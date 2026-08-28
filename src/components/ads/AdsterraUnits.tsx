@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 const SKYSCRAPER_KEY = '636174ac7332e295e72e425d0954d5f7';
+const LEADERBOARD_KEY = 'd0b096ecb0a8b5914582b86b34bafcb0';
+const RECTANGLE_KEY = '7965f66d89e280d28afc03888b015066';
 const NATIVE_CONTAINER_ID = 'container-698769f2ffc8a5ff10c04c2915a994d2';
 const NATIVE_SCRIPT_SRC = 'https://pl30771759.profitableratecpmnetwork.com/698769f2ffc8a5ff10c04c2915a994d2/invoke.js';
 
@@ -10,7 +12,7 @@ const NATIVE_SCRIPT_SRC = 'https://pl30771759.profitableratecpmnetwork.com/69876
 // app instead of just inserting the ad. Rendering it inside a fresh iframe we create
 // ourselves isolates that document.write() to the iframe's own blank document, where
 // it's the normal, safe way for this kind of legacy ad tag to work.
-export function AdsterraSkyscraper160x600({ className = '' }: { className?: string }) {
+function AtOptionsBanner({ adKey, width, height, className = '' }: { adKey: string; width: number; height: number; className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -18,8 +20,8 @@ export function AdsterraSkyscraper160x600({ className = '' }: { className?: stri
     if (!container) return;
 
     const iframe = document.createElement('iframe');
-    iframe.style.width = '160px';
-    iframe.style.height = '600px';
+    iframe.style.width = `${width}px`;
+    iframe.style.height = `${height}px`;
     iframe.style.border = '0';
     iframe.style.display = 'block';
     iframe.title = 'Advertisement';
@@ -32,10 +34,10 @@ export function AdsterraSkyscraper160x600({ className = '' }: { className?: stri
         '<!doctype html><html><head><meta charset="utf-8">' +
           '<style>body{margin:0;padding:0;overflow:hidden;}</style></head><body>' +
           '<script>atOptions = {' +
-          `"key":"${SKYSCRAPER_KEY}",` +
-          '"format":"iframe","height":600,"width":160,"params":{}' +
+          `"key":"${adKey}",` +
+          `"format":"iframe","height":${height},"width":${width},"params":{}` +
           '};</script>' +
-          `<script src="https://www.highrevenueformat.com/${SKYSCRAPER_KEY}/invoke.js"><\/script>` +
+          `<script src="https://www.highrevenueformat.com/${adKey}/invoke.js"><\/script>` +
           '</body></html>'
       );
       doc.close();
@@ -44,9 +46,21 @@ export function AdsterraSkyscraper160x600({ className = '' }: { className?: stri
     return () => {
       if (container.contains(iframe)) container.removeChild(iframe);
     };
-  }, []);
+  }, [adKey, width, height]);
 
-  return <div ref={containerRef} className={className} style={{ width: 160, height: 600 }} />;
+  return <div ref={containerRef} className={className} style={{ width, height }} />;
+}
+
+export function AdsterraSkyscraper160x600({ className = '' }: { className?: string }) {
+  return <AtOptionsBanner adKey={SKYSCRAPER_KEY} width={160} height={600} className={className} />;
+}
+
+export function AdsterraLeaderboard728x90({ className = '' }: { className?: string }) {
+  return <AtOptionsBanner adKey={LEADERBOARD_KEY} width={728} height={90} className={className} />;
+}
+
+export function AdsterraRectangle300x250({ className = '' }: { className?: string }) {
+  return <AtOptionsBanner adKey={RECTANGLE_KEY} width={300} height={250} className={className} />;
 }
 
 // Native Banner uses an async script targeting a specific container div by id — a

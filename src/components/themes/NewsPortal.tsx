@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Search, ChevronDown, ChevronLeft, ChevronRight, Calendar, Eye, Sparkles, AlertCircle, TrendingUp, CheckCircle, RefreshCw, FileText, Globe, Loader2, ArrowRight, ArrowLeft, Edit3, Facebook, Twitter, Linkedin, Youtube, Instagram, List, Grid, ArrowUpRight, Mail, Hash, Flame, Shield, Lock, Unlock, Key, X } from 'lucide-react';
 import { seedArticles } from '../../data/articles';
 import { apiUrl } from '../../lib/api';
-import { AdsterraSkyscraper160x600, AdsterraNativeBanner } from '../ads/AdsterraUnits';
+import { AdsterraSkyscraper160x600, AdsterraNativeBanner, AdsterraLeaderboard728x90, AdsterraRectangle300x250 } from '../ads/AdsterraUnits';
 
 const CATEGORY_FALLBACK_IMAGES: Record<string, string[]> = {
   POLITICS: [
@@ -675,6 +675,12 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
               {photoCredit}
             </p>
 
+            {/* Leaderboard advertisement - desktop only, sits above the side skyscrapers'
+                sticky range so wide-screen readers see it before scrolling into the body */}
+            <div className="hidden xl:flex justify-center bg-white border border-slate-100 rounded-lg shadow-sm p-4 mb-8">
+              <AdsterraLeaderboard728x90 />
+            </div>
+
             {/* Advertisement - shown below xl instead of the side skyscrapers, so every
                 screen size gets an ad, not just desktop */}
             <div className="xl:hidden bg-white border border-slate-100 rounded-lg shadow-sm p-4 mb-8">
@@ -702,6 +708,11 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
                 </div>
               </div>
             )}
+
+            {/* Rectangle advertisement - end of article, before related content */}
+            <div className="flex justify-center bg-white border border-slate-100 rounded-lg shadow-sm p-4 mt-8">
+              <AdsterraRectangle300x250 />
+            </div>
 
             {/* Read Next / More from Simplify Feed section */}
             <div className="mt-16 pt-10 border-t-4 border-[#68A108]">
