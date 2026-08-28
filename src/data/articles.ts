@@ -603,7 +603,7 @@ export const seedArticles: Article[] = [
     "date": "Aug 27, 2026",
     "author": "Entertainment News Bureau",
     "views": "689.4k",
-    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1787944290/images_ivmom9.webp",
     "thumbnailStyle": "breaking",
     "meta": "Samuel Monroe Jr., who broke out in the 1993 classic Menace II Society and built a three-decade career in film and television, has died at 52 following a battle with meningitis and MRSA pneumonia.",
     "tags": [
@@ -622,7 +622,7 @@ export const seedArticles: Article[] = [
     "date": "Aug 28, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "845.2k",
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1787944242/2026-08-20t153449z-1568145054-rc2f2nao8bys-rtrmadp-3-massachusetts-crime-clancy_k3cmc1.jpg",
     "thumbnailStyle": "breaking",
     "meta": "No verdict yet: jurors in Lindsay Clancy's murder trial were sent home Thursday after roughly three and a half hours of deliberation and are back Friday morning to keep weighing her fate.",
     "tags": [
