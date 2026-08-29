@@ -619,7 +619,7 @@ export const seedArticles: Article[] = [
     "id": "lindsay-clancy-trial-verdict-watch-day-two",
     "title": "Lindsay Clancy Verdict Watch: Jury Enters Second Day of Deliberations in Duxbury Murder Trial",
     "category": "US NEWS",
-    "date": "Aug 28, 2026",
+    "date": "Aug 29, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "845.2k",
     "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1787944242/2026-08-20t153449z-1568145054-rc2f2nao8bys-rtrmadp-3-massachusetts-crime-clancy_k3cmc1.jpg",

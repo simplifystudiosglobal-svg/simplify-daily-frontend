@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, Newspaper, ChevronLeft, ChevronRight, CheckCircle2, Search, Rss, Globe2, LayoutGrid, X, Clock } from 'lucide-react';
 import { AdsterraNativeBanner } from '../ads/AdsterraUnits';
 import { apiUrl } from '../../lib/api';
+import { seedArticles } from '../../data/articles';
 
 type StaticPage = 'about' | 'contact' | 'privacy' | 'terms';
 
@@ -19,7 +20,7 @@ interface NewsStory {
   headline: string;
   source: string;
   publishedDate: string;
-  category: NewsCategory;
+  category: NewsCategory | string;
   image: string;
   summary: string;
   content: string;
@@ -192,6 +193,24 @@ const newsStories: NewsStory[] = [
   }
 ];
 
+// Shared articles (src/data/articles.ts) are the single source new stories actually get
+// added to going forward, so World News stays current instead of the hand-written list
+// above going stale. Merged in read-only; the hand-written stories above are untouched.
+const sharedWorldNews: NewsStory[] = seedArticles
+  .filter((a) => a.category === 'WORLD NEWS')
+  .map((a) => ({
+    id: a.id,
+    headline: a.title,
+    source: 'Simplify Feed',
+    publishedDate: a.date,
+    category: a.category,
+    image: a.image,
+    summary: a.meta,
+    content: a.content,
+  }));
+
+const allNewsStories: NewsStory[] = [...sharedWorldNews, ...newsStories];
+
 function StoryDetail({ item, onBack }: { item: NewsStory; onBack: () => void }) {
   const dateObj = parsePublishedDate(item.publishedDate);
   return (
@@ -326,7 +345,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
       const match = path.match(/^\/world-news\/(.+)$/);
       if (!match) return null;
       const id = decodeURIComponent(match[1]);
-      return newsStories.some((s) => s.id === id) ? id : null;
+      return allNewsStories.some((s) => s.id === id) ? id : null;
     };
 
     const initial = idFromPath(window.location.pathname);
@@ -353,14 +372,14 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
   }, [selectedId]);
 
   const enriched = useMemo(
-    () => newsStories.map((s) => ({ ...s, publishedDateObj: parsePublishedDate(s.publishedDate) })),
+    () => allNewsStories.map((s) => ({ ...s, publishedDateObj: parsePublishedDate(s.publishedDate) })),
     []
   );
 
   const categoryCounts = useMemo(() => {
     const counts = {} as Record<NewsCategory, number>;
     for (const cat of NEWS_CATEGORIES) {
-      counts[cat] = newsStories.filter((s) => s.category === cat).length;
+      counts[cat] = allNewsStories.filter((s) => s.category === cat).length;
     }
     return counts;
   }, []);
@@ -397,7 +416,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
   }, [enriched]);
 
   const outletCount = useMemo(() => {
-    const set = new Set(newsStories.map((s) => s.source));
+    const set = new Set(allNewsStories.map((s) => s.source));
     return set.size;
   }, []);
 
@@ -519,7 +538,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
                         : 'bg-white border-slate-200 text-slate-500 hover:border-[#68A108]/50 hover:text-[#68A108]'
                       }`}
                   >
-                    {cat} ({cat === 'All' ? newsStories.length : categoryCounts[cat]})
+                    {cat} ({cat === 'All' ? allNewsStories.length : categoryCounts[cat]})
                   </button>
                 ))}
               </div>
@@ -618,7 +637,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
                       <Globe2 size={15} />
                       <span className="text-[10px] font-black uppercase tracking-widest">Global Coverage</span>
                     </div>
-                    <div className="text-3xl font-black leading-none">{newsStories.length}</div>
+                    <div className="text-3xl font-black leading-none">{allNewsStories.length}</div>
                     <div className="text-[11px] font-bold text-neutral-400 mt-1">Verified stories</div>
                     <div className="h-px bg-white/10 my-3" />
                     <div className="text-2xl font-black leading-none">{outletCount}+</div>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, Newspaper, ChevronLeft, ChevronRight, CheckCircle2, Search, Rss, Globe2, LayoutGrid, X, Clock } from 'lucide-react';
 import { AdsterraNativeBanner } from '../ads/AdsterraUnits';
 import { apiUrl } from '../../lib/api';
+import { seedArticles } from '../../data/articles';
 
 type StaticPage = 'about' | 'contact' | 'privacy' | 'terms';
 
@@ -19,7 +20,7 @@ interface EntertainmentStory {
   headline: string;
   source: string;
   publishedDate: string;
-  category: EntertainmentCategory;
+  category: EntertainmentCategory | string;
   image: string;
   summary: string;
   content: string;
@@ -192,6 +193,24 @@ const entertainmentStories: EntertainmentStory[] = [
   }
 ];
 
+// Shared articles (src/data/articles.ts) are the single source new stories actually get
+// added to going forward, so Entertainment stays current instead of the hand-written list
+// above going stale. Merged in read-only; the hand-written stories above are untouched.
+const sharedEntertainment: EntertainmentStory[] = seedArticles
+  .filter((a) => a.category === 'ENTERTAINMENT')
+  .map((a) => ({
+    id: a.id,
+    headline: a.title,
+    source: 'Simplify Feed',
+    publishedDate: a.date,
+    category: a.category,
+    image: a.image,
+    summary: a.meta,
+    content: a.content,
+  }));
+
+const allEntertainmentStories: EntertainmentStory[] = [...sharedEntertainment, ...entertainmentStories];
+
 function StoryDetail({ item, onBack }: { item: EntertainmentStory; onBack: () => void }) {
   const dateObj = parsePublishedDate(item.publishedDate);
   return (
@@ -326,7 +345,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
       const match = path.match(/^\/entertainment\/(.+)$/);
       if (!match) return null;
       const id = decodeURIComponent(match[1]);
-      return entertainmentStories.some((s) => s.id === id) ? id : null;
+      return allEntertainmentStories.some((s) => s.id === id) ? id : null;
     };
 
     const initial = idFromPath(window.location.pathname);
@@ -353,14 +372,14 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
   }, [selectedId]);
 
   const enriched = useMemo(
-    () => entertainmentStories.map((s) => ({ ...s, publishedDateObj: parsePublishedDate(s.publishedDate) })),
+    () => allEntertainmentStories.map((s) => ({ ...s, publishedDateObj: parsePublishedDate(s.publishedDate) })),
     []
   );
 
   const categoryCounts = useMemo(() => {
     const counts = {} as Record<EntertainmentCategory, number>;
     for (const cat of ENTERTAINMENT_CATEGORIES) {
-      counts[cat] = entertainmentStories.filter((s) => s.category === cat).length;
+      counts[cat] = allEntertainmentStories.filter((s) => s.category === cat).length;
     }
     return counts;
   }, []);
@@ -397,7 +416,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
   }, [enriched]);
 
   const outletCount = useMemo(() => {
-    const set = new Set(entertainmentStories.map((s) => s.source));
+    const set = new Set(allEntertainmentStories.map((s) => s.source));
     return set.size;
   }, []);
 
@@ -519,7 +538,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
                         : 'bg-white border-slate-200 text-slate-500 hover:border-[#68A108]/50 hover:text-[#68A108]'
                       }`}
                   >
-                    {cat} ({cat === 'All' ? entertainmentStories.length : categoryCounts[cat]})
+                    {cat} ({cat === 'All' ? allEntertainmentStories.length : categoryCounts[cat]})
                   </button>
                 ))}
               </div>
@@ -618,7 +637,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
                       <Globe2 size={15} />
                       <span className="text-[10px] font-black uppercase tracking-widest">Global Coverage</span>
                     </div>
-                    <div className="text-3xl font-black leading-none">{entertainmentStories.length}</div>
+                    <div className="text-3xl font-black leading-none">{allEntertainmentStories.length}</div>
                     <div className="text-[11px] font-bold text-neutral-400 mt-1">Verified stories</div>
                     <div className="h-px bg-white/10 my-3" />
                     <div className="text-2xl font-black leading-none">{outletCount}+</div>
