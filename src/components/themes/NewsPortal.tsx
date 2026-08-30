@@ -74,22 +74,35 @@ export function getSmartFallbackImage(category?: string, key?: string): string {
 
 const FALLBACK_NEWS_IMAGE = "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80";
 
+// "BREAKING"/"EXCLUSIVE" badges should only show while an article is actually recent -
+// thumbnailStyle is set once at creation and never revisited, so without this an article
+// keeps flashing "BREAKING" indefinitely, long after it stopped being news.
+const BADGE_RECENCY_WINDOW_HOURS = 72;
+const isRecentArticle = (dateStr: string): boolean => {
+  const t = new Date(dateStr).getTime();
+  if (isNaN(t)) return false;
+  return Date.now() - t <= BADGE_RECENCY_WINDOW_HOURS * 60 * 60 * 1000;
+};
+
 // Catchy dynamic thumbnail badge renderer
 const renderCatchyThumbnail = (article: any, customClass: string = "w-full h-full object-cover", showCategory: boolean = true, showBadge: boolean = true) => {
   const style = article.thumbnailStyle || 'standard';
-  
+  const isRecent = isRecentArticle(article.date);
+
   // Custom badges and overlays based on design system
   let badgeEl = null;
   let overlayStyles = "";
   let containerStyles = "relative overflow-hidden w-full h-full group rounded-none";
 
   if (style === 'breaking') {
-    badgeEl = (
-      <div className="absolute top-2 left-2 flex items-center gap-1 bg-[#68A108] text-white text-[8px] font-black uppercase tracking-[0.12em] px-2 py-1 shadow-lg select-none z-10 border border-red-500/10 animate-pulse">
-        <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping shrink-0" />
-        <span>BREAKING</span>
-      </div>
-    );
+    if (isRecent) {
+      badgeEl = (
+        <div className="absolute top-2 left-2 flex items-center gap-1 bg-[#68A108] text-white text-[8px] font-black uppercase tracking-[0.12em] px-2 py-1 shadow-lg select-none z-10 border border-red-500/10 animate-pulse">
+          <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping shrink-0" />
+          <span>BREAKING</span>
+        </div>
+      );
+    }
     overlayStyles = "absolute inset-0 bg-gradient-to-t from-black/75 via-red-950/10 to-transparent mix-blend-multiply group-hover:bg-red-950/15 transition-all duration-500";
     containerStyles += " border border-[#68A108]/40";
   } else if (style === 'viral') {
@@ -111,11 +124,13 @@ const renderCatchyThumbnail = (article: any, customClass: string = "w-full h-ful
     overlayStyles = "absolute inset-0 bg-gradient-to-t from-black/75 via-emerald-950/5 to-transparent group-hover:bg-emerald-950/10 transition-all duration-500";
     containerStyles += " border border-emerald-500/30";
   } else if (style === 'editorial') {
-    badgeEl = (
-      <div className="absolute top-2 left-2 flex items-center gap-1 bg-slate-900 border-l-2 border-amber-400 text-white text-[8px] font-semibold uppercase tracking-[0.12em] px-2 py-1 shadow-lg select-none z-10">
-        <span>EXCLUSIVE</span>
-      </div>
-    );
+    if (isRecent) {
+      badgeEl = (
+        <div className="absolute top-2 left-2 flex items-center gap-1 bg-slate-900 border-l-2 border-amber-400 text-white text-[8px] font-semibold uppercase tracking-[0.12em] px-2 py-1 shadow-lg select-none z-10">
+          <span>EXCLUSIVE</span>
+        </div>
+      );
+    }
     overlayStyles = "absolute inset-0 bg-gradient-to-t from-black/75 via-slate-900/10 to-transparent group-hover:bg-slate-900/15 transition-all duration-500";
     containerStyles += " border border-slate-300/20";
   }
