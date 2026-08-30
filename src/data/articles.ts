@@ -643,7 +643,7 @@ export const seedArticles: Article[] = [
     "date": "Aug 30, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "720.5k",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathmandu%20Valley.jpg?width=1200",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1788102724/https_3A_2F_2Fcms-image-bucket-productionv3-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com_2Fimages_2F3_2F8_2F2_2F6_2F13026283-1-eng-GB_2F912e95cc76f0-GettyImages-2291713322a_w4cudz.jpg",
     "thumbnailStyle": "breaking",
     "meta": "A glacial collapse triggered catastrophic flash floods across Nepal and Tibet, killing more than 680 people, leaving thousands missing, and prompting Nepal's foreign minister and the UN climate chief to warn of a worsening Himalayan climate threat.",
     "tags": [
