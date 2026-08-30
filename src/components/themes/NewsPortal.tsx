@@ -405,6 +405,24 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
     }
   }, [allArticles]);
 
+  // Pull in articles the admin has synced and published server-side (see backend
+  // GET /api/articles), so every visitor sees them - not just the browser that ran the
+  // sync, which is all the localStorage-only path above could ever do.
+  useEffect(() => {
+    fetch(apiUrl('/api/articles'))
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.success && Array.isArray(data.articles) && data.articles.length > 0) {
+          setAllArticles((prev) => {
+            const existingIds = new Set(prev.map((a) => a.id));
+            const newItems = data.articles.filter((a: any) => a && a.id && !existingIds.has(a.id));
+            return newItems.length > 0 ? [...newItems, ...prev] : prev;
+          });
+        }
+      })
+      .catch((err) => console.error("Failed to load published articles:", err));
+  }, []);
+
   const sortedAllArticles = useMemo(() => {
     return [...allArticles].sort((a, b) => {
       const timeA = new Date(a.date).getTime() || 0;

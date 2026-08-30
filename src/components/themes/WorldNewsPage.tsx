@@ -196,9 +196,8 @@ const newsStories: NewsStory[] = [
 // Shared articles (src/data/articles.ts) are the single source new stories actually get
 // added to going forward, so World News stays current instead of the hand-written list
 // above going stale. Merged in read-only; the hand-written stories above are untouched.
-const sharedWorldNews: NewsStory[] = seedArticles
-  .filter((a) => a.category === 'WORLD NEWS')
-  .map((a) => ({
+function toWorldNewsStory(a: { id: string; title: string; date: string; category: string; image: string; meta: string; content: string }): NewsStory {
+  return {
     id: a.id,
     headline: a.title,
     source: 'Simplify Feed',
@@ -207,9 +206,12 @@ const sharedWorldNews: NewsStory[] = seedArticles
     image: a.image,
     summary: a.meta,
     content: a.content,
-  }));
+  };
+}
 
-const allNewsStories: NewsStory[] = [...sharedWorldNews, ...newsStories];
+const sharedWorldNews: NewsStory[] = seedArticles
+  .filter((a) => a.category === 'WORLD NEWS')
+  .map(toWorldNewsStory);
 
 function StoryDetail({ item, onBack }: { item: NewsStory; onBack: () => void }) {
   const dateObj = parsePublishedDate(item.publishedDate);
@@ -332,6 +334,27 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<'All' | NewsCategory>('All');
   const skipNextUrlSync = useRef(true);
+
+  // Admin-synced articles published server-side (backend GET /api/articles), so they show
+  // up here for every visitor rather than only the browser that ran the sync.
+  const [serverWorldNews, setServerWorldNews] = useState<NewsStory[]>([]);
+  useEffect(() => {
+    fetch(apiUrl('/api/articles'))
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.success && Array.isArray(data.articles)) {
+          setServerWorldNews(
+            data.articles.filter((a: any) => a?.category === 'WORLD NEWS').map(toWorldNewsStory)
+          );
+        }
+      })
+      .catch((err) => console.error('Failed to load published articles:', err));
+  }, []);
+
+  const allNewsStories = useMemo<NewsStory[]>(
+    () => [...serverWorldNews, ...sharedWorldNews, ...newsStories],
+    [serverWorldNews]
+  );
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const jumpToSearch = () => {
     searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -354,7 +377,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
     const onPopState = () => setSelectedId(idFromPath(window.location.pathname));
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
-  }, []);
+  }, [allNewsStories]);
 
   useEffect(() => {
     if (skipNextUrlSync.current) {
@@ -373,7 +396,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
 
   const enriched = useMemo(
     () => allNewsStories.map((s) => ({ ...s, publishedDateObj: parsePublishedDate(s.publishedDate) })),
-    []
+    [allNewsStories]
   );
 
   const categoryCounts = useMemo(() => {
@@ -382,7 +405,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
       counts[cat] = allNewsStories.filter((s) => s.category === cat).length;
     }
     return counts;
-  }, []);
+  }, [allNewsStories]);
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -418,7 +441,7 @@ export default function WorldNewsPage({ onNavigateHome, onNavigateJobs, onNaviga
   const outletCount = useMemo(() => {
     const set = new Set(allNewsStories.map((s) => s.source));
     return set.size;
-  }, []);
+  }, [allNewsStories]);
 
   const selectedStory = selectedId ? enriched.find((s) => s.id === selectedId) ?? null : null;
 

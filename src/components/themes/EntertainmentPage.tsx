@@ -196,9 +196,8 @@ const entertainmentStories: EntertainmentStory[] = [
 // Shared articles (src/data/articles.ts) are the single source new stories actually get
 // added to going forward, so Entertainment stays current instead of the hand-written list
 // above going stale. Merged in read-only; the hand-written stories above are untouched.
-const sharedEntertainment: EntertainmentStory[] = seedArticles
-  .filter((a) => a.category === 'ENTERTAINMENT')
-  .map((a) => ({
+function toEntertainmentStory(a: { id: string; title: string; date: string; category: string; image: string; meta: string; content: string }): EntertainmentStory {
+  return {
     id: a.id,
     headline: a.title,
     source: 'Simplify Feed',
@@ -207,9 +206,12 @@ const sharedEntertainment: EntertainmentStory[] = seedArticles
     image: a.image,
     summary: a.meta,
     content: a.content,
-  }));
+  };
+}
 
-const allEntertainmentStories: EntertainmentStory[] = [...sharedEntertainment, ...entertainmentStories];
+const sharedEntertainment: EntertainmentStory[] = seedArticles
+  .filter((a) => a.category === 'ENTERTAINMENT')
+  .map(toEntertainmentStory);
 
 function StoryDetail({ item, onBack }: { item: EntertainmentStory; onBack: () => void }) {
   const dateObj = parsePublishedDate(item.publishedDate);
@@ -332,6 +334,27 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<'All' | EntertainmentCategory>('All');
   const skipNextUrlSync = useRef(true);
+
+  // Admin-synced articles published server-side (backend GET /api/articles), so they show
+  // up here for every visitor rather than only the browser that ran the sync.
+  const [serverEntertainment, setServerEntertainment] = useState<EntertainmentStory[]>([]);
+  useEffect(() => {
+    fetch(apiUrl('/api/articles'))
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.success && Array.isArray(data.articles)) {
+          setServerEntertainment(
+            data.articles.filter((a: any) => a?.category === 'ENTERTAINMENT').map(toEntertainmentStory)
+          );
+        }
+      })
+      .catch((err) => console.error('Failed to load published articles:', err));
+  }, []);
+
+  const allEntertainmentStories = useMemo<EntertainmentStory[]>(
+    () => [...serverEntertainment, ...sharedEntertainment, ...entertainmentStories],
+    [serverEntertainment]
+  );
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const jumpToSearch = () => {
     searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -354,7 +377,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
     const onPopState = () => setSelectedId(idFromPath(window.location.pathname));
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
-  }, []);
+  }, [allEntertainmentStories]);
 
   useEffect(() => {
     if (skipNextUrlSync.current) {
@@ -373,7 +396,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
 
   const enriched = useMemo(
     () => allEntertainmentStories.map((s) => ({ ...s, publishedDateObj: parsePublishedDate(s.publishedDate) })),
-    []
+    [allEntertainmentStories]
   );
 
   const categoryCounts = useMemo(() => {
@@ -382,7 +405,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
       counts[cat] = allEntertainmentStories.filter((s) => s.category === cat).length;
     }
     return counts;
-  }, []);
+  }, [allEntertainmentStories]);
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -418,7 +441,7 @@ export default function EntertainmentPage({ onNavigateHome, onNavigateJobs, onNa
   const outletCount = useMemo(() => {
     const set = new Set(allEntertainmentStories.map((s) => s.source));
     return set.size;
-  }, []);
+  }, [allEntertainmentStories]);
 
   const selectedStory = selectedId ? enriched.find((s) => s.id === selectedId) ?? null : null;
 
