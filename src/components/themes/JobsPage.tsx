@@ -68,6 +68,10 @@ function getInitials(company: string): string {
   return (words[0][0] + words[1][0]).toUpperCase();
 }
 
+// Date this list was last audited against official sources. Bump it whenever the
+// entries below are re-verified - it is shown to visitors as "Updated".
+const LAST_UPDATED = 'Sep 22, 2026';
+
 const jobs: Job[] = [
   {
     "id": "google-software-engineer-early-career",
@@ -186,7 +190,7 @@ const jobs: Job[] = [
       "Strong analytical reasoning and problem-solving abilities"
     ],
     "howToApply": "Submit your resume through Meta Careers Students & Grads section. Selected applicants complete online coding screenings.",
-    "applyUrl": "https://www.metacareers.com/students-and-grads",
+    "applyUrl": "https://www.metacareers.com/careerprograms/students/",
     "applyLabel": "Apply on Meta Careers"
   },
   {
@@ -238,30 +242,6 @@ const jobs: Job[] = [
     "applyLabel": "Apply on Stripe Jobs"
   },
   {
-    "id": "cern-junior-fellowship-computing",
-    "title": "Junior Fellowship & Technical Student Programme (Computing & Data)",
-    "company": "CERN",
-    "location": "Geneva, Switzerland",
-    "type": "Full-time Fellowship (1–3 years)",
-    "category": "Engineering & Data",
-    "deadline": "November 2, 2026",
-    "summary": "Join the European Organization for Nuclear Research to develop petabyte-scale distributed computing systems for the Large Hadron Collider (LHC).",
-    "responsibilities": [
-      "Develop Worldwide LHC Computing Grid (WLCG) distributed data management software",
-      "Implement machine learning algorithms for particle track reconstruction and anomaly detection",
-      "Deploy containerized microservices on OpenStack and Kubernetes infrastructure",
-      "Participate in scientific computing research and publish technical whitepapers"
-    ],
-    "requirements": [
-      "Citizen of a CERN Member or Associate Member State",
-      "Completed a Bachelor's or Master's degree in Computer Science or IT within the last 4 years",
-      "Good working knowledge of either English or French"
-    ],
-    "howToApply": "Submit your CV, academic transcripts, and two letters of recommendation directly on the CERN SmartRecruiters careers portal.",
-    "applyUrl": "https://careers.cern/early-career-programmes",
-    "applyLabel": "Apply on CERN Careers"
-  },
-  {
     "id": "databricks-software-engineer-university",
     "title": "Software Engineer, New College Graduate (Data & AI Platforms)",
     "company": "Databricks",
@@ -310,13 +290,85 @@ const jobs: Job[] = [
     "applyLabel": "Apply on Palantir Careers"
   },
   {
+    "id": "cern-entry-level-university-graduates",
+    "title": "Entry-Level University Graduates Programme",
+    "company": "CERN",
+    "location": "Geneva, Switzerland",
+    "type": "Fixed-term graduate programme (6–24 months, extendable up to 36)",
+    "category": "Engineering & Data",
+    "deadline": "Rolling — no fixed deadline listed; apply through the CERN careers portal",
+    "summary": "CERN's programme for recent bachelor's and master's graduates with limited work experience, offering a time-limited contract at the European Organization for Nuclear Research.",
+    "responsibilities": [
+      "Contribute to the work of your assigned CERN group or department under supervision",
+      "Build professional experience in an international research environment"
+    ],
+    "requirements": [
+      "National of a CERN Member State or Associate Member State (some exceptions apply because of national ceilings)",
+      "Bachelor's or master's degree as your highest qualification (PhD holders are not eligible)",
+      "No more than 2 years of professional experience since graduation in the relevant field",
+      "Never held a previous CERN fellow or graduate contract"
+    ],
+    "howToApply": "Apply through CERN's careers portal with your CV (in English or French) and your diploma or certificate of achievement.",
+    "applyUrl": "https://careers.cern/programmes/entry-level-university-graduates/",
+    "applyLabel": "Apply on CERN Careers",
+    "note": "Per CERN's programme page: a monthly net stipend of CHF 5,266 or CHF 5,793 depending on qualification, plus health insurance and 30 days of paid leave. Nationality restrictions apply."
+  },
+  {
+    "id": "salesforce-software-engineering-new-grad",
+    "title": "Software Engineering, AMTS (College Grad)",
+    "company": "Salesforce",
+    "location": "Multiple US locations (San Francisco, Seattle, Palo Alto, Bellevue, Dallas, Indianapolis)",
+    "type": "Full-time / Graduate program",
+    "category": "Engineering & Data",
+    "deadline": "Rolling — new-grad openings are posted throughout the recruiting cycle",
+    "summary": "Salesforce's new-grad software engineering track, pairing incoming engineers with mentors and structured onboarding as they join product teams.",
+    "responsibilities": [
+      "Design, build, and ship features on Salesforce's product and platform teams",
+      "Collaborate with senior engineers through code review",
+      "Take part in Salesforce's mentorship and new-grad learning program"
+    ],
+    "requirements": [
+      "Recent or upcoming graduate in Computer Science or a related technical field",
+      "Solid foundation in data structures, algorithms, and at least one programming language",
+      "Strong collaboration and communication skills"
+    ],
+    "howToApply": "Apply directly through Salesforce's university / new-grad careers page.",
+    "applyUrl": "https://www.salesforce.com/company/careers/university/new-grads/",
+    "applyLabel": "Apply on Salesforce Careers"
+  },
+  {
+    "id": "ibm-entry-level-software-developer",
+    "title": "Entry-Level Software Developer",
+    "company": "IBM",
+    "location": "Multiple US locations (also posted internationally)",
+    "type": "Full-time",
+    "category": "Engineering & Data",
+    "deadline": "Rolling — IBM posts new entry-level openings on an ongoing basis",
+    "summary": "A ground-floor engineering role for early-career developers (0–1 year of experience) joining an Agile team to design, build, and deploy applications alongside experienced mentors.",
+    "responsibilities": [
+      "Contribute across the development cycle: design, build, test, and deploy applications",
+      "Work with APIs, databases, and cloud services to build scalable solutions",
+      "Apply Agile and DevOps practices as part of a collaborative team",
+      "Learn from senior engineers through mentorship and code review"
+    ],
+    "requirements": [
+      "Early in your software career: recent graduate, bootcamp completer, or self-taught with 0–1 year of professional experience",
+      "Working knowledge of at least one modern programming language",
+      "Strong problem-solving ability and willingness to learn"
+    ],
+    "howToApply": "Browse and apply through IBM's careers site; search \"entry level\" or your target location.",
+    "applyUrl": "https://www.ibm.com/careers/career-opportunities",
+    "applyLabel": "Apply on IBM Careers",
+    "note": "IBM posts specific entry-level roles continuously rather than one standing requisition, so this links to the general listings page."
+  },
+  {
     "id": "goldman-sachs-new-analyst-program",
     "title": "2027 New Analyst Programme (Global Markets & Investment Banking)",
     "company": "Goldman Sachs",
     "location": "New York, NY / London, UK / Singapore",
     "type": "Full-time",
     "category": "Business, Finance & Consulting",
-    "deadline": "November 15, 2026",
+    "deadline": "Rolling — applications open and reviewed on a rolling basis; deadlines vary by business, so apply early",
     "summary": "The premier launching pad for graduates in investment banking, global investment research, asset management, and quantitative finance.",
     "responsibilities": [
       "Build comprehensive financial valuation models (DCF, LBO, merger consequence analysis)",
@@ -358,126 +410,6 @@ const jobs: Job[] = [
     "applyLabel": "Apply on JPMorgan Careers"
   },
   {
-    "id": "morgan-stanley-capital-markets-analyst",
-    "title": "Global Capital Markets & Investment Banking Analyst Program",
-    "company": "Morgan Stanley",
-    "location": "New York, NY / London, UK / Hong Kong",
-    "type": "Full-time",
-    "category": "Business, Finance & Consulting",
-    "deadline": "November 20, 2026",
-    "summary": "Advise sovereign governments, corporations, and sponsors on capital structure optimization, initial public offerings (IPOs), and acquisitions.",
-    "responsibilities": [
-      "Structure equity, debt, and convertible security offerings in fast-moving market environments",
-      "Interact daily with trading desks to price syndicated securities and derivatives",
-      "Create dynamic corporate finance models evaluating capital allocation decisions",
-      "Coordinate due diligence sessions with legal counsels and independent auditors"
-    ],
-    "requirements": [
-      "Graduating senior or recent graduate (December 2026 – June 2027 graduation date)",
-      "High level of academic achievement and strong interest in global macro-markets",
-      "Fluency in English; additional language skills valued for international hubs"
-    ],
-    "howToApply": "Submit your formal application on the Morgan Stanley Students and Graduates portal with resume and cover letter.",
-    "applyUrl": "https://www.morganstanley.com/people-opportunities/students-graduates",
-    "applyLabel": "Apply on Morgan Stanley"
-  },
-  {
-    "id": "mckinsey-business-analyst-program",
-    "title": "Business Analyst (Undergraduate & Master's Full-Time)",
-    "company": "McKinsey & Company",
-    "location": "Global Offices (Over 130 Locations Worldwide)",
-    "type": "Full-time",
-    "category": "Business, Finance & Consulting",
-    "deadline": "October 15, 2026 (Regional dates vary)",
-    "summary": "Partner with senior executives of Fortune 500 companies, non-profits, and governments to solve their most urgent strategic challenges.",
-    "responsibilities": [
-      "Gather and analyze primary data, perform statistical tests, and formulate hypotheses",
-      "Conduct executive interviews with client front-line workers and C-suite leadership",
-      "Synthesize actionable strategic recommendations into high-impact executive decks",
-      "Support organizational transformations, digital modernizations, and sustainability roadmaps"
-    ],
-    "requirements": [
-      "Undergraduate or non-MBA master's degree completed by summer 2027",
-      "Exceptional problem-solving abilities and structured conceptual thinking",
-      "Demonstrated leadership impact in academic, extracurricular, or professional settings"
-    ],
-    "howToApply": "Submit application on McKinsey Careers, choose up to 3 office location preferences, and complete the Solve digital game-based assessment.",
-    "applyUrl": "https://www.mckinsey.com/careers/students",
-    "applyLabel": "Apply on McKinsey Careers"
-  },
-  {
-    "id": "bcg-associate-fulltime",
-    "title": "Associate (Undergraduate & Non-MBA Master's)",
-    "company": "Boston Consulting Group (BCG)",
-    "location": "North America, Europe, Asia-Pacific, Latin America",
-    "type": "Full-time",
-    "category": "Business, Finance & Consulting",
-    "deadline": "October 10, 2026 (Varies by target office)",
-    "summary": "Work side-by-side with global industry pioneers to build resilient operating models, enter new markets, and drive generative AI adoption.",
-    "responsibilities": [
-      "Dissect complex business situations into structured hypotheses and work streams",
-      "Build granular financial and market sizing models in Excel and Python",
-      "Lead stakeholder workshop sessions to align cross-functional teams around transformation milestones",
-      "Collaborate in tight-knit 4-6 person case teams with senior partners"
-    ],
-    "requirements": [
-      "Bachelor's or Master's degree in any discipline graduating in 2026 or 2027",
-      "Top-tier academic credentials and curiosity about disruptive technologies",
-      "Strong quantitative reasoning and compelling verbal presentation skills"
-    ],
-    "howToApply": "Apply online on the BCG Students portal, uploading your resume, transcript, and target office selections.",
-    "applyUrl": "https://www.bcg.com/careers/students",
-    "applyLabel": "Apply on BCG Careers"
-  },
-  {
-    "id": "bain-associate-consultant",
-    "title": "Associate Consultant (AC)",
-    "company": "Bain & Company",
-    "location": "Boston, MA / London, UK / San Francisco, CA / Global Offices",
-    "type": "Full-time",
-    "category": "Business, Finance & Consulting",
-    "deadline": "October 18, 2026",
-    "summary": "Known for world-leading private equity diligence and strategic advisory, Bain ACs take ownership of data-driven client problem solving from day one.",
-    "responsibilities": [
-      "Conduct commercial due diligence for leading global private equity firms",
-      "Perform cost-benefit analyses, supply chain optimization, and customer churn modeling",
-      "Present strategic findings directly to client management teams",
-      "Actively participate in Bain's collaborative mentorship culture and global training weeks"
-    ],
-    "requirements": [
-      "Degree from any academic background graduating in late 2026 or 2027",
-      "Strong analytical capabilities and comfortable navigating ambiguous datasets",
-      "Outstanding interpersonal empathy, teamwork spirit, and drive"
-    ],
-    "howToApply": "Submit application via Bain Careers portal. Shortlisted candidates participate in case interviews and behavioral evaluations.",
-    "applyUrl": "https://www.bain.com/careers/hiring-process/associate-consultant/",
-    "applyLabel": "Apply on Bain Careers"
-  },
-  {
-    "id": "deloitte-strategy-operations-analyst",
-    "title": "Strategy & Operations Analyst, Commercial Advisory (Fall 2027)",
-    "company": "Deloitte",
-    "location": "New York, NY / Chicago, IL / Washington, DC",
-    "type": "Full-time",
-    "category": "Business, Finance & Consulting",
-    "deadline": "November 30, 2026",
-    "summary": "Deliver end-to-end strategic advisory for global corporations navigating cloud transformation, M&A integrations, and supply chain reshoring.",
-    "responsibilities": [
-      "Analyze enterprise data to design future-state operating models and capability blueprints",
-      "Support post-merger integration offices and synergy tracking workstreams",
-      "Develop dynamic business cases projecting ROI on enterprise software investments",
-      "Draft client deliverables and executive briefing presentations"
-    ],
-    "requirements": [
-      "Undergraduate or master's degree in Business, Economics, STEM, or related field",
-      "Minimum cumulative GPA of 3.3/4.0",
-      "Proficiency in data analysis tools (Excel, Tableau, PowerBI, or SQL)"
-    ],
-    "howToApply": "Apply through the Deloitte Entry-Level Careers portal. Candidates should indicate their preferred practice and geographic office.",
-    "applyUrl": "https://apply.deloitte.com/en_US/careers/students-entry-level",
-    "applyLabel": "Apply on Deloitte Careers"
-  },
-  {
     "id": "pwc-graduate-associate-deals",
     "title": "Graduate Associate, Deals Strategy & Financial Advisory",
     "company": "PwC",
@@ -508,7 +440,7 @@ const jobs: Job[] = [
     "location": "New York, NY / London, UK / San Francisco, CA",
     "type": "Full-time",
     "category": "Business, Finance & Consulting",
-    "deadline": "October 30, 2026",
+    "deadline": "Rolling — varies by region; APAC postings have closed, so check the EMEA and Americas listings",
     "summary": "Manage risk and optimize multi-asset portfolios utilizing Aladdin, the global gold standard in asset management and risk technology.",
     "responsibilities": [
       "Analyze portfolio exposures, factor sensitivities, and liquidity metrics across asset classes",
@@ -550,29 +482,142 @@ const jobs: Job[] = [
     "applyLabel": "Apply on Bloomberg Careers"
   },
   {
-    "id": "un-young-professionals-programme",
-    "title": "Young Professionals Programme (UN YPP 2026/2027)",
-    "company": "United Nations",
-    "location": "New York, Geneva, Vienna, Nairobi, Worldwide",
-    "type": "Full-time International Civil Service (P-1/P-2)",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "December 15, 2026",
-    "summary": "The premiere recruitment initiative for talented professionals seeking to start an international civil service career with the United Nations Secretariat.",
+    "id": "morgan-stanley-fulltime-analyst-programs",
+    "title": "2027 Full-Time Analyst Programs (Investment Banking, Wealth Management and more)",
+    "company": "Morgan Stanley",
+    "location": "New York, NY / Paris / other global offices (varies by program)",
+    "type": "Full-time",
+    "category": "Business, Finance & Consulting",
+    "deadline": "October 9, 2026 (Wealth Management Branch Analyst, New York) — other programs vary, e.g. Investment Banking Analyst, Paris closes October 25, 2026",
+    "summary": "Morgan Stanley recruits its 2027 full-time analysts through separate programs by division and location, including Investment Banking and Wealth Management's Branch Analyst Program.",
     "responsibilities": [
-      "Conduct policy research on international peace, sustainable development, and human rights",
-      "Prepare diplomatic briefs, Secretary-General reports, and resolutions for General Assembly committees",
-      "Participate in peacekeeping missions and field coordinating mechanisms",
-      "Monitor multilateral treaty compliance and humanitarian aid deliveries"
+      "Join a specific division as a full-time analyst under senior guidance",
+      "Support live client and internal work in your division",
+      "Complete the structured onboarding and training for your program"
     ],
     "requirements": [
-      "Citizen of an eligible participating UN Member State (updated annually based on unrepresented status)",
-      "Hold at least a first-level university degree in an exam-relevant subject area",
-      "Aged 32 years or younger in the year of examination",
-      "Fluent in either English or French (official working languages of the UN)"
+      "Final-year student or recent graduate; degree requirements vary by division",
+      "Strong analytical and communication skills",
+      "Some programs include a video interview stage after the application, with its own short deadline"
     ],
-    "howToApply": "Apply online through Inspira, the UN's online recruitment platform. Qualified candidates will be invited to sit for the specialized UN competitive exam.",
-    "applyUrl": "https://careers.un.org/lbw/home.aspx?viewtype=NCE",
-    "applyLabel": "Apply on UN Careers (Inspira)"
+    "howToApply": "Pick your division and location on Morgan Stanley's Students & Graduates portal; each program lists its own application deadline.",
+    "applyUrl": "https://www.morganstanley.com/people-opportunities/students-graduates",
+    "applyLabel": "Apply on Morgan Stanley",
+    "note": "Morgan Stanley recruits on a rolling basis, so programs can close early — apply as soon as your target program opens."
+  },
+  {
+    "id": "standard-chartered-graduate-programme",
+    "title": "Graduate Programme (2027 Intake)",
+    "company": "Standard Chartered",
+    "location": "Multiple markets (varies by country)",
+    "type": "Full-time / 18-month graduate programme",
+    "category": "Business, Finance & Consulting",
+    "deadline": "Rolling — applications opened in early September 2026 and are reviewed on a rolling basis",
+    "summary": "An 18-month graduate programme of business-aligned rotations, starting each September, open to students from any degree discipline.",
+    "responsibilities": [
+      "Complete business-aligned rotations over the 18-month programme",
+      "Work on live projects within each rotation"
+    ],
+    "requirements": [
+      "In your penultimate or final year of a bachelor’s or postgraduate degree",
+      "Open to all degree disciplines"
+    ],
+    "howToApply": "Select your market on Standard Chartered's early-careers pages and apply online; selection includes a Workplace Scenarios assessment followed by assessment centres.",
+    "applyUrl": "https://www.sc.com/en/global-careers/early-careers/",
+    "applyLabel": "Apply on Standard Chartered Careers",
+    "note": "Programmes and timelines differ by country, so check the page for your market."
+  },
+  {
+    "id": "mastercard-launch-program",
+    "title": "Launch Program (Global Graduate Program)",
+    "company": "Mastercard",
+    "location": "Multiple countries (50+ countries, 80+ offices)",
+    "type": "Full-time / 18-month graduate program",
+    "category": "Business, Finance & Consulting",
+    "deadline": "Rolling — no fixed dates listed; browse open opportunities on the Launch page",
+    "summary": "Mastercard's 18-month flagship global graduate program, combining full-time work with structured development across technology, consulting, product, and sales.",
+    "responsibilities": [
+      "Start with onboarding and a virtual bootcamp, then take on hands-on work in your role",
+      "Attend quarterly Skill Boost sessions during the program",
+      "Take part in social impact projects through nonprofit partnerships"
+    ],
+    "requirements": [
+      "Recent or upcoming graduate with a bachelor's or master's degree",
+      "Innovative thinking and strong problem-solving skills",
+      "Specific qualifications vary by role"
+    ],
+    "howToApply": "Open the Launch program page and use 'View open opportunities' to apply to a role that matches your background.",
+    "applyUrl": "https://careers.mastercard.com/us/en/early-careers/launch",
+    "applyLabel": "Apply on Mastercard Careers"
+  },
+  {
+    "id": "ey-early-careers-programmes",
+    "title": "Graduate & Student Entry-Level Programmes",
+    "company": "EY",
+    "location": "Global (select your country)",
+    "type": "Full-time / Graduate programme",
+    "category": "Business, Finance & Consulting",
+    "deadline": "Rolling — varies by country and service line; roles may fill early",
+    "summary": "EY's graduate and student entry-level programmes run across service lines such as assurance, consulting, and tax, depending on the country you apply in.",
+    "responsibilities": [
+      "Work on client-facing engagements in your service line",
+      "Complete the training and professional-qualification pathway attached to your programme"
+    ],
+    "requirements": [
+      "Final-year student or recent graduate (rules vary by country)",
+      "Requirements and eligible degrees differ by service line and country"
+    ],
+    "howToApply": "Select your country on EY's global careers site, choose a programme, and apply online.",
+    "applyUrl": "https://www.ey.com/en_gl/careers/student-entry-level-programs",
+    "applyLabel": "Apply on EY Careers",
+    "note": "In some countries, programmes last two to three years and lead to an industry-recognised qualification; check your country’s page for details."
+  },
+  {
+    "id": "visa-early-careers",
+    "title": "Early Careers Programs (Leadership Associate Program & Graduate Roles)",
+    "company": "Visa",
+    "location": "Multiple global locations",
+    "type": "Full-time / Rotational graduate program",
+    "category": "Business, Finance & Consulting",
+    "deadline": "Rolling — openings are listed by program and location; confirm current dates on the site",
+    "summary": "Visa's early-career programs, including the Leadership Associate Program (VLA), a two-year rotational program building broad experience in the payments industry.",
+    "responsibilities": [
+      "Rotate across distinct assignments over the two-year VLA program",
+      "Build foundational knowledge of Visa's payments business",
+      "Take on real project ownership within each rotation"
+    ],
+    "requirements": [
+      "Recent graduate or final-year student from a range of academic disciplines",
+      "Demonstrated leadership potential and strong analytical skills"
+    ],
+    "howToApply": "Apply through Visa's Early Careers hub, which lists current openings by program and location.",
+    "applyUrl": "https://corporate.visa.com/en/careers/early-careers.html",
+    "applyLabel": "Apply on Visa Careers",
+    "note": "Visa recruits for many early-career programs on an annual calendar, so check current-cycle dates before applying."
+  },
+  {
+    "id": "world-bank-treasury-summer-internship-2027",
+    "title": "Treasury Summer Internship (Summer 2027)",
+    "company": "World Bank Group (Treasury)",
+    "location": "Washington, DC",
+    "type": "Internship (June 1 – August 9, 2027)",
+    "category": "Business, Finance & Consulting",
+    "deadline": "September 30, 2026 (closing date reported by listings; confirm in the World Bank Group careers portal)",
+    "summary": "A paid summer internship in the World Bank Group's Treasury, with an onboarding week, three rotations of three weeks each, and a capstone presentation. Up to 17 interns are hired.",
+    "responsibilities": [
+      "Complete three three-week rotations across Treasury teams",
+      "Deliver a capstone presentation at the end of the internship"
+    ],
+    "requirements": [
+      "Enrolled in the second-to-final year of a four-year degree program",
+      "Interest in finance, business, economics, or related fields",
+      "Graduating between December 2027 and September 2028",
+      "Available full-time for the whole internship, in person in Washington, DC"
+    ],
+    "howToApply": "Apply through the World Bank Group careers portal with a one-page PDF cover letter and a one-page PDF resume (a half-page personal statement is optional).",
+    "applyUrl": "https://treasury.worldbank.org/en/about/unit/treasury/about/student-and-graduate-careers",
+    "applyLabel": "Apply via World Bank Treasury",
+    "note": "Per the Treasury page, the internship is paid ($22.70–$27.70 per hour depending on citizenship) and the World Bank sponsors the appropriate visa for an incoming intern."
   },
   {
     "id": "world-bank-group-ypp",
@@ -581,7 +626,7 @@ const jobs: Job[] = [
     "location": "Washington, DC (with global field missions)",
     "type": "Full-time 5-Year Renewable Staff Contract",
     "category": "Policy, Government & Nonprofit",
-    "deadline": "October 25, 2026",
+    "deadline": "September 30, 2026 (11:59 PM UTC)",
     "summary": "The flagship leadership pipeline for future global leaders at the World Bank, IFC, and MIGA dedicated to eradicating poverty and boosting shared prosperity.",
     "responsibilities": [
       "Lead economic sector studies and structure sovereign development loans",
@@ -596,32 +641,8 @@ const jobs: Job[] = [
       "Fluency in English; working knowledge of French, Spanish, Arabic, Russian, or Portuguese preferred"
     ],
     "howToApply": "Submit your application via the World Bank Group YPP portal, including CV, statement of interest, academic credentials, and policy essay.",
-    "applyUrl": "https://www.worldbank.org/en/about/careers/programs-and-internships/young-professionals-program",
+    "applyUrl": "https://www.worldbank.org/ext/en/careers/talent-programs/young-professionals-program",
     "applyLabel": "Apply on World Bank Careers"
-  },
-  {
-    "id": "imf-research-assistant-program",
-    "title": "Research Assistant Program (Early Career Economic Research)",
-    "company": "International Monetary Fund (IMF)",
-    "location": "Washington, DC",
-    "type": "Full-time 2-Year Contract",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "November 15, 2026",
-    "summary": "Conduct sophisticated empirical and theoretical macroeconomic research supporting global financial stability, exchange rate monitoring, and debt sustainability.",
-    "responsibilities": [
-      "Manage extensive macroeconomic datasets across cross-country financial databases",
-      "Run econometric regressions and dynamic stochastic general equilibrium (DSGE) models",
-      "Draft analytical notes, statistical annexes, and charts for Article IV staff reports",
-      "Collaborate with senior economists on IMF Working Papers and research monographs"
-    ],
-    "requirements": [
-      "Bachelor's or Master's degree in Economics, Mathematics, Statistics, or Computer Science",
-      "Strong programming proficiency in Stata, Python, R, MATLAB, or EViews",
-      "Outstanding academic performance in intermediate and advanced macroeconomic theory"
-    ],
-    "howToApply": "Submit your profile on the IMF Workday portal with resume, official academic transcript, and a sample quantitative research paper.",
-    "applyUrl": "https://www.imf.org/en/About/Recruitment/working-at-the-imf/research-assistant-program",
-    "applyLabel": "Apply on IMF Careers"
   },
   {
     "id": "who-global-internship-jpo",
@@ -654,7 +675,7 @@ const jobs: Job[] = [
     "location": "New York, NY / Copenhagen, Denmark / Field Duty Stations",
     "type": "Full-time Fixed-Term Staff",
     "category": "Policy, Government & Nonprofit",
-    "deadline": "Rolling — 2026/2027 Intake",
+    "deadline": "Varies — JPO calls are run by sponsoring governments; UNICEF posts other vacancies continuously",
     "summary": "Advocate for child survival, nutrition, basic education, and protection from violence across humanitarian emergencies and long-term development programs.",
     "responsibilities": [
       "Monitor community health, child protection, and primary education initiatives in target districts",
@@ -670,78 +691,6 @@ const jobs: Job[] = [
     "howToApply": "Apply through your home country government's sponsoring JPO department or through UNICEF's official global e-recruitment system.",
     "applyUrl": "https://www.unicef.org/careers/junior-professional-officer-programme",
     "applyLabel": "Apply on UNICEF Careers"
-  },
-  {
-    "id": "wfp-programme-policy-officer",
-    "title": "Programme Policy Officer (Early Career / CST Level I)",
-    "company": "World Food Programme (WFP)",
-    "location": "Rome, Italy & Global Emergency Operations",
-    "type": "Full-time International Consultant",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "November 30, 2026",
-    "summary": "Coordinate large-scale humanitarian food assistance, school feeding initiatives, and climate resilience programs at the 2020 Nobel Peace Prize laureate organization.",
-    "responsibilities": [
-      "Conduct food security assessments and vulnerability mapping in conflict-affected regions",
-      "Oversee cash-based transfer systems and digital biometric distribution mechanisms",
-      "Ensure compliance with humanitarian protection standards and gender-sensitive programming",
-      "Liaise with logistics teams, local suppliers, and UNHCR refugee shelter administrators"
-    ],
-    "requirements": [
-      "University degree in International Development, Economics, Agriculture, or Humanitarian Affairs",
-      "At least 2 years of relevant professional experience in humanitarian assistance or policy analysis",
-      "Working knowledge of English; proficiency in French, Arabic, or Spanish is an advantage"
-    ],
-    "howToApply": "Create a candidate profile on the WFP Careers portal, search for Programme Policy openings, and submit your cover letter and P11 profile.",
-    "applyUrl": "https://www.wfp.org/careers",
-    "applyLabel": "Apply on WFP Careers"
-  },
-  {
-    "id": "oecd-young-associates-programme",
-    "title": "Young Associates Programme (YAP)",
-    "company": "OECD",
-    "location": "Paris, France",
-    "type": "Full-time 2-Year Programme",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "December 1, 2026",
-    "summary": "A 24-month dedicated fast-track program designed for recent undergraduates to conduct cutting-edge public policy research before pursuing postgraduate study.",
-    "responsibilities": [
-      "Analyze economic indicators, tax reform proposals, environmental data, or digital economy policies",
-      "Draft chapters for OECD Economic Surveys and thematic comparative policy reports",
-      "Organize international committee meetings attended by ministers from member economies",
-      "Receive structured executive mentoring and preparation for top global graduate school admissions"
-    ],
-    "requirements": [
-      "Citizen of an OECD member country holding a Bachelor's or equivalent degree earned within the past 2 years",
-      "Graduating with top academic honors; planning to apply to graduate school following the 2-year term",
-      "Fluency in one of the two official languages of the OECD (English and French)"
-    ],
-    "howToApply": "Apply online on the OECD Careers portal for the specific policy stream of your academic expertise.",
-    "applyUrl": "https://www.oecd.org/en/about/careers/young-associates-programme.html",
-    "applyLabel": "Apply on OECD Careers"
-  },
-  {
-    "id": "eu-blue-book-traineeship",
-    "title": "Blue Book Traineeship (European Commission)",
-    "company": "European Union",
-    "location": "Brussels, Belgium / Luxembourg",
-    "type": "Paid 5-Month Traineeship (March 2027 Session)",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "October 15, 2026",
-    "summary": "Gain hands-on experience inside the directorates-general of the European Commission, shaping European regulations, trade policies, and external relations.",
-    "responsibilities": [
-      "Draft briefings, minutes of inter-institutional meetings, and legislative review documents",
-      "Assist in managing European Horizon science grants and Erasmus academic mobility programs",
-      "Organize ministerial council events, citizen dialogues, and public consultations",
-      "Conduct comparative legal analysis across EU member state statutory frameworks"
-    ],
-    "requirements": [
-      "Completed a university degree of at least 3 years of study (Bachelor's degree)",
-      "Very good knowledge of two official EU languages (for EU citizens) or one (for non-EU nationals)",
-      "No prior work experience of more than 6 weeks in any EU institution or agency"
-    ],
-    "howToApply": "Register on the EU Blue Book application portal, fill out the application dossier, upload supporting credentials, and submit before deadline.",
-    "applyUrl": "https://traineeships.ec.europa.eu/",
-    "applyLabel": "Apply on EU Traineeships"
   },
   {
     "id": "msf-global-humanitarian-specialist",
@@ -774,7 +723,7 @@ const jobs: Job[] = [
     "location": "Manila, Philippines (with regional missions)",
     "type": "Full-time 3-Year Fixed Term",
     "category": "Policy, Government & Nonprofit",
-    "deadline": "January 15, 2027",
+    "deadline": "September 30, 2026 (11:59 PM Manila time)",
     "summary": "Embark on an international career in sovereign lending, private sector operations, climate transition finance, and economic analysis across Asia and the Pacific.",
     "responsibilities": [
       "Structure infrastructure loans and blended finance vehicles for green energy and clean water projects",
@@ -783,13 +732,78 @@ const jobs: Job[] = [
       "Rotate across operational departments and resident country missions"
     ],
     "requirements": [
-      "Citizen of an ADB member economy aged 32 or younger upon application",
-      "Master's degree or PhD in Economics, Finance, Engineering, Environmental Science, or related fields",
-      "Minimum 2 years of relevant professional development work experience"
+      "Citizen of an ADB member economy, aged 32 or younger",
+      "Master's degree or PhD in Economics, Finance, Engineering, Environmental Science, or a related field",
+      "At least 3 years of relevant professional experience"
     ],
     "howToApply": "Apply online through the ADB Career Portal. Include a comprehensive summary of your development projects and research papers.",
-    "applyUrl": "https://www.adb.org/site/careers/young-professionals-program",
+    "applyUrl": "https://www.adb.org/work-with-us/careers/adb-young-professionals-program",
     "applyLabel": "Apply on ADB Careers"
+  },
+  {
+    "id": "undp-digital-ai-innovation-internship-2026",
+    "title": "Digital, AI and Innovation Internship (Global Call for 2026)",
+    "company": "UNDP",
+    "location": "Varies by posting",
+    "type": "Internship",
+    "category": "Policy, Government & Nonprofit",
+    "deadline": "September 30, 2026",
+    "summary": "UNDP's global call for a Digital, AI and Innovation internship, part of an internship programme that places students on development work across UNDP country, regional, and headquarters offices.",
+    "responsibilities": [
+      "Support UNDP's digital, AI, and innovation work under the guidance of staff",
+      "Contribute to projects within the office or team you are placed in"
+    ],
+    "requirements": [
+      "Enrolled in the final year of a bachelor's degree, or in a graduate programme (master's or higher)",
+      "Fluent English"
+    ],
+    "howToApply": "Apply through the UNDP careers portal via the posting. UNDP internships are advertised on jobs.undp.org, each with its own deadline.",
+    "applyUrl": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/33001",
+    "applyLabel": "Apply via UNDP Careers",
+    "note": "Other UNDP internship vacancies are listed at jobs.undp.org and close on their own dates."
+  },
+  {
+    "id": "unhcr-internship-programme",
+    "title": "UNHCR Internship Programme",
+    "company": "UNHCR (UN Refugee Agency)",
+    "location": "Global (headquarters and field offices)",
+    "type": "Internship",
+    "category": "Policy, Government & Nonprofit",
+    "deadline": "Rolling — each posting carries its own closing date",
+    "summary": "A structured internship for students and recent graduates to gain hands-on experience in the humanitarian and refugee-protection sector.",
+    "responsibilities": [
+      "Support the work of your assigned team, such as legal protection, community services, public affairs, or health",
+      "Contribute to operational or policy work under staff supervision"
+    ],
+    "requirements": [
+      "Currently pursuing, or recently completed, an undergraduate or graduate degree",
+      "Strong written and spoken English; other languages are an asset depending on the duty station"
+    ],
+    "howToApply": "Create a profile on UNHCR's recruitment platform (Workday) and apply to open internship postings. UNHCR does not charge fees at any stage of recruitment.",
+    "applyUrl": "https://www.unhcr.org/us/get-involved/work-us/careers-unhcr/how-apply",
+    "applyLabel": "Apply via UNHCR Careers",
+    "note": "Highly competitive, so apply early once a relevant posting opens."
+  },
+  {
+    "id": "un-women-internship-programme",
+    "title": "UN Women Internship Programme",
+    "company": "UN Women",
+    "location": "Global (headquarters and regional / country offices)",
+    "type": "Internship (typically 2–6 months)",
+    "category": "Policy, Government & Nonprofit",
+    "deadline": "Rolling — vacancies are posted throughout the year, each with its own closing date",
+    "summary": "Internships across UN Women offices, giving students and recent graduates experience in gender equality and women’s empowerment work.",
+    "responsibilities": [
+      "Support the work of your assigned team on real projects under expert guidance",
+      "Contribute to research, programme, or communications work relevant to your placement"
+    ],
+    "requirements": [
+      "Typically enrolled in a master's, post-master's, or PhD program, or in the final year of an undergraduate degree, or a recent graduate (within about two years)",
+      "Check each posting for exact eligibility, language, and stipend details"
+    ],
+    "howToApply": "View current internship openings on UN Women's careers portal and apply to the posting that matches your background.",
+    "applyUrl": "https://www.unwomen.org/en/about-us/employment/internship-programme",
+    "applyLabel": "Apply via UN Women"
   },
   {
     "id": "spotify-early-career-product-designer",
@@ -814,54 +828,6 @@ const jobs: Job[] = [
     "howToApply": "Apply on Life at Spotify Students portal. Make sure your portfolio URL is clearly linked in your resume.",
     "applyUrl": "https://www.lifeatspotify.com/students",
     "applyLabel": "Apply on Life at Spotify"
-  },
-  {
-    "id": "airbnb-associate-product-designer",
-    "title": "Associate Product Designer, Early Career",
-    "company": "Airbnb",
-    "location": "San Francisco, CA / Remote (US)",
-    "type": "Full-time",
-    "category": "Design, Marketing & Ops",
-    "deadline": "Rolling — 2026/2027 Intake",
-    "summary": "Craft magical travel and hosting experiences, reimagining search, booking, messaging, and community trust across global cultures.",
-    "responsibilities": [
-      "Create thoughtful, inclusive product designs from initial problem framing to finished UI",
-      "Collaborate with user researchers to test prototypes in real-world travel contexts",
-      "Work alongside iOS and Android engineers to polish micro-interactions and transitions",
-      "Maintain and expand Airbnb's world-renowned Design Language System (DLS)"
-    ],
-    "requirements": [
-      "Graduating senior or recent graduate in Design, HCI, or related field in 2026/2027",
-      "Demonstrated portfolio highlighting systems thinking, typography, and clear design rationale",
-      "Strong storytelling and presentation capabilities"
-    ],
-    "howToApply": "Submit your resume and online portfolio on the Airbnb University Recruiting portal.",
-    "applyUrl": "https://careers.airbnb.com/university/",
-    "applyLabel": "Apply on Airbnb Careers"
-  },
-  {
-    "id": "canva-launchpad-early-careers",
-    "title": "Launchpad Early Careers Program (UI/UX Design & Creative Ops)",
-    "company": "Canva",
-    "location": "Sydney, Australia / Austin, TX / London, UK",
-    "type": "Full-time Graduate Program",
-    "category": "Design, Marketing & Ops",
-    "deadline": "October 31, 2026",
-    "summary": "Empower the world to design by building generative AI creative suites, print logistics, visual collaboration tools, and video editing experiences.",
-    "responsibilities": [
-      "Design accessible tools that make professional graphic design effortless for non-designers",
-      "Prototype creative workflow experiments and collaborate on Magic Studio AI features",
-      "Refine UI animations and responsive desktop/tablet layouts",
-      "Participate in structured Canva Academy bootcamps and executive mentorship"
-    ],
-    "requirements": [
-      "Completed a university degree or accredited design boot camp within the last 12 months",
-      "Passionate about visual design, human-centered computing, and user interface ergonomics",
-      "Comfortable with Figma, creative suites, and basic front-end concepts (HTML/CSS)"
-    ],
-    "howToApply": "Apply on the Canva Early Careers Launchpad page with your resume and design portfolio showcase.",
-    "applyUrl": "https://www.lifeatcanva.com/en/early-careers/",
-    "applyLabel": "Apply on Canva Careers"
   },
   {
     "id": "adobe-experience-design-specialist",
@@ -942,7 +908,7 @@ const jobs: Job[] = [
     "location": "London, UK / Englewood Cliffs, NJ / Singapore / Worldwide",
     "type": "Full-time Graduate Trainee (3-Year Fast Track)",
     "category": "Design, Marketing & Ops",
-    "deadline": "November 15, 2026",
+    "deadline": "Rolling — varies by country (Singapore closes September 30, 2026); roles can close early once filled",
     "summary": "A world-famous fast-track management trainee scheme developing managers who build iconic FMCG brands (Dove, Ben & Jerry's, Knorr, Hellmann's).",
     "responsibilities": [
       "Lead national and regional brand campaigns across digital, retail, and experiential channels",
@@ -956,7 +922,7 @@ const jobs: Job[] = [
       "Curiosity, emotional intelligence, and resilience in fast-moving commercial markets"
     ],
     "howToApply": "Complete the online application and profile assessment on the Unilever UFLP website, followed by a digital discovery centre assessment.",
-    "applyUrl": "https://www.unilever.com/careers/graduates/uflp/",
+    "applyUrl": "https://careers.unilever.com/en/early-careers",
     "applyLabel": "Apply on Unilever Careers"
   },
   {
@@ -1008,28 +974,48 @@ const jobs: Job[] = [
     "applyLabel": "Apply on Zapier Careers"
   },
   {
-    "id": "nike-design-brand-innovation-apprentice",
-    "title": "Design & Brand Innovation Apprentice (Global Sports Apparel & Digital)",
-    "company": "Nike",
-    "location": "Beaverton, OR / Hilversum, Netherlands",
-    "type": "Full-time Apprenticeship & Entry Level",
+    "id": "airbnb-early-careers",
+    "title": "Early Careers & Internship Programs",
+    "company": "Airbnb",
+    "location": "Multiple locations (varies by role)",
+    "type": "Internship / Early career",
     "category": "Design, Marketing & Ops",
-    "deadline": "October 28, 2026",
-    "summary": "Join Nike World Headquarters to design athlete-centered apparel, footwear materials, and digital brand marketing experiences.",
+    "deadline": "Rolling — apply as early as possible after a role posts",
+    "summary": "Airbnb's internship and early-career programs put students and graduates on high-exposure projects from day one, with the goal of converting strong interns into full-time hires.",
     "responsibilities": [
-      "Assist senior footwear and apparel designers in material sourcing, color palettes, and sketch rendering",
-      "Design digital marketing content, typography, and motion assets for the Nike App and SNKRS",
-      "Collaborate with the Nike Sports Research Lab (NSRL) to integrate biomechanical data into product design",
-      "Participate in quarterly creative reviews and athlete feedback workshops"
+      "Own meaningful project work within your assigned team",
+      "Partner with cross-functional teams such as product, design, marketing, or operations, depending on the role"
     ],
     "requirements": [
-      "Recent graduate or graduating senior with a degree in Apparel Design, Industrial Design, Graphic Design, or related field",
-      "Compelling design portfolio demonstrating sports passion, consumer insights, and visual creativity",
-      "Proficiency in Adobe Creative Suite, 3D modeling tools (CLO3D, Rhino, Blender), or Figma"
+      "Currently enrolled student or early-career candidate, depending on the role",
+      "Relevant coursework or prior internship experience for the track you apply to"
     ],
-    "howToApply": "Submit your resume and link to your design portfolio through the Nike University Relations job board.",
-    "applyUrl": "https://jobs.nike.com/university-relations",
-    "applyLabel": "Apply on Nike Careers"
+    "howToApply": "Browse open early-career roles on Airbnb's careers site and apply directly.",
+    "applyUrl": "https://careers.airbnb.com/internship-programs/",
+    "applyLabel": "Apply on Airbnb Careers"
+  },
+  {
+    "id": "shopify-early-career-programs",
+    "title": "Early-Career Programs: Engineering Internship, APM & Design Apprentice",
+    "company": "Shopify",
+    "location": "Varies by program",
+    "type": "Internship / Apprenticeship",
+    "category": "Design, Marketing & Ops",
+    "deadline": "Rolling — Shopify's page lists no fixed dates; check each program's site",
+    "summary": "Shopify runs structured early-career programs across engineering, product management, and design, plus a work-and-study route into computer science.",
+    "responsibilities": [
+      "Internship: a paid 4-month engineering internship for students, recent graduates, and early-career candidates",
+      "APM Program: a 12-month Apprentice Product Manager program building foundational product management skills",
+      "Design Apprentice Program: a 6-month program pairing early-career designers with senior mentors across two rotations",
+      "Dev Degree: a 3–4-year program for earning a computer science degree while working"
+    ],
+    "requirements": [
+      "Open to students, recent graduates, career switchers, and early-career candidates (varies by program)",
+      "Program-specific criteria are listed on each program's own page"
+    ],
+    "howToApply": "Choose the program that fits your discipline on Shopify's early-career page, then apply on its dedicated site (internships.shopify.com, apm.shopify.com, shopify.design/dap, or devdegree.ca).",
+    "applyUrl": "https://www.shopify.com/careers/interns",
+    "applyLabel": "Explore Shopify Programs"
   }
 ];
 
@@ -1299,7 +1285,7 @@ export default function JobsPage({ onNavigateHome, onNavigateScholarships, onNav
               Sourced from official employer &amp; institutional career pages
             </div>
             <div className="text-[10px] font-bold text-[#68A108] font-mono uppercase tracking-wider">
-              {jobs.length} Openings · Updated {new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+              {jobs.length} Openings · Updated {LAST_UPDATED}
             </div>
           </div>
         </div>
