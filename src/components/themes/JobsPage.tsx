@@ -70,7 +70,7 @@ function getInitials(company: string): string {
 
 // Date this list was last audited against official sources. Bump it whenever the
 // entries below are re-verified - it is shown to visitors as "Updated".
-const LAST_UPDATED = 'Sep 22, 2026';
+const LAST_UPDATED = 'Sep 29, 2026';
 
 const jobs: Job[] = [
   {
@@ -288,30 +288,6 @@ const jobs: Job[] = [
     "howToApply": "Apply via the Palantir Students and New Grads career portal. Highlight engineering projects and complex problem-solving examples.",
     "applyUrl": "https://www.palantir.com/careers/students/",
     "applyLabel": "Apply on Palantir Careers"
-  },
-  {
-    "id": "cern-entry-level-university-graduates",
-    "title": "Entry-Level University Graduates Programme",
-    "company": "CERN",
-    "location": "Geneva, Switzerland",
-    "type": "Fixed-term graduate programme (6–24 months, extendable up to 36)",
-    "category": "Engineering & Data",
-    "deadline": "Rolling — no fixed deadline listed; apply through the CERN careers portal",
-    "summary": "CERN's programme for recent bachelor's and master's graduates with limited work experience, offering a time-limited contract at the European Organization for Nuclear Research.",
-    "responsibilities": [
-      "Contribute to the work of your assigned CERN group or department under supervision",
-      "Build professional experience in an international research environment"
-    ],
-    "requirements": [
-      "National of a CERN Member State or Associate Member State (some exceptions apply because of national ceilings)",
-      "Bachelor's or master's degree as your highest qualification (PhD holders are not eligible)",
-      "No more than 2 years of professional experience since graduation in the relevant field",
-      "Never held a previous CERN fellow or graduate contract"
-    ],
-    "howToApply": "Apply through CERN's careers portal with your CV (in English or French) and your diploma or certificate of achievement.",
-    "applyUrl": "https://careers.cern/programmes/entry-level-university-graduates/",
-    "applyLabel": "Apply on CERN Careers",
-    "note": "Per CERN's programme page: a monthly net stipend of CHF 5,266 or CHF 5,793 depending on qualification, plus health insurance and 30 days of paid leave. Nationality restrictions apply."
   },
   {
     "id": "salesforce-software-engineering-new-grad",
@@ -596,55 +572,6 @@ const jobs: Job[] = [
     "note": "Visa recruits for many early-career programs on an annual calendar, so check current-cycle dates before applying."
   },
   {
-    "id": "world-bank-treasury-summer-internship-2027",
-    "title": "Treasury Summer Internship (Summer 2027)",
-    "company": "World Bank Group (Treasury)",
-    "location": "Washington, DC",
-    "type": "Internship (June 1 – August 9, 2027)",
-    "category": "Business, Finance & Consulting",
-    "deadline": "September 30, 2026 (closing date reported by listings; confirm in the World Bank Group careers portal)",
-    "summary": "A paid summer internship in the World Bank Group's Treasury, with an onboarding week, three rotations of three weeks each, and a capstone presentation. Up to 17 interns are hired.",
-    "responsibilities": [
-      "Complete three three-week rotations across Treasury teams",
-      "Deliver a capstone presentation at the end of the internship"
-    ],
-    "requirements": [
-      "Enrolled in the second-to-final year of a four-year degree program",
-      "Interest in finance, business, economics, or related fields",
-      "Graduating between December 2027 and September 2028",
-      "Available full-time for the whole internship, in person in Washington, DC"
-    ],
-    "howToApply": "Apply through the World Bank Group careers portal with a one-page PDF cover letter and a one-page PDF resume (a half-page personal statement is optional).",
-    "applyUrl": "https://treasury.worldbank.org/en/about/unit/treasury/about/student-and-graduate-careers",
-    "applyLabel": "Apply via World Bank Treasury",
-    "note": "Per the Treasury page, the internship is paid ($22.70–$27.70 per hour depending on citizenship) and the World Bank sponsors the appropriate visa for an incoming intern."
-  },
-  {
-    "id": "world-bank-group-ypp",
-    "title": "Young Professionals Program (WBG YPP)",
-    "company": "World Bank Group",
-    "location": "Washington, DC (with global field missions)",
-    "type": "Full-time 5-Year Renewable Staff Contract",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "September 30, 2026 (11:59 PM UTC)",
-    "summary": "The flagship leadership pipeline for future global leaders at the World Bank, IFC, and MIGA dedicated to eradicating poverty and boosting shared prosperity.",
-    "responsibilities": [
-      "Lead economic sector studies and structure sovereign development loans",
-      "Work on project finance, equity investments, and political risk guarantees in emerging markets",
-      "Advise national ministries of finance on fiscal governance, renewable infrastructure, and health systems",
-      "Deploy to client countries for on-the-ground technical missions"
-    ],
-    "requirements": [
-      "Master's or Doctorate degree in economics, finance, public policy, engineering, or international development",
-      "Born on or after October 1, 1994 (under 32 years of age at intake)",
-      "Minimum of 3 years of relevant professional development experience or continued doctoral study",
-      "Fluency in English; working knowledge of French, Spanish, Arabic, Russian, or Portuguese preferred"
-    ],
-    "howToApply": "Submit your application via the World Bank Group YPP portal, including CV, statement of interest, academic credentials, and policy essay.",
-    "applyUrl": "https://www.worldbank.org/ext/en/careers/talent-programs/young-professionals-program",
-    "applyLabel": "Apply on World Bank Careers"
-  },
-  {
     "id": "who-global-internship-jpo",
     "title": "Global Internship & Junior Professional Programme",
     "company": "World Health Organization (WHO)",
@@ -669,30 +596,6 @@ const jobs: Job[] = [
     "applyLabel": "Apply on WHO Careers"
   },
   {
-    "id": "unicef-junior-professional-officer",
-    "title": "Junior Professional Officer (JPO) & Global Talent Initiative",
-    "company": "UNICEF",
-    "location": "New York, NY / Copenhagen, Denmark / Field Duty Stations",
-    "type": "Full-time Fixed-Term Staff",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "Varies — JPO calls are run by sponsoring governments; UNICEF posts other vacancies continuously",
-    "summary": "Advocate for child survival, nutrition, basic education, and protection from violence across humanitarian emergencies and long-term development programs.",
-    "responsibilities": [
-      "Monitor community health, child protection, and primary education initiatives in target districts",
-      "Manage supply chain fulfillment for emergency relief kits, water purification, and vaccines",
-      "Prepare donor reporting documentation and programmatic performance dashboards",
-      "Engage local civil society partners and government welfare ministries"
-    ],
-    "requirements": [
-      "Advanced university degree (Master's) in Social Sciences, Development Economics, Education, or Public Health",
-      "Minimum of 2 to 4 years of professional field experience in development or humanitarian response",
-      "Fluency in English and another UN language (Arabic, Chinese, French, Russian, Spanish)"
-    ],
-    "howToApply": "Apply through your home country government's sponsoring JPO department or through UNICEF's official global e-recruitment system.",
-    "applyUrl": "https://www.unicef.org/careers/junior-professional-officer-programme",
-    "applyLabel": "Apply on UNICEF Careers"
-  },
-  {
     "id": "msf-global-humanitarian-specialist",
     "title": "Global Humanitarian Logistics & Operations Specialist",
     "company": "Doctors Without Borders (MSF)",
@@ -715,52 +618,6 @@ const jobs: Job[] = [
     "howToApply": "Submit your CV and humanitarian motivation letter on the MSF International Careers website.",
     "applyUrl": "https://www.doctorswithoutborders.org/careers",
     "applyLabel": "Apply on MSF Careers"
-  },
-  {
-    "id": "adb-young-professionals-program",
-    "title": "Young Professionals Program (YPP)",
-    "company": "Asian Development Bank (ADB)",
-    "location": "Manila, Philippines (with regional missions)",
-    "type": "Full-time 3-Year Fixed Term",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "September 30, 2026 (11:59 PM Manila time)",
-    "summary": "Embark on an international career in sovereign lending, private sector operations, climate transition finance, and economic analysis across Asia and the Pacific.",
-    "responsibilities": [
-      "Structure infrastructure loans and blended finance vehicles for green energy and clean water projects",
-      "Conduct macroeconomic policy dialogues with national central banks and development ministries",
-      "Participate in project appraisal missions, environmental safeguards audits, and disbursements",
-      "Rotate across operational departments and resident country missions"
-    ],
-    "requirements": [
-      "Citizen of an ADB member economy, aged 32 or younger",
-      "Master's degree or PhD in Economics, Finance, Engineering, Environmental Science, or a related field",
-      "At least 3 years of relevant professional experience"
-    ],
-    "howToApply": "Apply online through the ADB Career Portal. Include a comprehensive summary of your development projects and research papers.",
-    "applyUrl": "https://www.adb.org/work-with-us/careers/adb-young-professionals-program",
-    "applyLabel": "Apply on ADB Careers"
-  },
-  {
-    "id": "undp-digital-ai-innovation-internship-2026",
-    "title": "Digital, AI and Innovation Internship (Global Call for 2026)",
-    "company": "UNDP",
-    "location": "Varies by posting",
-    "type": "Internship",
-    "category": "Policy, Government & Nonprofit",
-    "deadline": "September 30, 2026",
-    "summary": "UNDP's global call for a Digital, AI and Innovation internship, part of an internship programme that places students on development work across UNDP country, regional, and headquarters offices.",
-    "responsibilities": [
-      "Support UNDP's digital, AI, and innovation work under the guidance of staff",
-      "Contribute to projects within the office or team you are placed in"
-    ],
-    "requirements": [
-      "Enrolled in the final year of a bachelor's degree, or in a graduate programme (master's or higher)",
-      "Fluent English"
-    ],
-    "howToApply": "Apply through the UNDP careers portal via the posting. UNDP internships are advertised on jobs.undp.org, each with its own deadline.",
-    "applyUrl": "https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/33001",
-    "applyLabel": "Apply via UNDP Careers",
-    "note": "Other UNDP internship vacancies are listed at jobs.undp.org and close on their own dates."
   },
   {
     "id": "unhcr-internship-programme",
@@ -908,7 +765,7 @@ const jobs: Job[] = [
     "location": "London, UK / Englewood Cliffs, NJ / Singapore / Worldwide",
     "type": "Full-time Graduate Trainee (3-Year Fast Track)",
     "category": "Design, Marketing & Ops",
-    "deadline": "Rolling — varies by country (Singapore closes September 30, 2026); roles can close early once filled",
+    "deadline": "Rolling — varies by country; roles can close early once filled",
     "summary": "A world-famous fast-track management trainee scheme developing managers who build iconic FMCG brands (Dove, Ben & Jerry's, Knorr, Hellmann's).",
     "responsibilities": [
       "Lead national and regional brand campaigns across digital, retail, and experiential channels",
@@ -1016,6 +873,356 @@ const jobs: Job[] = [
     "howToApply": "Choose the program that fits your discipline on Shopify's early-career page, then apply on its dedicated site (internships.shopify.com, apm.shopify.com, shopify.design/dap, or devdegree.ca).",
     "applyUrl": "https://www.shopify.com/careers/interns",
     "applyLabel": "Explore Shopify Programs"
+  },
+  {
+    "id": "jane-street-software-engineer-nyc",
+    "title": "Software Engineer",
+    "company": "Jane Street",
+    "location": "New York, NY",
+    "type": "Full-time",
+    "category": "Engineering & Data",
+    "deadline": "Rolling — no deadline listed; Jane Street interviews as applications arrive",
+    "summary": "A software engineering role at the quantitative trading firm Jane Street, which builds most of its systems in the functional programming language OCaml.",
+    "responsibilities": [
+      "Design and build the software behind Jane Street's trading, research and infrastructure",
+      "Work closely with traders and researchers on real production systems"
+    ],
+    "requirements": [
+      "Strong programming and computer science fundamentals",
+      "Interest in functional programming; Jane Street uses OCaml as its primary language"
+    ],
+    "howToApply": "Apply directly through the posting on Jane Street's careers site.",
+    "applyUrl": "https://www.janestreet.com/join-jane-street/position/4274288002/",
+    "applyLabel": "Apply on Jane Street",
+    "note": "The posting lists a base salary of $300,000, which Jane Street says is only one part of total compensation alongside an annual discretionary bonus."
+  },
+  {
+    "id": "un-volunteers-international-assignments",
+    "title": "International UN Volunteer Assignments",
+    "company": "United Nations Volunteers (UNV)",
+    "location": "Worldwide (UN agencies in many countries) / remote online volunteering",
+    "type": "Volunteer assignment, typically 3 to 12 months (with living allowance)",
+    "category": "Policy, Government & Nonprofit",
+    "deadline": "Rolling — each vacancy lists its own closing date",
+    "summary": "UNV places volunteers with UN agencies worldwide in humanitarian, development, health, elections and communications roles, with categories from Community to Expert level.",
+    "responsibilities": [
+      "Support a UN agency programme in the field or remotely, depending on the assignment",
+      "Contribute skills in areas such as humanitarian response, development, health or communications"
+    ],
+    "requirements": [
+      "Eligibility depends on the assignment category (Community, Associate, Specialist or Expert)",
+      "A profile in the UNV Global Talent Pool"
+    ],
+    "howToApply": "Create a profile in the UNV Global Talent Pool on the Unified Volunteering Platform (app.unv.org), then apply to specific vacancies before their deadlines.",
+    "applyUrl": "https://www.unv.org/become-volunteer/volunteer-abroad",
+    "applyLabel": "Apply on UNV",
+    "note": "International UN Volunteers receive a Volunteer Living Allowance, settling-in grant, travel, insurance, paid leave and a resettlement allowance."
+  },
+  {
+    "id": "pg-hong-kong-graduate-program-2027",
+    "title": "2027 Hong Kong Graduate Program (Sales, Brand, Finance, Product Supply)",
+    "company": "Procter & Gamble (P&G)",
+    "location": "Hong Kong",
+    "type": "Full-time graduate role",
+    "category": "Design, Marketing & Ops",
+    "deadline": "November 2, 2026 (applications opened September 9, 2026)",
+    "summary": "P&G hires graduates straight into real roles from day one, including Brand Manager, Sales Account Manager, Finance Manager and Product Supply Manager.",
+    "responsibilities": [
+      "Own a full-time role in Brand, Sales, Finance or Product Supply from your first day",
+      "Build and manage P&G brands and customer accounts in the Hong Kong market"
+    ],
+    "requirements": [
+      "Completing a bachelor's degree or above in 2027, or less than 3 years of work experience after graduating",
+      "IANG visa holders are eligible",
+      "You can apply for at most two positions"
+    ],
+    "howToApply": "Apply through the Apply Now buttons for each role on the P&G Hong Kong careers page.",
+    "applyUrl": "https://www.pgcareers.com/global/en/greater-china-hong-kong-sar",
+    "applyLabel": "Apply on P&G Careers",
+    "note": "A 2027 Hong Kong Internship Program for students graduating in 2028 runs on the same timeline."
+  },
+  {
+    "id": "mars-leadership-experience-2027-uk",
+    "title": "Mars Leadership Experience 2027 Graduate Programme (UK)",
+    "company": "Mars",
+    "location": "Mars UK sites across the country",
+    "type": "Full-time / 3-year rotational graduate programme",
+    "category": "Design, Marketing & Ops",
+    "deadline": "Rolling — applications are open now; apply early as places can fill",
+    "summary": "Mars's flagship graduate scheme, with three 12-month placements in Demand (sales, category, marketing), Supply (manufacturing, supply chain, logistics) or Digital tracks.",
+    "responsibilities": [
+      "Complete three 12-month placements in your chosen track",
+      "Take on real responsibility with mentoring and coaching support"
+    ],
+    "requirements": [
+      "University graduates from any study background, with a degree within the last 2 years",
+      "Fluent English and willingness to be internationally mobile"
+    ],
+    "howToApply": "Apply through the Mars Leadership Experience page on Mars UK's careers site.",
+    "applyUrl": "https://careers.mars.com/uk/en/leadership-experience",
+    "applyLabel": "Apply on Mars Careers",
+    "note": "Mars lists a UK starting salary of £33,000 plus a £2,000 joining bonus."
+  },
+  {
+    "id": "meta-rotational-product-manager-2027",
+    "title": "Rotational Product Manager (RPM) Program",
+    "company": "Meta",
+    "location": "Menlo Park, CA / New York, NY",
+    "type": "Full-time / 18-month rotational program",
+    "category": "Design, Marketing & Ops",
+    "deadline": "Open now — applications open once a year; program start dates are March 2027 and September 2027",
+    "summary": "An 18-month program for early-career product managers that starts with a product bootcamp and rotates through three of Meta's product teams.",
+    "responsibilities": [
+      "Complete three rotations across different Meta product teams",
+      "Drive product decisions with engineering, design and data science partners"
+    ],
+    "requirements": [
+      "Four or more years of related experience in product management or adjacent fields",
+      "Non-traditional backgrounds, including founders and career changers, are welcome"
+    ],
+    "howToApply": "Apply through Meta's Rotational Programs page with a resume and a short questionnaire.",
+    "applyUrl": "https://www.metacareers.com/rotational-programs/",
+    "applyLabel": "Apply on Meta Careers"
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship",
+    "id": "undp-internship-programme",
+    "title": "UNDP Internship Programme",
+    "company": "United Nations Development Programme (UNDP)",
+    "location": "UNDP offices worldwide (headquarters, regional and country offices)",
+    "deadline": "Rolling — each internship posting has its own closing date",
+    "summary": "UNDP internships place students and recent graduates in its development work around the world. UN internships are open to applicants of all nationalities.",
+    "responsibilities": [
+      "Support a UNDP programme or management team on real projects",
+      "Research, write and help with analysis or events, depending on the posting"
+    ],
+    "requirements": [
+      "In the last year of a bachelor's, completing a master's, or graduated within the past year",
+      "No previous work experience required",
+      "Proficiency in the language(s) listed in the posting"
+    ],
+    "howToApply": "Find internship postings on UNDP's jobs page and apply online. There is no application fee.",
+    "applyUrl": "https://www.undp.org/careers/people-programmes",
+    "applyLabel": "Apply on UNDP Careers",
+    "note": "Interns without outside funding receive a monthly stipend that varies by location."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship (6 to 26 weeks)",
+    "id": "unicef-internship-programme",
+    "title": "UNICEF Internship Programme",
+    "company": "UNICEF",
+    "location": "UNICEF offices worldwide / some remote postings",
+    "deadline": "Rolling — internships are posted year round, each with its own deadline",
+    "summary": "UNICEF's paid internships give students and recent graduates hands-on experience in child rights, health, education, emergencies and operations.",
+    "responsibilities": [
+      "Contribute to a UNICEF team at headquarters, a regional office or a country office",
+      "Support research, communications, programme or operations work"
+    ],
+    "requirements": [
+      "At least 18 years old",
+      "Enrolled in an undergraduate, graduate or PhD programme, or graduated within the past two years",
+      "Proficient in English, French or Spanish"
+    ],
+    "howToApply": "Browse internships on UNICEF's vacancies page, complete your profile and apply before the posting's deadline.",
+    "applyUrl": "https://www.unicef.org/careers/internships",
+    "applyLabel": "Apply on UNICEF Careers",
+    "note": "Interns receive a monthly stipend, and a travel and visa contribution may be offered when funding allows. Some country office postings are for national candidates only, so check each vacancy."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship (2 to 6 months)",
+    "id": "un-secretariat-internship-programme",
+    "title": "United Nations Secretariat Internship Programme",
+    "company": "United Nations Secretariat",
+    "location": "New York, Geneva, Vienna, Nairobi and other UN duty stations",
+    "deadline": "Rolling — internships are posted on UN Careers, each with its own deadline",
+    "summary": "Internships across UN Secretariat departments and offices, including political affairs, human rights, environment and communications, open to applicants regardless of nationality.",
+    "responsibilities": [
+      "Support a UN office with research, drafting, meetings and outreach",
+      "Work alongside UN staff on current priorities of your department"
+    ],
+    "requirements": [
+      "Enrolled in a graduate programme or the final year of a bachelor's, or graduated within the past year",
+      "Strong command of English or French",
+      "Not a child or sibling of a UN Secretariat staff member"
+    ],
+    "howToApply": "Search careers.un.org for \"Internship\", create an Inspira profile and apply with a cover letter tailored to the posting.",
+    "applyUrl": "https://careers.un.org/",
+    "applyLabel": "Apply on UN Careers",
+    "note": "The UN's own guidance describes Secretariat internships as unpaid, with interns covering travel and living costs, so check each posting for current terms."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship (2 to 8 months)",
+    "id": "wfp-internship-programme",
+    "title": "WFP Internship Programme",
+    "company": "World Food Programme (WFP)",
+    "location": "WFP offices worldwide",
+    "deadline": "Rolling — internships are posted on the WFP jobs portal",
+    "summary": "Paid internships with the world's largest humanitarian food agency, open to students and recent graduates from all countries.",
+    "responsibilities": [
+      "Support WFP teams in programmes, supply chain, communications or operations",
+      "Take part in learning and training during your assignment"
+    ],
+    "requirements": [
+      "Completed at least two years of undergraduate study; currently enrolled or graduated within the past six months",
+      "Fluent English and good computer skills"
+    ],
+    "howToApply": "Filter for internships on the WFP careers portal and apply through its recruitment system.",
+    "applyUrl": "https://www.wfp.org/careers/contract-types",
+    "applyLabel": "Apply on WFP Careers",
+    "note": "Interns receive a stipend of up to US$1,000 a month depending on the duty station, plus medical insurance."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship",
+    "id": "unops-internships",
+    "title": "UNOPS Internships",
+    "company": "United Nations Office for Project Services (UNOPS)",
+    "location": "UNOPS offices worldwide",
+    "deadline": "Rolling — each internship posting has its own closing date",
+    "summary": "Internships with the UN agency that delivers infrastructure, procurement and project management for peace, humanitarian and development work. There are no nationality restrictions.",
+    "responsibilities": [
+      "Support project, partnerships, procurement or communications teams",
+      "Work on live UNOPS projects under supervision"
+    ],
+    "requirements": [
+      "Enrolled in an undergraduate or graduate programme, or completed a degree within the past three years"
+    ],
+    "howToApply": "Apply to open internship vacancies on the UNOPS jobs portal.",
+    "applyUrl": "https://jobs.unops.org/",
+    "applyLabel": "Apply on UNOPS Jobs",
+    "note": "Interns without outside funding may receive a monthly stipend, and UNOPS provides a one-time travel lump sum."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship",
+    "id": "unaids-internship",
+    "title": "UNAIDS Internship",
+    "company": "UNAIDS",
+    "location": "Geneva, Switzerland (headquarters) and other offices; some remote",
+    "deadline": "Rolling — internship calls are posted on the UNAIDS recruitment site",
+    "summary": "Internships with the UN's joint programme on HIV/AIDS. UNAIDS particularly encourages applications from women and from nationals of under-represented countries.",
+    "responsibilities": [
+      "Support UNAIDS teams on data, policy, communications or programme work"
+    ],
+    "requirements": [
+      "At least 20 years old",
+      "Enrolled in, or graduated within the past year from, an undergraduate or graduate degree",
+      "Working knowledge of an official language used in the office"
+    ],
+    "howToApply": "Apply to current internship calls on the UNAIDS e-recruitment site.",
+    "applyUrl": "https://erecruit.unaids.org/",
+    "applyLabel": "Apply on UNAIDS",
+    "note": "A stipend of up to about US$1,000 a month may be offered to interns without other financial support."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship",
+    "id": "itc-internship-programme",
+    "title": "International Trade Centre Internship Programme",
+    "company": "International Trade Centre (ITC)",
+    "location": "Geneva, Switzerland",
+    "deadline": "Rolling — internships are posted as they open",
+    "summary": "Internships at the joint agency of the UN and the World Trade Organization that helps small businesses in developing countries trade internationally.",
+    "responsibilities": [
+      "Support ITC teams on trade development projects, research and communications"
+    ],
+    "requirements": [
+      "In the second or final year of a bachelor's, in a graduate programme, or graduated within the past year",
+      "Good command of English or French"
+    ],
+    "howToApply": "Apply to ITC internship postings listed on its careers pages and UN job boards.",
+    "applyUrl": "https://intracen.org/about-us/careers",
+    "applyLabel": "Apply on ITC",
+    "note": "Most ITC internships are unpaid, though some provide a subsistence allowance. Interns arrange their own Swiss visa where needed."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Internship",
+    "id": "ifrc-internships",
+    "title": "IFRC Internships",
+    "company": "International Federation of Red Cross and Red Crescent Societies (IFRC)",
+    "location": "Geneva, Switzerland and IFRC offices worldwide",
+    "deadline": "Rolling — each internship has its own closing date",
+    "summary": "Internships with the world's largest humanitarian network, in areas such as disaster response, migration and communications. IFRC welcomes applicants of every nationality.",
+    "responsibilities": [
+      "Support an IFRC department on emergency response, programmes or communications"
+    ],
+    "requirements": [
+      "Check each posting for education and language requirements"
+    ],
+    "howToApply": "Apply to open internships on the IFRC careers site.",
+    "applyUrl": "https://www.ifrc.org/get-involved/work-us/internships",
+    "applyLabel": "Apply on IFRC",
+    "note": "IFRC pays a stipend (for example CHF 65 a day in Geneva) and arranges Swiss work authorization for its interns."
+  },
+  {
+    "category": "Policy, Government & Nonprofit",
+    "type": "Traineeship / Internship (varies by programme)",
+    "id": "icrc-graduate-student-programmes",
+    "title": "Graduate and Student Programmes (Traineeships and Internships)",
+    "company": "International Committee of the Red Cross (ICRC)",
+    "location": "Geneva, Switzerland and ICRC delegations",
+    "deadline": "Varies — each programme posts its own dates on the ICRC careers site",
+    "summary": "ICRC traineeships and internships for students and graduates, including legal and humanitarian programmes, open to applicants of all nationalities.",
+    "responsibilities": [
+      "Work alongside ICRC staff on humanitarian law, operations or support functions, depending on the programme"
+    ],
+    "requirements": [
+      "Requirements depend on the programme; legal traineeships ask for international humanitarian law study",
+      "Fluent English and often a second language"
+    ],
+    "howToApply": "Browse current openings under Graduates and Students on the ICRC careers site.",
+    "applyUrl": "https://careers.icrc.org/go/Graduates-and-Students/3808201/",
+    "applyLabel": "Apply on ICRC Careers",
+    "note": "Past ICRC legal traineeships were paid, 12-month roles in Geneva."
+  },
+  {
+    "id": "canonical-graduate-software-engineer",
+    "title": "Graduate Software Engineer, Open Source and Linux",
+    "company": "Canonical (Ubuntu)",
+    "location": "Remote, home-based worldwide",
+    "type": "Full-time",
+    "category": "Engineering & Data",
+    "deadline": "Rolling — no fixed deadline; the role is open now",
+    "summary": "Canonical, the company behind Ubuntu, hires recent graduates into engineering teams around the world as a fully remote, home-based role.",
+    "responsibilities": [
+      "Build open source software in Python, Go, Rust, C/C++ or JavaScript",
+      "Collaborate with a team in your time zone (EMEA, APAC or AMER)"
+    ],
+    "requirements": [
+      "Degree in computer science, STEM or a related field, with a strong academic record",
+      "Linux experience",
+      "Able to travel internationally twice a year for company events"
+    ],
+    "howToApply": "Apply through Canonical's careers page.",
+    "applyUrl": "https://canonical.com/careers/8142329/graduate-software-engineer-open-source-and-linux-canonical-ubuntu-remote",
+    "applyLabel": "Apply on Canonical",
+    "note": "Benefits include a USD 2,000 yearly learning budget and twice-yearly in-person team sprints."
+  },
+  {
+    "id": "doist-remote-roles",
+    "title": "Remote Roles at Doist (Todoist and Twist)",
+    "company": "Doist",
+    "location": "Remote, anywhere in the world",
+    "type": "Full-time (openings vary)",
+    "category": "Design, Marketing & Ops",
+    "deadline": "Rolling — apply when a role that fits you is posted",
+    "summary": "The company behind Todoist hires across engineering, design, marketing and operations, and says it never places restrictions on where team members live.",
+    "responsibilities": [
+      "Depends on the role, working async with a fully remote team"
+    ],
+    "requirements": [
+      "Role-specific; see each posting",
+      "Comfortable with async, written communication"
+    ],
+    "howToApply": "Check Doist's careers page for current openings and apply online.",
+    "applyUrl": "https://doist.com/careers",
+    "applyLabel": "Apply on Doist",
+    "note": "Salaries use a published formula based on skills and location, with no negotiation, plus a learning budget."
   }
 ];
 

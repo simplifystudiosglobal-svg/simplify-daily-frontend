@@ -64,7 +64,7 @@ function parseDeadlineDate(deadline: string): Date | null {
 
 // Date this list was last audited against official sources. Bump it whenever the
 // entries below are re-verified - it is shown to visitors as "Updated".
-const LAST_UPDATED = 'Sep 22, 2026';
+const LAST_UPDATED = 'Sep 29, 2026';
 
 const scholarships: Scholarship[] = [
   {
@@ -94,32 +94,6 @@ const scholarships: Scholarship[] = [
     "infoUrl": "https://future.utoronto.ca/how-to-apply"
   },
   {
-    "id": "rhodes-scholarship-oxford",
-    "name": "Rhodes Scholarships at Oxford University",
-    "sponsor": "The Rhodes Trust",
-    "location": "Oxford, United Kingdom",
-    "level": "Masters / PhD / Postgraduate",
-    "deadline": "October 7, 2026 (United States) — deadlines vary by constituency; e.g. Canada closes September 24, 2026",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Radcliffe%20Camera%2C%20Oxford%20-%20Oct%202006.jpg?width=1280",
-    "summary": "The world's oldest and most prestigious international postgraduate award, enabling outstanding young leaders from around the globe to study at the University of Oxford.",
-    "coverage": [
-      "Oxford course and college fees",
-      "Annual living stipend",
-      "Visa and health-surcharge costs",
-      "Return flights to and from Oxford"
-    ],
-    "eligibility": [
-      "Eligibility and application rules vary by country / regional constituency",
-      "Selection weighs academic excellence, character, leadership and commitment to service",
-      "Use the Rhodes Trust's eligibility checker to find your constituency and its timeline"
-    ],
-    "howToApply": "Use the Rhodes Trust's eligibility checker to identify your constituency, then apply through that constituency's own process and deadline.",
-    "applyUrl": "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/",
-    "applyLabel": "Apply on Rhodes Trust",
-    "infoUrl": "https://www.rhodeshouse.ox.ac.uk/",
-    "note": "There is no single global deadline. Some constituencies have already closed (India in July and Pakistan in August 2026), so check yours first."
-  },
-  {
     "id": "gates-cambridge",
     "name": "Gates Cambridge Scholarships",
     "sponsor": "Bill & Melinda Gates Foundation & University of Cambridge",
@@ -144,34 +118,6 @@ const scholarships: Scholarship[] = [
     "applyUrl": "https://www.gatescambridge.org/apply/",
     "applyLabel": "Gates Cambridge Portal",
     "infoUrl": "https://www.postgraduate.study.cam.ac.uk/"
-  },
-  {
-    "id": "chevening-scholarships",
-    "name": "Chevening Scholarships UK",
-    "sponsor": "Foreign, Commonwealth & Development Office (FCDO)",
-    "location": "United Kingdom (Any University)",
-    "level": "Masters",
-    "deadline": "October 6, 2026 (11:00 UTC)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace%20of%20Westminster%2C%20London%20-%20Feb%202007.jpg?width=1280",
-    "summary": "The UK government's global scholarship programme, funded by the FCDO and partner organizations, offering full financial support to study for any eligible master's degree at any UK university.",
-    "coverage": [
-      "Full university tuition fees for a one-year Master's degree",
-      "Monthly living stipend set to standard UK regional student rates",
-      "Economy travel to and from the UK via approved routes",
-      "Arrival allowance, departure allowance, and visa application fee contribution",
-      "Access to exclusive Chevening networking events, trips, and cultural experiences"
-    ],
-    "eligibility": [
-      "Citizen of a Chevening-eligible country or territory",
-      "Undergraduate degree equivalent to an upper second-class 2:1 honours degree in the UK",
-      "Minimum of two years (equivalent to 2,800 hours) of demonstrable work experience",
-      "Commitment to return to home country for a minimum of two years after award ends"
-    ],
-    "howToApply": "Submit your application through the official Chevening online application system (e-Chevening). Choose three eligible Master's courses across UK institutions.",
-    "applyUrl": "https://www.chevening.org/apply/",
-    "applyLabel": "Official Chevening Portal",
-    "infoUrl": "https://www.chevening.org/scholarships/",
-    "note": "Applications opened on August 4, 2026. The closing time is in UTC, so check the equivalent time in your country."
   },
   {
     "id": "eth-zurich-excellence",
@@ -249,32 +195,6 @@ const scholarships: Scholarship[] = [
     "note": "There is no single deadline. Each consortium runs its own admissions process, so check the individual programme website."
   },
   {
-    "id": "swiss-government-excellence",
-    "name": "Swiss Government Excellence Scholarships for Foreign Scholars",
-    "sponsor": "Federal Commission for Scholarships for Foreign Students (FCS)",
-    "location": "All Swiss Cantonal Universities & Federal Institutes (ETH & EPFL), Switzerland",
-    "level": "PhD / Postgraduate / Fellowship / Training",
-    "deadline": "Varies by country — applications opened in August 2026; confirm your country’s deadline with the Swiss embassy or the official list",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Switzerland_%28Pantone%29.svg?width=960",
-    "summary": "Awarded by the Swiss government to promote international exchange and research cooperation between Switzerland and over 180 other countries.",
-    "coverage": [
-      "Monthly scholarship stipend of CHF 1,920 for PhD/research and CHF 3,500 for postdoctoral fellows",
-      "Mandatory Swiss health insurance premiums fully paid",
-      "Flight allowance for return airfare to country of origin",
-      "Housing allowance of CHF 300 paid once at the beginning of the scholarship",
-      "Public transportation pass (half-fare card) valid across Swiss rail networks"
-    ],
-    "eligibility": [
-      "Postgraduate researchers with a Master's degree or PhD wishing to undertake doctoral or post-doc research in Switzerland",
-      "Written confirmation from an academic supervisor at a Swiss university accepting the candidate",
-      "Detailed research proposal and strong academic letters of reference"
-    ],
-    "howToApply": "Contact the Swiss embassy in your country of origin to verify the national deadline and receive the official application package.",
-    "applyUrl": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships",
-    "applyLabel": "Swiss Federal Portal",
-    "infoUrl": "https://www.eda.admin.ch/"
-  },
-  {
     "id": "eiffel-excellence-scholarship",
     "name": "France Excellence Eiffel Scholarship Programme",
     "sponsor": "Campus France & French Ministry for Europe and Foreign Affairs",
@@ -326,31 +246,6 @@ const scholarships: Scholarship[] = [
     "infoUrl": "https://www.a-star.edu.sg/"
   },
   {
-    "id": "commonwealth-masters-phd",
-    "name": "Commonwealth Master's & PhD Scholarships",
-    "sponsor": "Commonwealth Scholarship Commission in the UK (CSC) & FCDO",
-    "location": "United Kingdom Universities",
-    "level": "Masters / PhD / Postgraduate",
-    "deadline": "October 20, 2026, 4:00 pm BST (applications opened September 8, 2026)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg?width=960",
-    "summary": "Funded by the UK FCDO, enabling talented and motivated individuals from low and middle income Commonwealth countries to gain the skills needed for sustainable development.",
-    "coverage": [
-      "Approved airfare from your home country to the UK and return",
-      "Full tuition fees paid directly to the host university",
-      "Monthly living allowance (higher rate in London)",
-      "Warm clothing, study travel grant, and family allowances where eligible"
-    ],
-    "eligibility": [
-      "Citizen of or granted refugee status by an eligible Commonwealth country",
-      "Hold a first degree of at least upper second class (2:1) honours standard",
-      "Unable to afford to study in the UK without this scholarship"
-    ],
-    "howToApply": "You cannot apply directly to the CSC. You must be nominated by your country’s National Nominating Agency or an approved organisation, then apply through the CSC online system (CSC Central). Nominating agencies often set earlier deadlines.",
-    "applyUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
-    "applyLabel": "CSC UK Commonwealth Portal",
-    "infoUrl": "https://cscuk.fcdo.gov.uk/"
-  },
-  {
     "id": "turkiye-burslari",
     "name": "Türkiye Scholarships (Türkiye Bursları)",
     "sponsor": "Presidency for Turks Abroad and Related Communities (YTB)",
@@ -382,7 +277,7 @@ const scholarships: Scholarship[] = [
     "sponsor": "King Abdullah University of Science and Technology",
     "location": "Thuwal, Saudi Arabia",
     "level": "Masters / PhD / Postgraduate",
-    "deadline": "January 3, 2027 (August 2027 intake for MS, MS/PhD and PhD) — the January 2027 PhD intake closes September 27",
+    "deadline": "January 3, 2027 (August 2027 intake for MS, MS/PhD and PhD)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Saudi_Arabia.svg?width=960",
     "summary": "A premier award supporting all admitted Master's and PhD students at KAUST, providing comprehensive funding in advanced scientific and engineering research.",
     "coverage": [
@@ -426,54 +321,6 @@ const scholarships: Scholarship[] = [
     "infoUrl": "https://www.ox.ac.uk/admissions/graduate"
   },
   {
-    "id": "weidenfeld-hoffmann-trust",
-    "name": "Weidenfeld-Hoffmann Scholarships and Leadership Programme",
-    "sponsor": "Weidenfeld-Hoffmann Trust & University of Oxford",
-    "location": "Oxford, United Kingdom",
-    "level": "Masters",
-    "deadline": "January 8, 2027 (some courses have an earlier December 2026 deadline; check your course page)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Radcliffe%20Camera%2C%20Oxford%20-%20Oct%202006.jpg?width=1280",
-    "summary": "Cultivates the leaders of tomorrow by providing outstanding university graduates from emerging economies with full funding and comprehensive leadership training.",
-    "coverage": [
-      "100% of Oxford tuition and college fees",
-      "Living stipend to cover accommodation and meals",
-      "Leadership Programme with professional skills seminars and retreats"
-    ],
-    "eligibility": [
-      "Applying to an eligible Master's course at Oxford in business, policy, environmental change, or law",
-      "National of an eligible country in Eastern Europe, Central Asia, South Asia, Middle East, Africa, or Latin America",
-      "Intention to return to home country to serve public life upon graduation"
-    ],
-    "howToApply": "Tick the Weidenfeld-Hoffmann box in the Funding section of Oxford's graduate application form and upload the required Weidenfeld-Hoffmann questionnaire.",
-    "applyUrl": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search/weidenfeld-hoffmann-scholarships-and-leadership-programme",
-    "applyLabel": "Oxford Weidenfeld Portal",
-    "infoUrl": "https://whtrust.org/"
-  },
-  {
-    "id": "nl-scholarship-netherlands",
-    "name": "NL Scholarship (Formerly Holland Scholarship)",
-    "sponsor": "Dutch Ministry of Education, Culture and Science",
-    "location": "Participating Research Universities, Netherlands",
-    "level": "Undergraduate / Masters",
-    "deadline": "February 1, 2027 or May 1, 2027, depending on the institution",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_Netherlands.svg?width=960",
-    "summary": "Financed by the Dutch Ministry of Education, Culture and Science to support international students from outside the EEA wishing to pursue a Bachelor's or Master's in the Netherlands.",
-    "coverage": [
-      "Scholarship grant of €5,000, €10,000 or €15,000 awarded in the first year of study",
-      "Contribution towards tuition costs and living expenditure in Dutch student cities"
-    ],
-    "eligibility": [
-      "Nationality is non-EEA",
-      "Applying for a full-time Bachelor's or Master's at a participating Dutch higher education institution",
-      "Have not previously studied in the Netherlands"
-    ],
-    "howToApply": "Apply directly for an eligible programme at your chosen participating Dutch university, and submit the NL scholarship application form via the university portal.",
-    "applyUrl": "https://www.studyinnl.org/finances/nl-scholarship",
-    "applyLabel": "Study in NL Portal",
-    "infoUrl": "https://www.studyinnl.org/",
-    "note": "There is no single national deadline. Each participating Dutch institution sets its own, so check the institution’s website."
-  },
-  {
     "id": "yenching-academy-fellowship",
     "name": "Yenching Academy Fellowship at Peking University",
     "sponsor": "Peking University",
@@ -501,32 +348,6 @@ const scholarships: Scholarship[] = [
     "note": "Students and alumni of Partner Universities must go through their home university’s internal pre-selection before applying."
   },
   {
-    "id": "adb-japan-scholarship",
-    "name": "Asian Development Bank–Japan Scholarship Program (ADB-JSP)",
-    "sponsor": "Asian Development Bank & Government of Japan",
-    "location": "Designated Institutions in Asia & Pacific (Japan, Singapore, Australia, etc.)",
-    "level": "Masters",
-    "deadline": "November 5, 2026 (e.g. Ritsumeikan APU) — deadlines vary by host institution; University of Tokyo: December 10, 2026",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shinjuku%20skyline%2C%20Tokyo%20-%20Sony%20A7R%20(11831328835).jpg?width=1280",
-    "summary": "Aims to provide an opportunity for well-qualified citizens of ADB developing member countries to undertake postgraduate studies in economics, business, science, and technology.",
-    "coverage": [
-      "Full tuition fees and admission charges",
-      "Monthly subsistence and housing allowance",
-      "Allowance for books and instructional materials",
-      "Medical insurance coverage and round-trip economy airfare"
-    ],
-    "eligibility": [
-      "National of an ADB borrowing member country under 35 years old",
-      "Bachelor's degree with superior academic record and at least 2 years of professional work experience",
-      "Commitment to return and contribute to home country development for at least two years"
-    ],
-    "howToApply": "Send your application for admission and the ADB-JSP scholarship form directly to the designated academic institution of your choice.",
-    "applyUrl": "https://www.adb.org/work-with-us/careers/japan-scholarship-program",
-    "applyLabel": "ADB-JSP Official Page",
-    "infoUrl": "https://www.adb.org/",
-    "note": "Each host university sets its own ADB-JSP deadline, so confirm with the institution you plan to attend."
-  },
-  {
     "id": "skoll-scholarship-oxford",
     "name": "Skoll Scholarship for MBA at Saïd Business School",
     "sponsor": "Skoll Centre for Social Entrepreneurship, University of Oxford",
@@ -549,78 +370,6 @@ const scholarships: Scholarship[] = [
     "applyUrl": "https://www.sbs.ox.ac.uk/oxford-experience/scholarships-and-funding/skoll-scholarship",
     "applyLabel": "Saïd Skoll Portal",
     "infoUrl": "https://www.skollcentre.org/"
-  },
-  {
-    "id": "beit-trust-scholarships",
-    "name": "Beit Trust Postgraduate Scholarships",
-    "sponsor": "The Beit Trust",
-    "location": "Universities in the UK & South Africa",
-    "level": "Masters",
-    "deadline": "February 12, 2027 (applications open December 1, 2026)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_Kingdom.svg?width=960",
-    "summary": "Awarded to graduates who are nationals of Zambia, Zimbabwe, or Malawi for Master's degrees at partner universities in the United Kingdom or South Africa.",
-    "coverage": [
-      "Fees, tuition, and college costs paid in full",
-      "Personal allowance stipend calculated to cover accommodation and meals comfortably",
-      "Return economy flight tickets and baggage allowance",
-      "Laptop computer allowance and settling-in grant"
-    ],
-    "eligibility": [
-      "Nationals of Zambia, Zimbabwe, or Malawi under the age of 30 (or 35 for medical doctors)",
-      "Hold a degree of at least Upper Second Class (2:1)",
-      "Demonstrated intention to return home to benefit their native country"
-    ],
-    "howToApply": "Download the application form from the Beit Trust website, complete it with academic transcripts and references, and submit by email before the deadline.",
-    "applyUrl": "https://beittrust.org.uk/beit-trust-scholarships/",
-    "applyLabel": "Beit Trust Portal",
-    "infoUrl": "https://beittrust.org.uk/"
-  },
-  {
-    "id": "aga-khan-foundation-isp",
-    "name": "Aga Khan Foundation International Scholarship Programme (AKF ISP)",
-    "sponsor": "Aga Khan Development Network (AKDN)",
-    "location": "Leading Universities Globally",
-    "level": "Masters / PhD / Postgraduate",
-    "deadline": "March 31, 2027 (2027–28 applications expected to open January 1, 2027)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aga%20Khan%20Museum%20in%20Toronto-%20Exterior.jpg?width=1280",
-    "summary": "Supports outstanding students from developing countries who have no other means of financing their postgraduate education to build future leaders.",
-    "coverage": [
-      "Tuition and living expenses funded as a 50% grant and 50% loan",
-      "Annual review and renewal for the duration of the course",
-      "Repayment of the loan portion begins after graduation"
-    ],
-    "eligibility": [
-      "Nationals of developing countries where AKF has existing offices",
-      "Consistently excellent academic records and genuine financial need",
-      "Under 30 years of age (priority given to young scholars)"
-    ],
-    "howToApply": "Contact the local Aga Khan Foundation office or Aga Khan Education Board in your country of current residence to obtain application forms.",
-    "applyUrl": "https://www.akdn.org/our-agencies/aga-khan-foundation/international-scholarship-programme",
-    "applyLabel": "AKDN Scholarship Page",
-    "infoUrl": "https://www.akdn.org/"
-  },
-  {
-    "id": "peo-international-peace-scholarship",
-    "name": "P.E.O. International Peace Scholarship (IPS)",
-    "sponsor": "P.E.O. International",
-    "location": "United States & Canada",
-    "level": "Masters / PhD / Postgraduate",
-    "deadline": "December 15, 2026",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_the_United_States.svg?width=960",
-    "summary": "Provides educational grants for women from other countries to pursue full-time graduate study in the United States and Canada.",
-    "coverage": [
-      "Maximum scholarship award of $12,500 USD per academic year",
-      "Renewable for up to two additional years of graduate study"
-    ],
-    "eligibility": [
-      "Female citizen of a country other than the United States or Canada",
-      "Admitted to full-time graduate study at an accredited college or university in the US or Canada",
-      "Promise to return to home country to utilize education to foster world peace"
-    ],
-    "howToApply": "Submit the electronic Eligibility Form between September 15 and December 15, 2026. If confirmed eligible, submit the full online application by March 2027.",
-    "applyUrl": "https://www.peointernational.org/educational-support/international-peace-scholarship-fund/",
-    "applyLabel": "P.E.O. IPS Portal",
-    "infoUrl": "https://www.peointernational.org/"
   },
   {
     "id": "humboldt-research-fellowship",
@@ -647,32 +396,6 @@ const scholarships: Scholarship[] = [
     "infoUrl": "https://www.humboldt-foundation.de/"
   },
   {
-    "id": "manaaki-nz-scholarships",
-    "name": "Manaaki New Zealand Scholarships",
-    "sponsor": "Ministry of Foreign Affairs and Trade (MFAT), New Zealand",
-    "location": "Universities in New Zealand & Pacific Islands",
-    "level": "Undergraduate / Masters / PhD / Postgraduate",
-    "deadline": "April 10, 2027 (applications open March 1, 2027)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_New_Zealand.svg?width=960",
-    "summary": "Government-funded scholarships for international students from eligible developing countries to study in New Zealand and build lasting global relationships.",
-    "coverage": [
-      "Full tuition fees for the duration of the qualification",
-      "Weekly living allowance",
-      "Establishment allowance and medical and travel insurance",
-      "Return economy airfare and a reintegration allowance"
-    ],
-    "eligibility": [
-      "Citizen of an eligible partner country in the Pacific, Asia, Africa, or Latin America",
-      "Minimum age of 18 at start of study",
-      "Fulfill academic and English language requirements of chosen institution",
-      "Committed to returning to home country for at least two years after study"
-    ],
-    "howToApply": "Check country eligibility using the online eligibility questionnaire on the MFAT portal, then submit the electronic application form.",
-    "applyUrl": "https://www.nzscholarships.govt.nz/",
-    "applyLabel": "Manaaki NZ Portal",
-    "infoUrl": "https://www.mfat.govt.nz/"
-  },
-  {
     "id": "hong-kong-phd-fellowship-scheme",
     "name": "Hong Kong PhD Fellowship Scheme (HKPFS) 2027/28",
     "sponsor": "Research Grants Council (RGC), Hong Kong",
@@ -694,28 +417,6 @@ const scholarships: Scholarship[] = [
     "applyUrl": "https://www.ugc.edu.hk/eng/rgc/funding_opport/hkpfs/",
     "applyLabel": "Official HKPFS Page",
     "note": "Stipend rates shown are for the 2026/27 academic year and are reviewed annually."
-  },
-  {
-    "id": "reach-oxford-scholarship",
-    "name": "Reach Oxford Scholarship",
-    "sponsor": "University of Oxford",
-    "location": "Oxford, United Kingdom",
-    "level": "Undergraduate",
-    "deadline": "October 15, 2026 (Oxford undergraduate application) — scholarship application by January 26, 2027 (12 noon UK time)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Radcliffe%20Camera%2C%20Oxford%20-%20Oct%202006.jpg?width=1280",
-    "summary": "Oxford's scholarship for undergraduate students from lower-income countries. You must apply for admission to Oxford first before you can be considered.",
-    "coverage": [
-      "Support with course and college fees and living costs — see the Reach Oxford page for the current package"
-    ],
-    "eligibility": [
-      "Applying for a 2027-entry undergraduate course at Oxford (application deadline October 15, 2026)",
-      "Must apply for admission before being considered for the scholarship",
-      "Country eligibility criteria apply — check the official page"
-    ],
-    "howToApply": "Submit your Oxford undergraduate application by October 15, 2026, then complete the Reach Oxford scholarship application by January 26, 2027.",
-    "applyUrl": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford",
-    "applyLabel": "Official Reach Oxford Page",
-    "note": "Applicants are told the outcome by the end of May 2027, with selection in April."
   },
   {
     "id": "cambridge-trust-scholarships",
@@ -760,95 +461,6 @@ const scholarships: Scholarship[] = [
     "applyLabel": "Official Application Page"
   },
   {
-    "id": "paul-daisy-soros-fellowships",
-    "name": "Paul & Daisy Soros Fellowships for New Americans (2027)",
-    "sponsor": "Paul & Daisy Soros Fellowships for New Americans",
-    "location": "United States",
-    "level": "Masters / PhD / Postgraduate / Fellowship / Training",
-    "deadline": "October 29, 2026, 2:00 pm ET",
-    "image": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
-    "summary": "A graduate-school fellowship for immigrants and children of immigrants pursuing graduate study in the United States. 30 Fellows are selected each year.",
-    "coverage": [
-      "Up to $90,000 in funding toward graduate study, as reported for the 2027 competition"
-    ],
-    "eligibility": [
-      "Must be a “New American”: an immigrant or child of immigrants, as defined on the Fellowship’s eligibility page",
-      "A minimum of three recommendations must be submitted by the deadline"
-    ],
-    "howToApply": "Submit the 2027 application online by 2:00 pm ET on October 29, 2026. Finalists (77) are interviewed virtually in late January and early February 2027, and 30 Fellows are notified in March 2027.",
-    "applyUrl": "https://pdsoros.org/application-process/",
-    "applyLabel": "Application Process",
-    "note": "No exceptions are made to the 2:00 pm ET deadline. Open to eligible New Americans only."
-  },
-  {
-    "id": "marshall-scholarship-2027",
-    "name": "Marshall Scholarship (2027 Competition)",
-    "sponsor": "Marshall Aid Commemoration Commission",
-    "location": "United Kingdom",
-    "level": "Masters / PhD / Postgraduate",
-    "deadline": "September 29, 2026 (5:00 pm in the time zone of your endorsing institution)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace%20of%20Westminster%2C%20London%20-%20Feb%202007.jpg?width=1280",
-    "summary": "A fully funded graduate scholarship for U.S. citizens to pursue one to three years of postgraduate study at any UK university. Up to 50 scholarships are awarded each year.",
-    "coverage": [
-      "University tuition and fees",
-      "Living stipend and an annual book grant",
-      "Thesis grant, research and daily travel grants",
-      "Return flights between the US and UK, and a dependent spouse allowance where applicable"
-    ],
-    "eligibility": [
-      "U.S. citizens with a first degree from an accredited four-year U.S. college or university",
-      "A minimum GPA of 3.7",
-      "Graduated after April 2024"
-    ],
-    "howToApply": "You cannot apply directly: institutional endorsement is required, so contact your undergraduate institution as soon as possible.",
-    "applyUrl": "https://www.marshallscholarship.org/apply/",
-    "applyLabel": "How to Apply",
-    "note": "Open to U.S. citizens only. Campus deadlines are usually earlier than the national deadline."
-  },
-  {
-    "id": "fulbright-us-student-program-2027",
-    "name": "Fulbright U.S. Student Program (2027–2028)",
-    "sponsor": "U.S. Department of State (Fulbright Program)",
-    "location": "Worldwide (host country of your choice)",
-    "level": "Masters / PhD / Postgraduate / Fellowship / Training",
-    "deadline": "October 6, 2026, 5:00 pm ET (campus deadlines are typically 4–6 weeks earlier)",
-    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Grants for U.S. citizens to study, conduct research, or teach English abroad for an academic year.",
-    "coverage": [
-      "Grant terms vary by host country and award type — see the program site for details"
-    ],
-    "eligibility": [
-      "U.S. citizens or nationals at the time of the application deadline (permanent residents are not eligible)",
-      "A conferred bachelor’s degree or equivalent before the start of the grant period"
-    ],
-    "howToApply": "Apply through the Fulbright online application. Confirm your campus deadline with your Fulbright Program Adviser.",
-    "applyUrl": "https://us.fulbrightonline.org/",
-    "applyLabel": "Official Fulbright U.S. Student Program",
-    "note": "Open to U.S. citizens only. The 2027–2028 competition is open now."
-  },
-  {
-    "id": "nsf-graduate-research-fellowship-2027",
-    "name": "NSF Graduate Research Fellowship Program (GRFP) 2027",
-    "sponsor": "U.S. National Science Foundation",
-    "location": "United States",
-    "level": "Masters / PhD / Postgraduate",
-    "deadline": "October 16, 2026 (reference letters); application deadlines by field October 19–23, 2026",
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80",
-    "summary": "A fellowship supporting graduate students in research-based master’s and doctoral programs in STEM fields.",
-    "coverage": [
-      "Multi-year fellowship support including a stipend and a cost-of-education allowance — see NSF for current rates"
-    ],
-    "eligibility": [
-      "U.S. citizen, national, or permanent resident at the time of submission",
-      "Intend to enroll or be enrolled full-time in an eligible research-based master’s or doctoral program in a STEM field",
-      "Completed less than one academic year in a graduate degree program"
-    ],
-    "howToApply": "Submit through Research.gov/GRFP. Deadlines by field: Life Sciences October 19; Computer Science October 20; Engineering October 22; Chemistry, Geosciences, Mathematical Sciences and Physics October 23. Reference letters are due October 16, 2026.",
-    "applyUrl": "https://www.nsf.gov/funding/initiatives/grfp",
-    "applyLabel": "Official NSF GRFP Page",
-    "note": "Open to U.S. citizens, nationals and permanent residents only."
-  },
-  {
     "id": "ubc-international-leader-of-tomorrow",
     "name": "UBC Karen McKellin International Leader of Tomorrow Award",
     "sponsor": "University of British Columbia",
@@ -868,26 +480,6 @@ const scholarships: Scholarship[] = [
     "applyUrl": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
     "applyLabel": "International Scholars Program",
     "note": "Sources report slightly different dates, so confirm on UBC’s official page before applying."
-  },
-  {
-    "id": "taiwan-scholarship-mofa",
-    "name": "Taiwan Scholarship (MOFA) 2027",
-    "sponsor": "Ministry of Foreign Affairs, Taiwan",
-    "location": "Taiwan",
-    "level": "Undergraduate / Masters / PhD",
-    "deadline": "March 31, 2027 (applications accepted February 1 – March 31, 2027)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taipei%20101%202009%20amk.jpg?width=1280",
-    "summary": "A scholarship encouraging outstanding international students to study in Taiwan and promoting bilateral exchange.",
-    "coverage": [
-      "Scholarship support for study in Taiwan — see the official page for the current package"
-    ],
-    "eligibility": [
-      "In principle granted to students from countries with diplomatic relations with Taiwan",
-      "Special consideration may also be given to students from other countries"
-    ],
-    "howToApply": "Apply through the Taiwan Scholarships application system linked from the MOFA page during the February 1 – March 31 window.",
-    "applyUrl": "https://en.mofa.gov.tw/cp.aspx?n=1325",
-    "applyLabel": "Official MOFA Page"
   },
   {
     "id": "chinese-government-scholarship-csc",
@@ -912,69 +504,6 @@ const scholarships: Scholarship[] = [
     "applyUrl": "https://studyinchina.csc.edu.cn/#/login",
     "applyLabel": "CSC Application Portal",
     "note": "The 2027/28 cycle dates follow the annual pattern and had not been published when this listing was checked, so confirm with your embassy or target university."
-  },
-  {
-    "id": "hertz-foundation-fellowship-2027",
-    "name": "Hertz Foundation Fellowship (2027)",
-    "sponsor": "Fannie and John Hertz Foundation",
-    "location": "United States",
-    "level": "PhD / Postgraduate",
-    "deadline": "October 30, 2026 (recommender evaluations due November 2, 2026, 6:00 pm PT)",
-    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
-    "summary": "A doctoral fellowship for graduate students in the applied physical, biological, and engineering sciences.",
-    "coverage": [
-      "Multi-year PhD funding — see the Hertz Foundation site for current terms"
-    ],
-    "eligibility": [
-      "Applicants must meet the Hertz citizenship and residency requirements (confirm on the Hertz site)",
-      "Pursuing a PhD in an eligible applied science, engineering, or mathematics field"
-    ],
-    "howToApply": "Complete the 2027 Hertz Fellowship application online by October 30, 2026. Recommenders submit evaluations by November 2, 2026.",
-    "applyUrl": "https://www.hertzfoundation.org/hertz-fellowship/apply/",
-    "applyLabel": "Apply for the Hertz Fellowship"
-  },
-  {
-    "id": "truman-scholarship-2027",
-    "name": "Harry S. Truman Scholarship (2027)",
-    "sponsor": "Harry S. Truman Scholarship Foundation",
-    "location": "United States",
-    "level": "Undergraduate / Masters",
-    "deadline": "February 2, 2027 (11:59 pm in your time zone; campus deadlines are usually earlier)",
-    "image": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
-    "summary": "A scholarship for U.S. undergraduates who plan careers in public service, providing funding for graduate study.",
-    "coverage": [
-      "Up to $30,000 toward graduate study"
-    ],
-    "eligibility": [
-      "U.S. citizens or nationals nominated by their institution",
-      "Commitment to a career in public service"
-    ],
-    "howToApply": "Applicants apply through their institution’s Truman Faculty Representative. The Foundation confirms receipt by February 8, 2027, and notifies finalists on February 15, 2027.",
-    "applyUrl": "https://www.truman.gov/apply/applying/important-dates",
-    "applyLabel": "Important Dates",
-    "note": "Open to U.S. citizens and nationals only."
-  },
-  {
-    "id": "leiden-university-excellence-scholarship",
-    "name": "Leiden University Excellence Scholarship (LExS)",
-    "sponsor": "Leiden University",
-    "location": "Leiden, Netherlands",
-    "level": "Masters",
-    "deadline": "December 1, 2026 (September 2027 intake; confirm on Leiden’s LExS page)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Academiegebouw%20Leiden.jpg?width=1280",
-    "summary": "A scholarship for excellent students joining a full-time Leiden University master’s programme. Around 25 are awarded each year, and over a thousand students apply.",
-    "coverage": [
-      "Tuition fee awards of €10,000 to €19,000, depending on the award level"
-    ],
-    "eligibility": [
-      "Excellent students joining a full-time Leiden master’s programme",
-      "For most programmes, aimed at non-EEA/non-EFTA students; some programmes have different nationality rules",
-      "Not available for non-advanced LLM programmes or MSc programmes at Leiden Law School"
-    ],
-    "howToApply": "Apply for admission to a Leiden master’s programme and submit your LExS application with a motivation letter inside the same online application, before the deadline. Late scholarship applications are not considered.",
-    "applyUrl": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
-    "applyLabel": "Official LExS Page",
-    "note": "Faculty committees nominate recipients within 10 weeks of the deadline, and all applicants are told before the end of March."
   },
   {
     "id": "trudeau-foundation-doctoral-scholarships-2027",
@@ -1018,6 +547,663 @@ const scholarships: Scholarship[] = [
     "applyUrl": "https://www.ceu.edu/admissions/master",
     "applyLabel": "CEU Master’s Admissions",
     "note": "Stipend awards are partial, not fully funded."
+  },
+  {
+    "id": "imperial-presidents-phd-scholarships-2027",
+    "name": "President's PhD Scholarships",
+    "sponsor": "Imperial College London",
+    "location": "London, United Kingdom",
+    "level": "PhD / Postgraduate",
+    "deadline": "November 2, 2026 (first round) — later rounds January 11, 2027 and March 1, 2027",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Queen's%20Tower%20Imperial%20College%20London%20-%20geograph.org.uk%20-%202288317.jpg?width=1280",
+    "summary": "Imperial's flagship doctoral award: 50 fully funded PhD places a year for outstanding students in any subject the College offers.",
+    "coverage": [
+      "Full tuition fees",
+      "Stipend of £27,036 a year (2027–28 rate)",
+      "£2,000 a year consumables fund for the first 3 years",
+      "Bespoke events from the Early Career Researcher Institute"
+    ],
+    "eligibility": [
+      "A first class undergraduate degree or equivalent, or a distinction in a standalone master's",
+      "Open to home and international applicants",
+      "Funded places start between August 1 and November 1, 2027"
+    ],
+    "howToApply": "There is no separate scholarship form. Apply for PhD admission through Imperial's online system by a round deadline, and your department nominates strong applicants.",
+    "applyUrl": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+    "applyLabel": "Apply via Imperial",
+    "note": "First-round applicants hear by January 31, 2027. Applying early gives you more chances across rounds."
+  },
+  {
+    "id": "tu-delft-van-effen-excellence-scholarship-2027",
+    "name": "Justus & Louise van Effen Excellence Scholarships",
+    "sponsor": "TU Delft (Justus & Louise van Effen Foundation)",
+    "location": "Delft, Netherlands",
+    "level": "Masters",
+    "deadline": "December 1, 2026, 23:59 CET",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Library%20TUDelft.jpg?width=1280",
+    "summary": "TU Delft's full scholarships for excellent international students admitted to its two-year MSc programmes, funded by the legacy of alumnus Justus van Effen.",
+    "coverage": [
+      "Full tuition fees for a TU Delft MSc programme (statutory or institutional rate)",
+      "Contribution toward living expenses"
+    ],
+    "eligibility": [
+      "Excellent international applicants (conditionally) admitted to a two-year regular TU Delft MSc",
+      "Roughly the top 10% of graduates in a relevant previous programme",
+      "A complete MSc application submitted before the scholarship deadline"
+    ],
+    "howToApply": "Complete your MSc application and upload the scholarship form, references and English test by December 1, 2026.",
+    "applyUrl": "https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/scholarships",
+    "applyLabel": "Apply via TU Delft",
+    "note": "Missing the December 1 deadline means your scholarship application will not be reviewed. Winners are told by the end of March 2027."
+  },
+  {
+    "id": "oxford-pershing-square-graduate-scholarships-2027",
+    "name": "Oxford-Pershing Square Graduate Scholarships",
+    "sponsor": "Pershing Square Foundation & Saïd Business School, University of Oxford",
+    "location": "Oxford, United Kingdom",
+    "level": "Masters",
+    "deadline": "January 6, 2027 (1+1 MBA and scholarship); your Oxford master's course deadline in December or January also applies",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Said%20Business%20School.jpg?width=1280",
+    "summary": "Full funding for up to five scholars a year to combine a one-year Oxford master's with a one-year MBA (the 1+1 MBA), for people committed to tackling social problems.",
+    "coverage": [
+      "Full funding for the one-year master's and the one-year MBA",
+      "Membership of the Pershing Square scholar community"
+    ],
+    "eligibility": [
+      "Applicants to the Oxford 1+1 MBA with a partner master's programme",
+      "Strong record of impact and commitment to addressing social issues"
+    ],
+    "howToApply": "Apply to both your Oxford master's course (by its own deadline) and the 1+1 MBA with the scholarship by January 6, 2027.",
+    "applyUrl": "https://www.sbs.ox.ac.uk/oxford-experience/scholarships-and-funding/oxford-pershing-square-graduate-scholarships",
+    "applyLabel": "Apply via Saïd Business School",
+    "note": "Shortlisting is expected in early April 2027, with interviews in late April or early May."
+  },
+  {
+    "id": "oist-phd-program-2027",
+    "name": "OIST PhD Program (Fully Funded)",
+    "sponsor": "Okinawa Institute of Science and Technology (OIST)",
+    "location": "Okinawa, Japan",
+    "level": "PhD / Postgraduate",
+    "deadline": "November 15, 2026, 23:59 JST (entry in May 2027, September 2027 or January 2028)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campus%20(41641045911).jpg?width=1280",
+    "summary": "A five-year, English-language PhD in Japan open to talented students from around the world, with research across physics, biology, chemistry, neuroscience, math and computing.",
+    "coverage": [
+      "Admitted PhD students are fully supported (tuition and living support)",
+      "English-language research environment"
+    ],
+    "eligibility": [
+      "Open to applicants of any nationality",
+      "A bachelor's or master's degree in a relevant field",
+      "Confirm your target laboratories have open PhD slots before applying"
+    ],
+    "howToApply": "Apply online with transcripts, a statement of purpose and a passport copy. You can submit only after at least two recommendation letters arrive.",
+    "applyUrl": "https://www.oist.jp/admissions/phd-program/apply-phd",
+    "applyLabel": "Apply on OIST",
+    "note": "The application fee is 5,000 JPY."
+  },
+  {
+    "id": "ista-phd-program-2027",
+    "name": "ISTA PhD Program",
+    "sponsor": "Institute of Science and Technology Austria (ISTA)",
+    "location": "Klosterneuburg (Vienna), Austria",
+    "level": "PhD / Postgraduate",
+    "deadline": "January 8, 2027, 3:00 pm CET (call opens late October 2026; references due January 12)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Institute%20of%20Science%20and%20Technology%20Austria%20-%20roundabout.jpg?width=1280",
+    "summary": "A fully funded, interdisciplinary PhD in the natural, mathematical and computer sciences at one of Europe's leading research institutes.",
+    "coverage": [
+      "Funded PhD position with an employment contract",
+      "Rotations across research groups in the first year"
+    ],
+    "eligibility": [
+      "Open to all nationalities",
+      "A bachelor's or master's in biology, chemistry, neuroscience, mathematics, computer science, physics, data science, earth science or related areas"
+    ],
+    "howToApply": "Apply online once the call opens in late October. Interviews take place in March, and the programme starts on September 15, 2027.",
+    "applyUrl": "https://phd.pages.ist.ac.at/phd-application-admission/",
+    "applyLabel": "Apply on ISTA"
+  },
+  {
+    "id": "embl-international-phd-2027",
+    "name": "EMBL International PhD Programme (Winter Recruitment)",
+    "sponsor": "European Molecular Biology Laboratory (EMBL)",
+    "location": "Heidelberg, Barcelona, Hamburg, Grenoble, Rome and Hinxton (EMBL-EBI)",
+    "level": "PhD / Postgraduate",
+    "deadline": "October 12, 2026, 23:59 CET (references by October 14)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/EMBL%20Heidelberg%20ATC.jpg?width=1280",
+    "summary": "Fully funded PhD positions at Europe's flagship life sciences laboratory, across its six sites.",
+    "coverage": [
+      "Funded PhD contract",
+      "No application fees at any stage"
+    ],
+    "eligibility": [
+      "Open to highly qualified students of all nationalities (EMBL member-state applicants are prioritised only when equally qualified)",
+      "A degree that qualifies you for PhD study before starting by October 2027",
+      "At least two academic references"
+    ],
+    "howToApply": "Apply through the EMBL International PhD Programme online portal. Email applications are not accepted.",
+    "applyUrl": "https://www.embl.org/about/info/embl-international-phd-programme/application/",
+    "applyLabel": "Apply on EMBL"
+  },
+  {
+    "id": "mbzuai-graduate-scholarship-2027",
+    "name": "MBZUAI Full Scholarship (MSc and PhD in AI)",
+    "sponsor": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+    "location": "Abu Dhabi, United Arab Emirates",
+    "level": "Masters / PhD / Postgraduate",
+    "deadline": "December 15, 2026 (Fall 2027 graduate intake)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masdar%20City%20in%20March%202022%2001.jpg?width=1280",
+    "summary": "Every admitted full-time MSc and PhD student at the AI-focused university receives a full scholarship.",
+    "coverage": [
+      "Full tuition",
+      "Monthly stipend",
+      "Health insurance",
+      "Annual return airfare and UAE residence support"
+    ],
+    "eligibility": [
+      "Open to students of all nationalities",
+      "Meet the admission requirements of the chosen MSc or PhD programme"
+    ],
+    "howToApply": "Apply on the MBZUAI admissions portal by December 15. The Fall 2027 semester starts in mid-August 2027.",
+    "applyUrl": "https://mbzuai.ac.ae/admissions",
+    "applyLabel": "Apply on MBZUAI"
+  },
+  {
+    "id": "ertegun-graduate-scholarship-2027",
+    "name": "Mica and Ahmet Ertegun Graduate Scholarship in the Humanities",
+    "sponsor": "Ertegun Graduate Scholarship Programme, University of Oxford",
+    "location": "Oxford, United Kingdom",
+    "level": "Masters / PhD / Postgraduate",
+    "deadline": "Early January 2027 (your Oxford humanities course deadline; a few area studies courses differ)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Radcliffe%20Humanities%20building%20-%20geograph.org.uk%20-%208093014.jpg?width=1280",
+    "summary": "Full funding for new graduate students in the humanities at Oxford, with membership of Ertegun House.",
+    "coverage": [
+      "Full course fees",
+      "Annual living grant (£21,805 in 2026–27)",
+      "Use of Ertegun House facilities and community"
+    ],
+    "eligibility": [
+      "Students from all countries, including the UK",
+      "Starting a new full-time graduate course in an eligible humanities subject"
+    ],
+    "howToApply": "Select the Ertegun scholarship in the funding section of your Oxford graduate application and attach the Ertegun supporting statement by your course's January deadline.",
+    "applyUrl": "https://www.ertegun.ox.ac.uk/scholarships",
+    "applyLabel": "Apply via Oxford"
+  },
+  {
+    "id": "harding-distinguished-postgraduate-scholars-2027",
+    "name": "Harding Distinguished Postgraduate Scholars Programme",
+    "sponsor": "University of Cambridge",
+    "location": "Cambridge, United Kingdom",
+    "level": "PhD / Postgraduate",
+    "deadline": "Your Cambridge PhD course funding deadline (early December 2026 or January 2027)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senate%20House%20in%20Cambridge.jpg?width=1280",
+    "summary": "Prestigious full PhD scholarships at Cambridge for academically outstanding students of any nationality.",
+    "coverage": [
+      "Full funding for PhD study at Cambridge (fees and maintenance)",
+      "Membership of the Harding scholar community"
+    ],
+    "eligibility": [
+      "Applicants of any nationality",
+      "Applying for a full-time or part-time PhD (including MRes+PhD routes) and not yet started a doctorate"
+    ],
+    "howToApply": "Tick the funding box in the \"Funding your Study\" section of the Cambridge Applicant Portal and apply by your course's funding deadline.",
+    "applyUrl": "https://www.hardingscholars.fund.cam.ac.uk/apply/application-and-eligibility-information",
+    "applyLabel": "Apply via Cambridge",
+    "note": "Awards are made in late February to early March 2027. Scholars are expected to live in the UK for most of their studies."
+  },
+  {
+    "id": "auckland-doctoral-scholarship",
+    "name": "University of Auckland Doctoral Scholarship",
+    "sponsor": "University of Auckland",
+    "location": "Auckland, New Zealand",
+    "level": "PhD / Postgraduate",
+    "deadline": "November 1, 2026 (next round); later rounds February 1, May 1 and August 1, 2027",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock%20Tower%2C%20University%20of%20Auckland.jpg?width=1280",
+    "summary": "Auckland's main doctoral scholarship, open to high-achieving domestic and international doctoral candidates.",
+    "coverage": [
+      "Stipend and fees support (value varies)",
+      "Tenure of up to 42 months"
+    ],
+    "eligibility": [
+      "High-achieving applicants to an approved doctoral programme (PhD, DMedSc, DClinPsy, DocFA, EdD or DHSc)"
+    ],
+    "howToApply": "No separate application is needed. You are considered when you apply for doctoral admission. International applicants are advised to apply in the November and February rounds to leave time for visas.",
+    "applyUrl": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-doctoral-scholarship-43-all.html",
+    "applyLabel": "Apply via Auckland"
+  },
+  {
+    "id": "unsw-international-scholarships-term1-2027",
+    "name": "UNSW International Scientia Scholarships (Term 1, 2027)",
+    "sponsor": "UNSW Sydney",
+    "location": "Sydney, Australia",
+    "level": "Undergraduate / Masters",
+    "deadline": "October 30, 2026, 11:59 pm AEST",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anzac%20Corps%20Memorial%20at%20UNSW%20Kensington%20campus.jpg?width=1280",
+    "summary": "Merit scholarships for international students of any country starting undergraduate or postgraduate coursework degrees at UNSW in Term 1, 2027.",
+    "coverage": [
+      "Full tuition for the minimum program duration (Scientia, Offer 1)",
+      "Or A$20,000 a year toward tuition (Scientia, Offer 2)"
+    ],
+    "eligibility": [
+      "International students (non-Australian) starting full-time study in Term 1, 2027",
+      "An offer of admission to an eligible program by October 30, 2026"
+    ],
+    "howToApply": "Register on the UNSW Scholarship Application Online portal and apply by October 30.",
+    "applyUrl": "https://www.scholarships.unsw.edu.au/scholarships/id/1988",
+    "applyLabel": "Apply on UNSW",
+    "note": "Some awards on the same page are limited to particular countries, but the Scientia Scholarship is open to all international students."
+  },
+  {
+    "id": "kaist-international-undergraduate-2027",
+    "name": "KAIST Undergraduate Scholarship (International Admission)",
+    "sponsor": "Korea Advanced Institute of Science and Technology (KAIST)",
+    "location": "Daejeon, South Korea",
+    "level": "Undergraduate",
+    "deadline": "October 22, 2026 (Early Admission) — Regular Admission November 10, 2026 to January 14, 2027",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/KAIST%20fountains%20view.jpg?width=1280",
+    "summary": "International applicants to Korea's top science and technology university are considered for a scholarship through the admission process itself.",
+    "coverage": [
+      "Tuition exemption for up to eight semesters",
+      "KRW 350,000 monthly support",
+      "Medical insurance"
+    ],
+    "eligibility": [
+      "International applicants for Fall 2027 undergraduate entry",
+      "Tick \"KAIST Scholarship\" in the Statement of Financial Resources"
+    ],
+    "howToApply": "Apply for international undergraduate admission by one of the deadlines and select the KAIST Scholarship in your application.",
+    "applyUrl": "https://admission.kaist.ac.kr/intl-undergraduate/",
+    "applyLabel": "Apply on KAIST"
+  },
+  {
+    "id": "ellis-phd-program-2026-call",
+    "name": "ELLIS PhD Program (AI and Machine Learning)",
+    "sponsor": "European Laboratory for Learning and Intelligent Systems (ELLIS)",
+    "location": "Leading AI labs across Europe",
+    "level": "PhD / Postgraduate",
+    "deadline": "October 31, 2026, 23:59 AoE (portal opens October 1, 2026)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/T%C3%BCbingen%20-%20Altstadt%20-%20Neckarfront%20-%20Ansicht%20von%20Neckarinsel%20mit%20Stocherkahn.jpg?width=1280",
+    "summary": "Europe's central PhD recruitment in machine learning and AI, with each student co-supervised by advisors in two countries.",
+    "coverage": [
+      "Funded PhD positions through the host institutions",
+      "Exchange with a second ELLIS advisor abroad"
+    ],
+    "eligibility": [
+      "No nationality restriction",
+      "Strong background for PhD study in machine learning or related fields"
+    ],
+    "howToApply": "Apply through the ELLIS central application portal between October 1 and 31, 2026.",
+    "applyUrl": "https://ellis.eu/news/ellis-phd-program-call-for-applications-2026",
+    "applyLabel": "Apply on ELLIS",
+    "note": "Start dates depend on your advisors and institution; the PhD degree is awarded by a European institution."
+  },
+  {
+    "id": "rockefeller-university-phd-2027",
+    "name": "David Rockefeller Graduate Program in Bioscience",
+    "sponsor": "The Rockefeller University",
+    "location": "New York, NY, United States",
+    "level": "PhD / Postgraduate",
+    "deadline": "December 1, 2026 (entry in September 2027)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Rockefeller%20University%2C%20York%20Avenue%20NYC.jpg?width=1280",
+    "summary": "A fully supported biomedical PhD in New York where international students apply through the same process as US students.",
+    "coverage": [
+      "Full tuition and a stipend for all admitted students",
+      "Student housing support"
+    ],
+    "eligibility": [
+      "Open to international and US applicants",
+      "A bachelor's, master's or MD (or international equivalent)",
+      "GRE and TOEFL are not required"
+    ],
+    "howToApply": "Apply online by December 1. Shortlisted candidates are invited to on-campus interviews in February.",
+    "applyUrl": "https://www.rockefeller.edu/education-and-training/graduate-program-in-bioscience/admissions/",
+    "applyLabel": "Apply on Rockefeller",
+    "note": "The application fee is $50."
+  },
+  {
+    "id": "warwick-chancellors-international-scholarship-2027",
+    "name": "Warwick PGR Scholarships (including Chancellor's International Scholarships)",
+    "sponsor": "University of Warwick",
+    "location": "Coventry, United Kingdom",
+    "level": "PhD / Postgraduate",
+    "deadline": "December 10, 2026, 16:59 GMT (course application by December 7; call opens October 5, 2026)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Warwick%20University%20campus%20-%20geograph.org.uk%20-%205811826.jpg?width=1280",
+    "summary": "Warwick's doctoral scholarship competition for PhD, MPhil/PhD and EngD students starting in October 2027, open to any nationality or fee status.",
+    "coverage": [
+      "Full academic fees (UK or international rate)",
+      "Tax-free UKRI-rate stipend for 3.5 years",
+      "£5,000 research training and support grant"
+    ],
+    "eligibility": [
+      "Any nationality or fee status",
+      "Starting an eligible research degree in October 2027"
+    ],
+    "howToApply": "Apply for your course by December 7, then submit the scholarship application through ITS by December 10.",
+    "applyUrl": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_funding/chancellors_int/",
+    "applyLabel": "Apply on Warwick"
+  },
+  {
+    "id": "vienna-biocenter-phd-autumn-2026",
+    "name": "Vienna BioCenter PhD Programme (Autumn Call)",
+    "sponsor": "Vienna BioCenter (IMP, IMBA, GMI, MFPL)",
+    "location": "Vienna, Austria",
+    "level": "PhD / Postgraduate",
+    "deadline": "October 15, 2026, 23:59 CET (applications and references)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campus-Vienna-Biocenter-01-.jpg?width=1280",
+    "summary": "A fully funded international PhD in molecular life sciences at one of Europe's top biology campuses.",
+    "coverage": [
+      "Full-time employment contract of about €39,000–€42,900 gross a year (2025 rates)",
+      "Health, pension and other insurance",
+      "Tuition fees reimbursed"
+    ],
+    "eligibility": [
+      "International applicants welcome, including non-EU/EEA citizens",
+      "A degree that qualifies you for PhD study"
+    ],
+    "howToApply": "Submit the written application and references by October 15. Shortlisted candidates have online interviews and then a campus visit.",
+    "applyUrl": "https://training.vbc.ac.at/phd-programme/applications/",
+    "applyLabel": "Apply on Vienna BioCenter",
+    "note": "Start dates are flexible, up to June 1, 2027."
+  },
+  {
+    "id": "cshl-school-of-biological-sciences-phd-2027",
+    "name": "CSHL School of Biological Sciences PhD",
+    "sponsor": "Cold Spring Harbor Laboratory",
+    "location": "Cold Spring Harbor, NY, United States",
+    "level": "PhD / Postgraduate",
+    "deadline": "December 1, 2026",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cold%20Spring%20Harbor%20Laboratory.jpg?width=1280",
+    "summary": "A fully funded biology PhD at a world-famous research laboratory, where about half of students come from outside the US.",
+    "coverage": [
+      "$50,000 annual stipend ($55,000 with an external fellowship)",
+      "All tuition and fees, health and dental insurance",
+      "Laptop, relocation and childcare support"
+    ],
+    "eligibility": [
+      "Open to applicants worldwide",
+      "A bachelor's degree or equivalent by enrollment",
+      "TOEFL or IELTS for non-English-medium degrees; GRE not required"
+    ],
+    "howToApply": "Apply online by December 1 with transcripts, a personal statement and three recommendation letters.",
+    "applyUrl": "https://www.cshl.edu/phd-program/how-to-apply/",
+    "applyLabel": "Apply on CSHL"
+  },
+  {
+    "id": "geneva-graduate-institute-financial-aid-2027",
+    "name": "Geneva Graduate Institute Scholarships (MA and PhD)",
+    "sponsor": "Geneva Graduate Institute (IHEID)",
+    "location": "Geneva, Switzerland",
+    "level": "Masters / PhD / Postgraduate",
+    "deadline": "January 14, 2027 (all MA and PhD programmes; applications open October 1, 2026)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geneva%20Graduate%20Institute.jpg?width=1280",
+    "summary": "Financial aid for master's and PhD students in international relations, development, economics, law and more. About 85% of students are international.",
+    "coverage": [
+      "Master's aid of CHF 10,000 (partial) or CHF 20,000 (full) a year",
+      "Every PhD admission offer comes with a four-year funding package"
+    ],
+    "eligibility": [
+      "Open to applicants of any nationality",
+      "Master's aid must be requested in the January application round"
+    ],
+    "howToApply": "Apply for admission and request financial aid in the same application by January 14. Recommendation letters are due January 22.",
+    "applyUrl": "https://www.graduateinstitute.ch/application",
+    "applyLabel": "Apply on Geneva Graduate Institute",
+    "note": "PhD applicants seeking the Swiss Government Excellence Scholarship through the Institute must apply by October 15, 2026."
+  },
+  {
+    "id": "dkfz-international-phd-2026-27-winter",
+    "name": "DKFZ International PhD Program (Winter Selection)",
+    "sponsor": "German Cancer Research Center (DKFZ)",
+    "location": "Heidelberg, Germany",
+    "level": "PhD / Postgraduate",
+    "deadline": "October 19, 2026",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Heidelberg%20DKFZ%20Neuenheimer%20Feld%2020120501.jpg?width=1280",
+    "summary": "Fully funded PhD positions in cancer research at Germany's largest biomedical research centre.",
+    "coverage": [
+      "All DKFZ PhD positions are fully funded for at least three years",
+      "Structured training and mentoring"
+    ],
+    "eligibility": [
+      "International applicants welcome",
+      "A master's degree (or equivalent) in life sciences or related fields"
+    ],
+    "howToApply": "Apply through the DKFZ online system by October 19.",
+    "applyUrl": "https://www.dkfz.de/en/career/international-phd-program",
+    "applyLabel": "Apply on DKFZ"
+  },
+  {
+    "id": "imprs-astrophysics-2027",
+    "name": "International Max Planck Research School on Astrophysics",
+    "sponsor": "Max Planck Society & LMU Munich",
+    "location": "Garching (Munich), Germany",
+    "level": "PhD / Postgraduate",
+    "deadline": "November 1, 2026 (programme starts September 1, 2027)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2009-03-17-Fehling-Gogel-Max-Planck-Institut-Astrophysik-01.jpg?width=1280",
+    "summary": "A funded astrophysics PhD programme run by Max Planck institutes and LMU Munich for students from around the world.",
+    "coverage": [
+      "Funded doctoral fellowship or contract"
+    ],
+    "eligibility": [
+      "No nationality restriction",
+      "A master's degree (or near completion) in physics, astronomy or a related field",
+      "English proficiency (TOEFL iBT 94+ or IELTS 7+ recommended)"
+    ],
+    "howToApply": "Submit the online form, CV, transcripts, a master's thesis or abstract and up to three recommendation letters by November 1.",
+    "applyUrl": "https://www.imprs-astro.mpg.de/content/application.html",
+    "applyLabel": "Apply on IMPRS Astrophysics"
+  },
+  {
+    "id": "unil-masters-grants-2027",
+    "name": "UNIL Master's Scholarships for Foreign Graduates",
+    "sponsor": "University of Lausanne (UNIL)",
+    "location": "Lausanne, Switzerland",
+    "level": "Masters",
+    "deadline": "November 1, 2026 (for 2027/2028)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/University-of-lausanne-internef.jpg?width=1280",
+    "summary": "About ten excellence scholarships a year for graduates of foreign universities entering a UNIL master's programme.",
+    "coverage": [
+      "CHF 1,600 a month for the minimum length of the master's",
+      "Exemption from course registration fees (only CHF 80 semester fees remain)"
+    ],
+    "eligibility": [
+      "A bachelor's degree from a university outside Switzerland, with outstanding results",
+      "B2 French or C1 English depending on the programme"
+    ],
+    "howToApply": "Complete the online scholarship application by November 1. Decisions are sent in early April 2027.",
+    "applyUrl": "https://www.unil.ch/unil/en/home/menuinst/etudier/mobilite-et-echange/etudiantes-et-etudiants-internationaux/etudiantes-internationaux-reguliers/bourse-de-master.html",
+    "applyLabel": "Apply on UNIL",
+    "note": "The grant does not cover the full cost of living in Switzerland."
+  },
+  {
+    "id": "francis-crick-phd-programme-2027",
+    "name": "Francis Crick Institute PhD Programme",
+    "sponsor": "The Francis Crick Institute",
+    "location": "London, United Kingdom",
+    "level": "PhD / Postgraduate",
+    "deadline": "October 30, 2026, 12:00 pm GMT (references by November 6)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Francis%20Crick%20Institute%20exterior.jpg?width=1280",
+    "summary": "Fully funded four-year biomedical PhD studentships at one of Europe's largest biomedical research institutes, open to all nationalities.",
+    "coverage": [
+      "Tuition fees",
+      "Tax-free stipend of £27,715 a year for four years",
+      "UK visa fees and Immigration Health Surcharge reimbursed"
+    ],
+    "eligibility": [
+      "Candidates of all nationalities",
+      "A degree that qualifies you for PhD study by the September 2027 start"
+    ],
+    "howToApply": "Apply online during the application window. The programme begins on September 27, 2027.",
+    "applyUrl": "https://www.crick.ac.uk/careers-and-study/students/phd-students/how-to-apply-phd-programme",
+    "applyLabel": "Apply on Crick"
+  },
+  {
+    "id": "imprs-bac-molgen-2027",
+    "name": "IMPRS for Biology and Computation (IMPRS-BAC)",
+    "sponsor": "Max Planck Institute for Molecular Genetics",
+    "location": "Berlin, Germany",
+    "level": "PhD / Postgraduate",
+    "deadline": "December 7, 2026, 23:59 CET",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Max%20Planck%20Institute%20for%20Molecular%20Genetics.jpg?width=1280",
+    "summary": "A funded PhD programme combining molecular biology and computation, seeking exceptional graduates from around the globe.",
+    "coverage": [
+      "Three years of funding for your doctoral project",
+      "Interview travel and accommodation covered (within limits)",
+      "Support to learn German"
+    ],
+    "eligibility": [
+      "Open to graduates from any country",
+      "A master's degree in biology, computer science, physics, mathematics or a related field"
+    ],
+    "howToApply": "Submit the online application by December 7. Successful candidates start between May and November 2027.",
+    "applyUrl": "https://www.molgen.mpg.de/IMPRS/application",
+    "applyLabel": "Apply on IMPRS-BAC"
+  },
+  {
+    "id": "wellcome-sanger-4-year-phd-2027",
+    "name": "Wellcome Sanger Institute 4-Year PhD Programme",
+    "sponsor": "Wellcome Sanger Institute",
+    "location": "Hinxton (Cambridge), United Kingdom",
+    "level": "PhD / Postgraduate",
+    "deadline": "November 24, 2026, 09:00 am GMT (applications open early October)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wellcome%20Trust%20Genome%20Campus%2C%20Hinxton%2C%20Winter%202009.png?width=1280",
+    "summary": "Twelve funded genomics PhD studentships a year, with applicants from anywhere in the world judged only on merit.",
+    "coverage": [
+      "Tuition fees for all students regardless of nationality",
+      "Stipend rising from £25,649 to £27,385 over four years",
+      "Visa and Immigration Health Surcharge reimbursed for international students"
+    ],
+    "eligibility": [
+      "Candidates worldwide",
+      "A degree in a relevant scientific discipline"
+    ],
+    "howToApply": "Apply online once applications open in early October. Interviews are on January 25, 2027.",
+    "applyUrl": "https://www.sanger.ac.uk/about/study/phd-programmes/4-year-phd-programme/",
+    "applyLabel": "Apply on Sanger"
+  },
+  {
+    "id": "epfl-edic-fellowships-2027",
+    "name": "EPFL EDIC Doctoral Fellowships (Computer and Communication Sciences)",
+    "sponsor": "École Polytechnique Fédérale de Lausanne (EPFL)",
+    "location": "Lausanne, Switzerland",
+    "level": "PhD / Postgraduate",
+    "deadline": "December 1, 2026, 23:59 CET (second deadline April 15, 2027)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/EPFL%20Rolex%20Learning%20Center%20%40%20EPFL%20%40%20Lausanne%20(36749824932).jpg?width=1280",
+    "summary": "55 first-year fellowships in 2027 for PhD students in computer science and communication systems at EPFL.",
+    "coverage": [
+      "First-year fellowship with rotations in research labs",
+      "All admitted students are paid a competitive salary"
+    ],
+    "eligibility": [
+      "No nationality restriction",
+      "A four- or five-year bachelor's or a master's in computer science, communication systems, electrical engineering, mathematics, physics or related fields"
+    ],
+    "howToApply": "Submit the full online application by December 1 to start the following September.",
+    "applyUrl": "https://www.epfl.ch/education/phd/edic-computer-and-communication-sciences/edic-computer-and-communication-sciences/edic-how-to-apply/",
+    "applyLabel": "Apply on EPFL"
+  },
+  {
+    "id": "gulbenkian-institute-advanced-study-fellowships-2027",
+    "name": "Gulbenkian Institute for Advanced Study Fellowships 2027/28",
+    "sponsor": "Calouste Gulbenkian Foundation",
+    "location": "Lisbon, Portugal",
+    "level": "Postgraduate / Fellowship / Training",
+    "deadline": "October 15, 2026, 15:00 Lisbon time",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior%20of%20Edif%C3%ADcio-sede%20da%20Funda%C3%A7%C3%A3o%20Calouste%20Gulbenkian%2C%20Lisbon%2C%20Portugal%20julesvernex2.jpg?width=1280",
+    "summary": "Three- to eight-month residencies in Lisbon for researchers, scholars and artists working on major global challenges.",
+    "coverage": [
+      "Monthly stipend",
+      "Travel costs and travel and health insurance",
+      "Partial housing allowance"
+    ],
+    "eligibility": [
+      "No nationality restriction and no Portuguese language requirement",
+      "A PhD is not formally required"
+    ],
+    "howToApply": "Apply through the Gulbenkian Institute for Advanced Study online portal by October 15.",
+    "applyUrl": "https://gulbenkian.pt/gias/news/2027-28-applications-open/",
+    "applyLabel": "Apply on Gulbenkian"
+  },
+  {
+    "id": "embo-postdoctoral-fellowships-2027",
+    "name": "EMBO Postdoctoral Fellowships",
+    "sponsor": "European Molecular Biology Organization (EMBO)",
+    "location": "Any EMBC member state (mostly Europe)",
+    "level": "Postgraduate / Fellowship / Training",
+    "deadline": "January 22, 2027, 14:00 CET (next cutoff; applications accepted any time)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/EMBL%20in%20Heidelberg.jpg?width=1280",
+    "summary": "Two-year fellowships for early-career life scientists of any nationality who move to a new country for their postdoc.",
+    "coverage": [
+      "Postdoctoral fellowship funding for up to two years",
+      "Access to EMBO training and networking"
+    ],
+    "eligibility": [
+      "Any nationality, but the move must be to a different country",
+      "PhD obtained within the past two years (or about to be)",
+      "At least one first-author research paper"
+    ],
+    "howToApply": "Apply through the EMBO online system. There is no application fee.",
+    "applyUrl": "https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/eligibility/",
+    "applyLabel": "Apply on EMBO"
+  },
+  {
+    "id": "mrc-lmb-phd-2027",
+    "name": "MRC Laboratory of Molecular Biology PhD Programme",
+    "sponsor": "MRC Laboratory of Molecular Biology (LMB) & University of Cambridge",
+    "location": "Cambridge, United Kingdom",
+    "level": "PhD / Postgraduate",
+    "deadline": "December 8, 2026 (leave two weeks for references)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MRC%20Laboratory%20of%20Molecular%20Biology%20-%20geograph.org.uk%20-%206522144.jpg?width=1280",
+    "summary": "PhD study at the lab that produced a dozen Nobel prizes, with funding available to students of all nationalities through open competition.",
+    "coverage": [
+      "Funding available through MRC, University of Cambridge and College studentships"
+    ],
+    "eligibility": [
+      "Qualified students of all nationalities and backgrounds"
+    ],
+    "howToApply": "Apply via the University of Cambridge Applicant Portal with a CV, transcripts, two references and the LMB Statement of Interest form.",
+    "applyUrl": "https://mrclmb.ac.uk/careers-and-people/phd-students/how-to-apply/",
+    "applyLabel": "Apply via LMB"
+  },
+  {
+    "id": "nyu-abu-dhabi-undergraduate-aid-2027",
+    "name": "NYU Abu Dhabi Need-Based Financial Aid",
+    "sponsor": "NYU Abu Dhabi",
+    "location": "Abu Dhabi, United Arab Emirates",
+    "level": "Undergraduate",
+    "deadline": "November 1, 2026 (Early Decision I; financial aid forms by November 10) — ED II January 1, 2027",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu%20dhabi%20skylines%202014.jpg?width=1280",
+    "summary": "NYU Abu Dhabi accepts financial aid applications from all students regardless of citizenship and offers the same aid whether you apply early or regular.",
+    "coverage": [
+      "Need-based institutional financial aid"
+    ],
+    "eligibility": [
+      "Undergraduate applicants of any citizenship",
+      "Submit the CSS Profile by the aid deadline"
+    ],
+    "howToApply": "Apply through the Common Application and submit the CSS Profile. Early Decision students are released if the aid offer does not make attending possible.",
+    "applyUrl": "https://nyuad.nyu.edu/en/apply/undergraduate/scholarships-and-financial-aid/apply-for-financial-aid.html",
+    "applyLabel": "Apply on NYU Abu Dhabi",
+    "note": "NYU remains test-optional through the 2027–2028 admissions cycle."
+  },
+  {
+    "id": "weizmann-feinberg-phd",
+    "name": "Weizmann Institute PhD (Feinberg Graduate School)",
+    "sponsor": "Weizmann Institute of Science",
+    "location": "Rehovot, Israel",
+    "level": "PhD / Postgraduate",
+    "deadline": "Applications accepted October 1, 2026 to March 31, 2027",
+    "image": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Research PhDs in the natural and exact sciences at the Weizmann Institute, open to international applicants.",
+    "coverage": [
+      "Funded PhD study (students receive a stipend and tuition support)"
+    ],
+    "eligibility": [
+      "An MSc with thesis or an MD for the regular PhD track",
+      "Agreement from a Weizmann advisor before applying"
+    ],
+    "howToApply": "Arrange a potential advisor, then register and apply online during the October to March window.",
+    "applyUrl": "https://www.weizmann.ac.il/feinberg/admissions/how-apply-1",
+    "applyLabel": "Apply on Weizmann"
   }
 ];
 
