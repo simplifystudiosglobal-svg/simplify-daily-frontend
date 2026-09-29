@@ -471,10 +471,19 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
 
     const mainStory = claim(sortedAllArticles[0]) || null;
 
-    const trendingStories = [...allArticles]
-      .sort((a, b) => parseViews(b.views) - parseViews(a.views))
-      .filter((a) => !used.has(String(a.id)))
-      .slice(0, 3);
+    // Trending ranks by views only among stories from the last week of coverage, so
+    // fresh stories surface instead of old all-time hits sitting there permanently.
+    const byViews = (a: any, b: any) => parseViews(b.views) - parseViews(a.views);
+    const newestTime = new Date(sortedAllArticles[0]?.date).getTime() || 0;
+    const TRENDING_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
+    const available = allArticles.filter((a) => !used.has(String(a.id)));
+    const recent = available
+      .filter((a) => newestTime - (new Date(a.date).getTime() || 0) <= TRENDING_WINDOW_MS)
+      .sort(byViews);
+    const trendingStories = [
+      ...recent,
+      ...available.filter((a) => !recent.includes(a)).sort(byViews),
+    ].slice(0, 3);
     trendingStories.forEach(claim);
 
     const remainingAfterTrending = sortedAllArticles.filter((a) => !used.has(String(a.id)));
