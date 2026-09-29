@@ -20,7 +20,7 @@ export const seedArticles: Article[] = [
     "date": "Sep 29, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "468.2k",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tennessee%20State%20Capitol%202009.jpg?width=1200",
+    "image": "/images/christa-pike.png",
     "thumbnailStyle": "breaking",
     "meta": "Christa Pike, the only woman on Tennessee's death row, is scheduled to die by lethal injection on Wednesday for the 1995 murder of Colleen Slemmer. Governor Bill Lee has denied clemency, and in a handwritten letter Pike says, \"Whether my clemency is granted or not, I am at peace.\"",
     "tags": [
