@@ -20,7 +20,7 @@ export const seedArticles: Article[] = [
     "date": "Sep 30, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "421.6k",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaliningrad%2C%20Russia%2C%20Pregolya%20River%2C%20Kant%20Island%20and%20the%20Cathedral%20at%20night.jpg?width=1200",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1790796914/reuters_6abd5616-1790793238_wkupsv.webp",
     "thumbnailStyle": "breaking",
     "meta": "Russia has told NATO countries it would be ready to use \"all its arsenal, including nuclear weapons\" if the alliance tries to isolate Kaliningrad, its exclave between Poland and Lithuania. NATO called it irresponsible nuclear rhetoric and said its exercises pose no risk to Russia.",
     "tags": [
@@ -42,7 +42,7 @@ export const seedArticles: Article[] = [
     "date": "Sep 30, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "389.2k",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miami%20County%20Courthouse%20%E2%80%94%20Troy%2C%20Ohio.jpg?width=1200",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1790797086/260929_wn_perez_caleb_flynn2_hpMain_4x5_fkypae.avif",
     "thumbnailStyle": "breaking",
     "meta": "An Ohio jury found former worship pastor and \"American Idol\" contestant Caleb Flynn guilty on all nine counts in the shooting death of his wife, Ashley Flynn, after prosecutors said he staged a break in. He faces life without parole at sentencing on October 5.",
     "tags": [
@@ -105,7 +105,7 @@ export const seedArticles: Article[] = [
     "date": "Sep 30, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "162.4k",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pensacola%20Customshouse01.jpg?width=1200",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1790796914/210494a4-f3c3-4855-95fe-083724e664ab-StoryLineCover20260929T093350.613_xqrugr.webp",
     "thumbnailStyle": "editorial",
     "meta": "Vontavius Jamaal Bradley, 23, of Pensacola was sentenced to 42 months in federal prison for a scheme that used stolen identities and false U.S. passport cards to open bank accounts and cash stolen and counterfeit checks. He must also repay $18,264.",
     "tags": [
@@ -279,7 +279,7 @@ export const seedArticles: Article[] = [
     "date": "Sep 21, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "642.7k",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gracie_East_front_summer_jeh.jpg?width=1200",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1790797006/21trump-news-header630p-qvgz-jumbo_bla2b5.avif",
     "thumbnailStyle": "breaking",
     "meta": "President Trump visited Mayor Zohran Mamdani at Gracie Mansion for their third meeting, telling him he is \"off to a start\" as a mayor. They agreed to open a new line of talks on the 12,000 home Sunnyside Yard project, but the president made no promises on Haitian immigrants facing the loss of protected status.",
     "tags": [
