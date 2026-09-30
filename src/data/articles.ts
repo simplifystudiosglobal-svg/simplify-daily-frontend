@@ -10,6 +10,8 @@ export interface Article {
   meta: string;
   tags: string[];
   content: string;
+  // Pins this article as the homepage main story regardless of date.
+  pinned?: boolean;
 }
 
 export const seedArticles: Article[] = [
@@ -143,6 +145,7 @@ export const seedArticles: Article[] = [
   },
   {
     "id": "spacex-starship-flight-14-reaches-orbit-first-time-2026",
+    "pinned": true,
     "title": "SpaceX Starship Reaches Orbit for the First Time, Then Cuts Its Flight Short",
     "category": "TECH",
     "date": "Sep 28, 2026",

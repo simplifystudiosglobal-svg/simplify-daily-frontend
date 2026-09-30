@@ -469,7 +469,7 @@ export default function NewsPortal({ onNavigateScholarships, onNavigateJobs, onN
       return article;
     };
 
-    const mainStory = claim(sortedAllArticles[0]) || null;
+    const mainStory = claim(sortedAllArticles.find((a) => a.pinned) || sortedAllArticles[0]) || null;
 
     // Trending ranks by views only among stories from the last week of coverage, so
     // fresh stories surface instead of old all-time hits sitting there permanently.
