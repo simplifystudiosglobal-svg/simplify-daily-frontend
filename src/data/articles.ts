@@ -43,7 +43,7 @@ export const seedArticles: Article[] = [
     "date": "Oct 01, 2026",
     "author": "Elizabeth Erimakoe",
     "views": "592.4k",
-    "image": "/images/christa-pike.png",
+    "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1790968669/b41c9f0_ftp-1-zkw8vtq7obar-ba0c159a245e4ee3aa1f8f61b6d0ef4f-0-e27e9e20d9844224b27cd68381c52c2d_xghtgl.jpg",
     "thumbnailStyle": "breaking",
     "meta": "Tennessee tried and failed to execute Christa Pike on Wednesday night. Witnesses and her lawyers say she was given two doses of pentobarbital and was still alive and snoring loudly when they were sent out. She was taken to a hospital, and Governor Bill Lee has halted executions for the rest of the year.",
     "tags": [
