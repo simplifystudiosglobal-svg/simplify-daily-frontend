@@ -23,7 +23,7 @@ export const seedArticles: Article[] = [
   "date": "Oct 02, 2026",
   "author": "Elizabeth Erimakoe",
   "views": "984.6k",
-  "image": "/images/ken-urker.jpg",
+  "image": "https://res.cloudinary.com/vugydyoc/image/upload/v1790968328/gypsy-rose-ken-urker-mc-250307-02-c417f5-611028_vtctfa.jpg",
   "thumbnailStyle": "viral",
   "meta": "Ken Urker, father of Gypsy Rose Blanchards infant daughter Aurora Raina, died unexpectedly in Raceland on his 34th birthday. Authorities report no signs of foul play as loved ones grieve and point to the devastating toll of cyberbullying.",
   "tags": [
