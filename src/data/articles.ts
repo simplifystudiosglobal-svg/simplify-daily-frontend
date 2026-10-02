@@ -6,7 +6,7 @@ export interface Article {
   author: string;
   views: string;
   image: string;
-  thumbnailStyle: 'breaking' | 'editorial' | 'neon';
+  thumbnailStyle: 'breaking' | 'editorial' | 'neon' | 'viral';
   meta: string;
   tags: string[];
   content: string;
